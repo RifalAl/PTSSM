@@ -15,7 +15,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Admin Toko | SPK Survey
+			Admin Toko | SPK Pemasangan
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -131,7 +131,7 @@
 						<!-- ASIDE MENU DISINI -->
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 							<!-- DASHBOARD -->
-							<li class="m-menu__item " aria-haspopup="true" >
+							<li class="m-menu__item  " aria-haspopup="true" >
 								<a  href="index.html" class="m-menu__link ">
 									<i class="m-menu__link-icon flaticon-line-graph"></i>
 									<span class="m-menu__link-title">
@@ -144,7 +144,7 @@
 								</a>
 							</li>
 							<!-- Manajemen Pelanggan -->
-							<li class="m-menu__item  " aria-haspopup="true" >
+							<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
 								<a  href="manajemen_pelanggan.html" class="m-menu__link ">
 									<i class="m-menu__link-icon fa 	fa-user-circle-o"></i>
 									<span class="m-menu__link-title">
@@ -156,8 +156,8 @@
 									</span>
 								</a>
 							</li>
-							<!-- Manajemen Pesanan -->
-							<li class="m-menu__item  m-menu__item--submenu m-menu__item--open m-menu__item--expanded" aria-haspopup="true" data-menu-submenu-toggle="hover">
+							<!-- Manajemen Pesanan-->
+							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
 								<a href="#" class="m-menu__link m-menu__toggle">
 									<i class="m-menu__link-icon flaticon-folder-2"></i>
 									<span class="m-menu__link-text">
@@ -175,7 +175,7 @@
 												</span>
 											</span>
 										</li>
-										<li class="m-menu__item  " aria-haspopup="true">
+										<li class="m-menu__item " aria-haspopup="true">
 											<a href="spk_pemasangan.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
@@ -215,7 +215,7 @@
 												</span>
 											</a>
 										</li>
-										<li class="m-menu__item m-menu__item--active" aria-haspopup="true">
+										<li class="m-menu__item " aria-haspopup="true">
 											<a href="spk_survey.html"  class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
@@ -291,7 +291,7 @@
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
 								<h3 class="m-subheader__title m-subheader__title--separator">
-									SPK Survey
+									Pelanggan
 								</h3>
 								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
 									<li class="m-nav__item m-nav__item--home">
@@ -305,17 +305,7 @@
 									<li class="m-nav__item">
 										<a href="#.html" class="m-nav__link">
 											<span class="m-nav__link-text">
-												Manajemen Pesanan
-											</span>
-										</a>
-									</li>
-									<li class="m-nav__separator">
-										-
-									</li>
-									<li class="m-nav__item">
-										<a href="spk_survey.html" class="m-nav__link">
-											<span class="m-nav__link-text">
-												SPK Survey
+												Pelanggan
 											</span>
 										</a>
 									</li>
@@ -337,9 +327,9 @@
 														<div class="col-md-4">
 															<div class="m-portlet__head-title">
 																<h3 class="m-portlet__head-text">
-																	List SPK Survey
+																	List Pelanggan
 																</h3>
-																<button onclick="window.location.href = 'tambah_spk_survey.html';" type="button" class="btn btn-success btn_tambah_spk">Tambah SPK</button>
+																<button onclick="window.location.href = 'tambah_pelanggan.html';" id="btn_tambah_pelanggan" type="button" class="btn btn-success">Tambah data Pelanggan</button>
 															</div>
 														</div>
 														<div class="col-md-4 offset-md-4">
@@ -359,72 +349,76 @@
 										<!--end: Search Form -->
 										<!--begin: Datatable -->
 										<!-- <div class="m_datatable" id="local_data"></div> -->
-										<table class="table" id="tbl_spk_survey">
+										<table class="table" id="tbl_list_pelanggan">
 											<thead>
 												<tr>
 													<th>No</th>
-													<th>Tanggal</th>
-													<th>No SPK</th>
+													<th>Id Pelanggan</th>
 													<th>Nama Pelanggan</th>
 													<th>No Telpon</th>
-													<th>Status</th>
+													<th>Alamat</th>
 													<th>Aksi</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>20/19/2018</td>
-													<td>0037/SSM/SPK-PSG/MKS/III/2019</td>
-													<td>TK. Aisiyah Bustanul Atfhal</td>
-													<td>085145322xxx</td>
-													<td>Selesai</td>
+													<td>00230/PLG/MKS/III</td>
+													<td>Bpk. Rifal</td>
+													<td>085145322137</td>
+													<td>Jl. Poros Malino, Komplek Griya Riski Abadi C6</td>
 													<td>
-														<a href="rincian_spk_survey.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														<a href="rincian_pelanggan.html" class="btn btn-sm btn-primary"  style="color:white; width:80px;">
+															Rincian
+														</a>
 													</td>
 												</tr>
 												<tr>
 													<td>2</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Bpk. Suminto</td>
+													<td >00230/PLG/MKS/III</td>
+													<td>Bpk. Rifal</td>
 													<td>085145322137</td>
-													<td>Pengerjaan</td>
+													<td>Jl. Poros Malino, Komplek Griya Riski Abadi C6</td>
 													<td>
-														<a href="rincian_spk_survey.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														<a href="rincian_pelanggan.html" class="btn btn-sm btn-primary"  style="color:white; width:80px;">
+															Rincian
+														</a>
 													</td>
 												</tr>
 												<tr>
 													<td>3</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Bpk. Suminto</td>
+													<td >00230/PLG/MKS/III</td>
+													<td>Bpk. Rifal</td>
 													<td>085145322137</td>
-													<td>Pengerjaan</td>
+													<td>Jl. Poros Malino, Komplek Griya Riski Abadi C6</td>
 													<td>
-														<a href="rincian_spk_survey.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														<a href="rincian_pelanggan.html" class="btn btn-sm btn-primary"  style="color:white; width:80px;">
+															Rincian
+														</a>
 													</td>
 												</tr>
 												<tr>
 													<td>4</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Ibu Ida</td>
+													<td >00230/PLG/MKS/III</td>
+													<td>Bpk. Rifal</td>
 													<td>085145322137</td>
-													<td>Selesai</td>
+													<td>Jl. Poros Malino, Komplek Griya Riski Abadi C6</td>
 													<td>
-														<a href="rincian_spk_survey.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														<a href="rincian_pelanggan.html" class="btn btn-sm btn-primary"  style="color:white; width:80px;">
+															Rincian
+														</a>
 													</td>
 												</tr>
 												<tr>
 													<td>5</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Ibu Rahm</td>
+													<td >00230/PLG/MKS/III</td>
+													<td>Bpk. Rifal</td>
 													<td>085145322137</td>
-													<td>Selesai</td>
+													<td>Jl. Poros Malino, Komplek Griya Riski Abadi C6</td>
 													<td>
-														<a href="rincian_spk_survey.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														<a href="rincian_pelanggan.html" class="btn btn-sm btn-primary"  style="color:white; width:80px;">
+															Rincian
+														</a>
 													</td>
 												</tr>
 											</tbody>
@@ -473,7 +467,7 @@
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
 		<script type="text/javascript">
-			var tbl_spk_survey = $('#tbl_spk_survey').mDatatable({
+			var tbl_list_pelanggan = $('#tbl_list_pelanggan').mDatatable({
 				data: {
 					saveState: {cookie: false},
 					/*type: 'remote',
@@ -519,13 +513,7 @@
 					width: 50
 				},
 				{
-					field: 'Tanggal',
-					textAlign: 'center',
-					type:'date',
-					format: 'DD/MM/YYYY',
-				},
-				{
-					field: 'No SPK',
+					field: 'Id Pelanggan',
 					textAlign: 'center',
 				},
 				{
@@ -537,15 +525,34 @@
 					textAlign: 'center',
 				},
 				{
-					field: 'Status',
+					field: 'Alamat',
 					textAlign: 'center',
 				},
 				{
 					field: 'Aksi',
 					textAlign: 'center',
+					width: 180
 				}
 
 				],
+			});
+		</script>
+		<script>
+			$('.btn_hapus').click(function(e) {
+				swal({
+					title: 'Apakah anda yakin menghapus data pelanggan ini?',
+					type: 'warning',
+					showCancelButton: true,
+					confirmButtonText: 'Ya,Hapus!'
+				}).then(function(result) {
+					if (result.value) {
+						swal(
+							'Berhasil!',
+							'Data pelanggan telah dihapus',
+							'success'
+							)
+					}
+				});
 			});
 		</script>
 	</body>
