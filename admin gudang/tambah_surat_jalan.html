@@ -141,7 +141,7 @@
 					<!-- ASIDE MENU DISINI -->
 					<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 						<!-- DASHBOARD -->
-						<li class="m-menu__item " aria-haspopup="true" >
+						<li class="m-menu__item  " aria-haspopup="true" >
 							<a  href="index.html" class="m-menu__link ">
 								<i class="m-menu__link-icon flaticon-line-graph"></i>
 								<span class="m-menu__link-title">
@@ -192,6 +192,19 @@
 								</span>
 							</a>
 						</li>
+						<!-- Inventory-->
+						<li class="m-menu__item" aria-haspopup="true" >
+							<a  href="inventory.html" class="m-menu__link ">
+								<i class="m-menu__link-icon fa 	fa-cube"></i>
+								<span class="m-menu__link-title">
+									<span class="m-menu__link-wrap">
+										<span class="m-menu__link-text">
+											Inventory
+										</span>
+									</span>
+								</span>
+							</a>
+						</li>
 						<!-- Stock -->
 						<li class="m-menu__item" aria-haspopup="true" >
 							<a  href="stock.html" class="m-menu__link ">
@@ -199,7 +212,7 @@
 								<span class="m-menu__link-title">
 									<span class="m-menu__link-wrap">
 										<span class="m-menu__link-text">
-											Stock
+											Manajemen Stock
 										</span>
 									</span>
 								</span>
@@ -217,7 +230,7 @@
 									</span>
 								</span>
 							</a>
-						</li>
+						</li>	
 					</ul>
 				</div>
 				<!-- END: Aside Menu -->
@@ -253,95 +266,82 @@
 								<li class="m-nav__item">
 									<a href="tambah_surat_jalan.html" class="m-nav__link">
 										<span class="m-nav__link-text">
-											tambah
+											Tambah
 										</span>
 									</a>
 								</li>
 							</ul>
 						</div>
-						<div>
-							<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
-								<span class="m-subheader__daterange-label">
-									<span class="m-subheader__daterange-title"></span>
-									<span class="m-subheader__daterange-date m--font-brand"></span>
-								</span>
-								<a
-								href="#"
-								class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
-								<i class="la la-angle-down"></i>
-							</a>
-						</span>
 					</div>
 				</div>
-			</div>
-			<!-- END: Subheader -->
-			<div class="m-content">
-				<div class="row">
-					<div class="col-xl-12">
-						<div class="m-portlet m-portlet--tab">
-							<div class="m-portlet__head">
-								<div class="m-portlet__head-caption">
-									<div class="m-portlet__head-title">
-										<span class="m-portlet__head-icon m--hide">
-											<i class="la la-gear"></i>
-										</span>
-										<h3 class="m-portlet__head-text">
-											Tambah Surat jalan
-										</h3>
+				<!-- END: Subheader -->
+				<div class="m-content">
+					<div class="row">
+						<div class="col-xl-12">
+							<div class="m-portlet m-portlet--tab">
+								<div class="m-portlet__head">
+									<div class="m-portlet__head-caption">
+										<div class="m-portlet__head-title">
+											<span class="m-portlet__head-icon m--hide">
+												<i class="la la-gear"></i>
+											</span>
+											<h3 class="m-portlet__head-text">
+												Tambah Surat jalan
+											</h3>
+										</div>
 									</div>
 								</div>
-							</div>
-							<!--begin::Form-->
-							<form class="m-form m-form--fit m-form--label-align-right">
-								<div class="m-portlet__body">
-									<div class="form-group m-form__group row">
-										<label  class="col-2 col-form-label">
-											No. SPK
-										</label>
-										<div class="col-10">
-											<input class="form-control m-input" type="text" value="0037/SSM/SPK-PSG/MKS/III/2019" id="no_spk">
+								<!--begin::Form-->
+								<form class="m-form m-form--fit m-form--label-align-right">
+									<div class="m-portlet__body">
+										<div class="form-group m-form__group row">
+											<label  class="col-2 col-form-label">
+												No. SPK
+											</label>
+											<div class="col-10">
+												<input class="form-control m-input" type="text" value="0037/SSM/SPK-PSG/MKS/III/2019" id="no_spk">
+											</div>
 										</div>
-									</div>
-									<div class="form-group m-form__group row">
-										<label class="col-2 col-form-label">
-											Tanggal
-										</label>
-										<div class="col-10">
-											<input class="form-control m-input" type="date" value="" id="tanggal_pembuatan_spk">
+										<div class="form-group m-form__group row">
+											<label class="col-2 col-form-label">
+												Tanggal
+											</label>
+											<div class="col-10">
+												<input class="form-control m-input" type="date" value="" id="tanggal_pembuatan_spk">
+											</div>
 										</div>
-									</div>
-									<div class="form-group m-form__group row">
-										<label  class="col-2 col-form-label">
-											Nama Pelanggan
-										</label>
-										<div class="col-10">
-											<input class="form-control m-input" type="text" value="Ibu Ani" id="nama_pelanggan">
+										<div class="form-group m-form__group row">
+											<label  class="col-2 col-form-label">
+												Nama Pelanggan
+											</label>
+											<div class="col-10">
+												<input class="form-control m-input" type="text" value="Ibu Ani" id="nama_pelanggan">
+											</div>
 										</div>
-									</div>
-									<div class="form-group m-form__group row">
-										<label  class="col-2 col-form-label">
-											Nomer Telpon
-										</label>
-										<div class="col-10">
-											<input class="form-control m-input" type="tel" value="085 145 322 137" id="no_telpon">
+										<div class="form-group m-form__group row">
+											<label  class="col-2 col-form-label">
+												Nomer Telpon
+											</label>
+											<div class="col-10">
+												<input class="form-control m-input" type="tel" value="085 145 322 137" id="no_telpon">
+											</div>
 										</div>
-									</div>
-									<div class="form-group m-form__group row">
-										<label for="example-email-input" class="col-2 col-form-label">
-											Email
-										</label>
-										<div class="col-10">
-											<input class="form-control m-input" type="email" value="nihonggomantappu@example.com" id="email_pelanggan">
+										<div class="form-group m-form__group row">
+											<label for="example-email-input" class="col-2 col-form-label">
+												Email
+											</label>
+											<div class="col-10">
+												<input class="form-control m-input" type="email" value="nihonggomantappu@example.com" id="email_pelanggan">
+											</div>
 										</div>
-									</div>
-									<div class="form-group m-form__group row">
-										<label  class="col-2 col-form-label">
-											Alamat
-										</label>
-										<div class="col-10">
-											<input class="form-control m-input" type="text" value="Jl. Angkasa 5, Panaikang, Makassar" id="alamat_pelanggan">
+										<div class="form-group m-form__group row">
+											<label  class="col-2 col-form-label">
+												Alamat
+											</label>
+											<div class="col-10">
+												<input class="form-control m-input" type="text" value="Jl. Angkasa 5, Panaikang, Makassar" id="alamat_pelanggan">
+											</div>
 										</div>
-									</div>
 									<!-- <div class="form-group m-form__group row">
 										<label  class="col-2 col-form-label">
 											Teknisi

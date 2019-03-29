@@ -16,7 +16,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>
-		Admin Gudang | Batal - Pengeluaran Material
+		Admin Toko | Tambah Inventory
 	</title>
 	<meta name="description" content="Latest updates and statistic charts">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,6 +44,15 @@
 	<!-- end:: Style tambahan -->
 	<!--end::Base Styles -->
 	<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
+	<style>
+		.m-datatable.m-datatable--default > .m-datatable__pager > .m-datatable__pager-info {
+			display: none !important;
+		}
+
+		.modal-dialog {
+			max-width: 600px;
+		}
+	</style>
 </head>
 <!-- end::Head -->
 <!-- end::Body -->
@@ -91,7 +100,7 @@
 						<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
 							<!-- BEGIN: Horizontal Menu -->
 							<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
-								<img style="display: inline; float: left; height: 60px; width: auto" src="../assets/demo/default/media/img/misc/Asset 5@2x.png">
+								<img style="display: inline; float: left; height: 60px; width: auto" src="../assets/demo/default/media/img/misc/admin_toko.png">
 							</div>
 							<!-- END: Horizontal Menu -->								
 							<!-- BEGIN: Topbar -->
@@ -171,7 +180,7 @@
 							</a>
 						</li>
 						<!-- Pengeluaran Material -->
-						<li class="m-menu__item m-menu__item--active" aria-haspopup="true" >
+						<li class="m-menu__item" aria-haspopup="true" >
 							<a  href="pengeluaran_material.html" class="m-menu__link ">
 								<i class="m-menu__link-icon la 	la-stack-overflow"></i>
 								<span class="m-menu__link-title">
@@ -184,7 +193,7 @@
 							</a>
 						</li>
 						<!-- Inventory-->
-						<li class="m-menu__item" aria-haspopup="true" >
+						<li class="m-menu__item m-menu__item--active" aria-haspopup="true" >
 							<a  href="inventory.html" class="m-menu__link ">
 								<i class="m-menu__link-icon fa 	fa-cube"></i>
 								<span class="m-menu__link-title">
@@ -233,7 +242,7 @@
 					<div class="d-flex align-items-center">
 						<div class="mr-auto">
 							<h3 class="m-subheader__title m-subheader__title--separator">
-								Pengeluaran Material Batal
+								Tambah Inventory
 							</h3>
 							<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
 								<li class="m-nav__item m-nav__item--home">
@@ -245,9 +254,9 @@
 									-
 								</li>
 								<li class="m-nav__item">
-									<a href="pengeluaran_material.html" class="m-nav__link">
+									<a href="inventory.html" class="m-nav__link">
 										<span class="m-nav__link-text">
-											Pengeluaran Material
+											Inventory
 										</span>
 									</a>
 								</li>
@@ -255,9 +264,9 @@
 									-
 								</li>
 								<li class="m-nav__item">
-									<a href="batal_pengeluaran_material.html" class="m-nav__link">
+									<a href="tambah_inventory.html" class="m-nav__link">
 										<span class="m-nav__link-text">
-											Batal
+											Tambah
 										</span>
 									</a>
 								</li>
@@ -270,25 +279,50 @@
 					<div class="row">
 						<div class="col-xl-12">
 							<div class="m-portlet m-portlet--tab">
-								<div class="m-portlet__head header">
-									<h3 class="header-pesanan">
-									</h3><br>
-									<h3 name="no_surat_jalan" class="header-pesanan-no"> 
-										<i class="fa fa-check-circle"> </i> 0037/SSM/SPK-PSG/MKS/III/2019
-									</h3><br><br>
-									<div class="info row">
-										<div class="col-sm">
-											<p id="tanggal_surat"><i class="flaticon-calendar-2"> </i>20/11/19</p> 
-											<p id="nama_pelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p>
-											<p id="no_telpon"><i class="fa fa-phone"> </i> 085-145-322-137</p>
+								<div class="m-portlet__head">
+									<div class="m-portlet__head-caption">
+										<div class="m-portlet__head-title">
+											<span class="m-portlet__head-icon m--hide">
+												<i class="la la-gear"></i>
+											</span>
+											<h3 class="m-portlet__head-text">
+												Tambah Item Inventory
+											</h3>
 										</div>
-										<div class="col-sm">
-											<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
-											<p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
-											<p id="keterangan_pesanan"><i class="fa fa-suitcase"> </i> Pemasangan 2 unit Ac Split Daikin 2 PK Malaysia</p>		
-										</div>
-									</div>	
+									</div>
 								</div>
+								<!--begin::Form-->
+								<form class="m-form m-form--fit m-form--label-align-right">
+									<div class="m-portlet__body">
+										<div class="form-group m-form__group row">
+											<label  class="col-2 col-form-label">
+												ID Barang
+											</label>
+											<div class="col-10">
+												<input class="form-control m-input" type="text" value="" id="id_barang">
+											</div>
+										</div>
+										<div class="form-group m-form__group row">
+											<label class="col-2 col-form-label">
+												Nama Barang
+											</label>
+											<div class="col-10">
+												<input class="form-control m-input" type="text" value="" id="nama_barang">
+											</div>
+										</div>
+										<div class="form-group m-form__group row">
+											<label  class="col-2 col-form-label">
+												No Seri
+											</label>
+											<div class="col-10">
+												<input class="form-control m-input" type="text" value="" id="no_seri">
+											</div>
+										</div>
+										<div style="margin-top: 20px" align="center">
+											<button id="btn_tambah_item_inventory" type="button" class="btn btn-success btn_pemasangan">Tambah Item</button>
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -296,6 +330,8 @@
 			</div>
 		</div>
 		<!-- end:: Body -->
+		<!--  Begin::Modals -->
+		<!-- End::Modals -->
 		<!-- begin::Footer -->
 		<footer class="m-grid__item		m-footer ">
 			<div class="m-container m-container--fluid m-container--full-height m-page__container">
@@ -305,6 +341,7 @@
 							Upa'na Studio
 						</span>
 					</div>
+
 				</div>
 			</div>
 		</footer>
@@ -326,114 +363,16 @@
 	<!--end::Page Vendors -->  
 	<!--begin::Page Snippets -->
 	<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		var tbl_material = $('#tbl_material').mDatatable({
-			data: {
-				saveState: {cookie: false},
-					/*type: 'remote',
-			        source: {
-			          read: {
-			            // sample GET method
-			            method: 'GET',
-			            url: 'https://keenthemes.com/metronic/preview/inc/api/datatables/demos/default.php',
-			            map: function(raw) {
-			              // sample data mapping
-			              var dataSet = raw;
-			              if (typeof raw.data !== 'undefined') {
-			                dataSet = raw.data;
-			              }
-			              return dataSet;
-			            },
-			          },
-			        },
-			        pageSize: 10,
-			        serverPaging: true,
-			        serverFiltering: true,
-			        serverSorting: true,*/
-			    },
-				// layout definition
-				layout: {
-					theme: 'default', // datatable theme
-					class: '', // custom wrapper class
-					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
-					// height: 450, // datatable's body's fixed height
-					footer: false // display/hide footer
-				},
-
-				// column sorting
-				sortable: false,
-				search: {
-					input: $('#generalSearch'),
-				},
-				columns: [
-
-				{
-					field: 'No',
-					textAlign: 'center',
-				},
-				{
-					field: 'Nama Material',
-					textAlign: 'center',
-					width:300
-				},
-				{
-					field: 'Teknisi',
-					textAlign: 'center',
-					width: 75
-				},
-				{
-					field: 'Kostumer',
-					textAlign: 'center',
-					width: 75
-				},
-				{
-					field: 'Pengeluaran',
-					textAlign: 'center',
-				},
-				{
-					field: 'Retur',
-					textAlign: 'center',
-				},
-				{
-					field: 'Total',
-					textAlign: 'center',
-				},
-				{
-					field: 'Aksi',
-					textAlign: 'center',
-					width: 200
-				}
-
-				],
-			});
-		</script>
-		<script>
-			$('.btn_hapus').click(function(e) {
-				swal({
-					title: 'Apakah anda yakin menghapus material ini?',
-					type: 'warning',
-					showCancelButton: true,
-					confirmButtonText: 'Ya,Hapus!'
-				}).then(function(result) {
-					if (result.value) {
-						swal(
-							'Berhasil!',
-							'Material telah dihapus',
-							'success'
-							)
-					}
-				});
-			});
-		</script>
-		<script>
+	<!--end::Page Snippets -->
+	<script>
 			//== Class definition
 			var SweetAlert2Demo = function() {
 
 			//== Demos
 			var initDemos = function() {
 
-				$('#btn_simpan').click(function(e) {
-					swal("Data Telah Tersimpan!", "data yang anda inputkan telah tersimpan", "success");
+				$('#btn_tambah_item_inventory').click(function(e) {
+					swal("Berhasil!", "Item telah ditambahkan ke Inventory","success");
 				});
 			};
 
@@ -450,9 +389,6 @@
 				SweetAlert2Demo.init();
 			});
 		</script>
-
-		<!--end::Page Snippets -->
-		<script src="http://localhost:35729/livereload.js"></script>
-		
 	</body>
-<!-- end::Body -->
+	<!-- end::Body -->
+	</html>

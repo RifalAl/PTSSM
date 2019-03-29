@@ -16,7 +16,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>
-		Admin Gudang | Batal - Pengeluaran Material
+		Admin Toko | SPK Pemasangan
 	</title>
 	<meta name="description" content="Latest updates and statistic charts">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -91,7 +91,7 @@
 						<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
 							<!-- BEGIN: Horizontal Menu -->
 							<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
-								<img style="display: inline; float: left; height: 60px; width: auto" src="../assets/demo/default/media/img/misc/Asset 5@2x.png">
+								<img style="display: inline; float: left; height: 60px; width: auto" src="../assets/demo/default/media/img/misc/admin_toko.png">
 							</div>
 							<!-- END: Horizontal Menu -->								
 							<!-- BEGIN: Topbar -->
@@ -144,84 +144,104 @@
 								</span>
 							</a>
 						</li>
-						<!-- Surat jalan-->
+						<!-- List SPK -->
+						<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
+							<a href="#" class="m-menu__link m-menu__toggle">
+								<i class="m-menu__link-icon flaticon-folder-2"></i>
+								<span class="m-menu__link-text">
+									List SPK
+								</span>
+								<i style="font-size: 1.5rem" class="m-menu__ver-arrow fa fa-caret-right"></i>
+							</a>
+							<div class="m-menu__submenu " style="">
+								<span class="m-menu__arrow"></span>
+								<ul class="m-menu__subnav">
+									<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
+										<span class="m-menu__link">
+											<span class="m-menu__link-text">
+												Pesanan
+											</span>
+										</span>
+									</li>
+									<li class="m-menu__item " aria-haspopup="true">
+										<a href="spk_pemasangan.html" class="m-menu__link ">
+											<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+												<span></span>
+											</i>
+											<span class="m-menu__link-text">
+												SPK Pemasangan
+											</span>
+										</a>
+									</li>
+									<li class="m-menu__item " aria-haspopup="true">
+										<a href="spk_servis.html"  class="m-menu__link ">
+											<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+												<span></span>
+											</i>
+											<span class="m-menu__link-text">
+												SPK Servis
+											</span>
+										</a>
+									</li>
+									<li class="m-menu__item " aria-haspopup="true">
+										<a href="spk_free.html"  class="m-menu__link ">
+											<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+												<span></span>
+											</i>
+											<span class="m-menu__link-text">
+												SPK Free
+											</span>
+										</a>
+									</li>
+									<li class="m-menu__item " aria-haspopup="true">
+										<a href="spk_komplain.html"  class="m-menu__link ">
+											<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+												<span></span>
+											</i>
+											<span class="m-menu__link-text">
+												SPK Komplain
+											</span>
+										</a>
+									</li>
+									<li class="m-menu__item " aria-haspopup="true">
+										<a href="spk_survey.html"  class="m-menu__link ">
+											<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+												<span></span>
+											</i>
+											<span class="m-menu__link-text">
+												SPK Survey
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<!-- Penawaran -->
 						<li class="m-menu__item" aria-haspopup="true" >
-							<a  href="surat_jalan.html" class="m-menu__link ">
-								<i class="m-menu__link-icon flaticon-transport"></i>
+							<a  href="penawaran.html" class="m-menu__link ">
+								<i class="m-menu__link-icon fa 	fa-handshake-o"></i>
 								<span class="m-menu__link-title">
 									<span class="m-menu__link-wrap">
 										<span class="m-menu__link-text">
-											Surat jalan
+											Penawaran
 										</span>
 									</span>
 								</span>
 							</a>
 						</li>
-						<!-- Barang Masuk -->
-						<li class="m-menu__item" aria-haspopup="true" >
-							<a  href="barang_masuk.html" class="m-menu__link ">
-								<i class="m-menu__link-icon fa fa-shopping-cart"></i>
+						<!-- Pelanggan -->
+						<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
+							<a  href="pelanggan.html" class="m-menu__link ">
+								<i class="m-menu__link-icon fa 	fa-user-circle-o"></i>
 								<span class="m-menu__link-title">
 									<span class="m-menu__link-wrap">
 										<span class="m-menu__link-text">
-											Barang Masuk
+											Pelanggan
 										</span>
 									</span>
 								</span>
 							</a>
 						</li>
-						<!-- Pengeluaran Material -->
-						<li class="m-menu__item m-menu__item--active" aria-haspopup="true" >
-							<a  href="pengeluaran_material.html" class="m-menu__link ">
-								<i class="m-menu__link-icon la 	la-stack-overflow"></i>
-								<span class="m-menu__link-title">
-									<span class="m-menu__link-wrap">
-										<span class="m-menu__link-text">
-											Pengeluaran Material
-										</span>
-									</span>
-								</span>
-							</a>
-						</li>
-						<!-- Inventory-->
-						<li class="m-menu__item" aria-haspopup="true" >
-							<a  href="inventory.html" class="m-menu__link ">
-								<i class="m-menu__link-icon fa 	fa-cube"></i>
-								<span class="m-menu__link-title">
-									<span class="m-menu__link-wrap">
-										<span class="m-menu__link-text">
-											Inventory
-										</span>
-									</span>
-								</span>
-							</a>
-						</li>
-						<!-- Stock -->
-						<li class="m-menu__item" aria-haspopup="true" >
-							<a  href="stock.html" class="m-menu__link ">
-								<i class="m-menu__link-icon flaticon-list-1"></i>
-								<span class="m-menu__link-title">
-									<span class="m-menu__link-wrap">
-										<span class="m-menu__link-text">
-											Manajemen Stock
-										</span>
-									</span>
-								</span>
-							</a>
-						</li>
-						<!-- Master Stock -->
-						<li class="m-menu__item" aria-haspopup="true" >
-							<a  href="master_stock.html" class="m-menu__link ">
-								<i class="m-menu__link-icon flaticon-open-box"></i>
-								<span class="m-menu__link-title">
-									<span class="m-menu__link-wrap">
-										<span class="m-menu__link-text">
-											Master stock
-										</span>
-									</span>
-								</span>
-							</a>
-						</li>	
 					</ul>
 				</div>
 				<!-- END: Aside Menu -->
@@ -233,7 +253,7 @@
 					<div class="d-flex align-items-center">
 						<div class="mr-auto">
 							<h3 class="m-subheader__title m-subheader__title--separator">
-								Pengeluaran Material Batal
+								Pelanggan
 							</h3>
 							<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
 								<li class="m-nav__item m-nav__item--home">
@@ -245,91 +265,198 @@
 									-
 								</li>
 								<li class="m-nav__item">
-									<a href="pengeluaran_material.html" class="m-nav__link">
+									<a href="#.html" class="m-nav__link">
 										<span class="m-nav__link-text">
-											Pengeluaran Material
-										</span>
-									</a>
-								</li>
-								<li class="m-nav__separator">
-									-
-								</li>
-								<li class="m-nav__item">
-									<a href="batal_pengeluaran_material.html" class="m-nav__link">
-										<span class="m-nav__link-text">
-											Batal
+											Pelanggan
 										</span>
 									</a>
 								</li>
 							</ul>
 						</div>
+						<div>
+							<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
+								<span class="m-subheader__daterange-label">
+									<span class="m-subheader__daterange-title"></span>
+									<span class="m-subheader__daterange-date m--font-brand"></span>
+								</span>
+								<a
+								href="#"
+								class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
+								<i class="la la-angle-down"></i>
+							</a>
+						</span>
 					</div>
 				</div>
-				<!-- END: Subheader -->
-				<div class="m-content">
-					<div class="row">
-						<div class="col-xl-12">
-							<div class="m-portlet m-portlet--tab">
-								<div class="m-portlet__head header">
-									<h3 class="header-pesanan">
-									</h3><br>
-									<h3 name="no_surat_jalan" class="header-pesanan-no"> 
-										<i class="fa fa-check-circle"> </i> 0037/SSM/SPK-PSG/MKS/III/2019
-									</h3><br><br>
-									<div class="info row">
-										<div class="col-sm">
-											<p id="tanggal_surat"><i class="flaticon-calendar-2"> </i>20/11/19</p> 
-											<p id="nama_pelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p>
-											<p id="no_telpon"><i class="fa fa-phone"> </i> 085-145-322-137</p>
+			</div>
+			<!-- END: Subheader -->
+			<div class="m-content">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="m-portlet m-portlet--mobile">
+							<div class="m-portlet__body">
+								<!--begin: Search Form -->
+								<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
+									<div class="row align-items-center">
+										<div class="col-md-12">
+											<div class="form-group m-form__group row align-items-center">
+												<div class="col-md-4">
+													<div class="m-portlet__head-title">
+														<h3 class="m-portlet__head-text">
+															List Pelanggan
+														</h3>
+														<button onclick="window.location.href = 'tambah_pelanggan.html';" id="btn_tambah_pelanggan" type="button" class="btn btn-success">Tambah data Pelanggan</button>
+													</div>
+												</div>
+												<div class="col-md-4 offset-md-4">
+													<div class="m-input-icon m-input-icon--left">
+														<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
+														<span class="m-input-icon__icon m-input-icon__icon--left">
+															<span>
+																<i class="la la-search"></i>
+															</span>
+														</span>
+													</div>
+												</div>
+											</div>
 										</div>
-										<div class="col-sm">
-											<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
-											<p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
-											<p id="keterangan_pesanan"><i class="fa fa-suitcase"> </i> Pemasangan 2 unit Ac Split Daikin 2 PK Malaysia</p>		
-										</div>
-									</div>	
+									</div>
 								</div>
+								<!--end: Search Form -->
+								<!--begin: Datatable -->
+								<!-- <div class="m_datatable" id="local_data"></div> -->
+								<table class="table" id="tbl_list_pelanggan">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Id Pelanggan</th>
+											<th>Nama Pelanggan</th>
+											<th>No Telpon</th>
+											<th>Alamat</th>
+											<th>Aksi</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>00230/PLG/MKS/III</td>
+											<td>Bpk. Rifal</td>
+											<td>085145322137</td>
+											<td>Jl. Poros Malino, Komplek Griya Riski Abadi C6</td>
+											<td>
+												<a href="edit_pelanggan.html" class="btn btn-sm btn-primary"  style="color:white; width:80px;">
+													Rincian
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td >00230/PLG/MKS/III</td>
+											<td>Bpk. Rifal</td>
+											<td>085145322137</td>
+											<td>Jl. Poros Malino, Komplek Griya Riski Abadi C6</td>
+											<td>
+												<a class="btn btn-sm btn-secondary btn_edit"  style="color:black; width:60px;">
+													<i class="fa fa-edit"></i>
+												</a>
+												<a class="btn btn-sm btn-secondary btn_hapus"  style="color:black; width:60px;">
+													<i class="fa fa-trash-o"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td >00230/PLG/MKS/III</td>
+											<td>Bpk. Rifal</td>
+											<td>085145322137</td>
+											<td>Jl. Poros Malino, Komplek Griya Riski Abadi C6</td>
+											<td>
+												<a class="btn btn-sm btn-secondary btn_edit"  style="color:black; width:60px;">
+													<i class="fa fa-edit"></i>
+												</a>
+												<a class="btn btn-sm btn-secondary btn_hapus"  style="color:black; width:60px;">
+													<i class="fa fa-trash-o"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td >00230/PLG/MKS/III</td>
+											<td>Bpk. Rifal</td>
+											<td>085145322137</td>
+											<td>Jl. Poros Malino, Komplek Griya Riski Abadi C6</td>
+											<td>
+												<a class="btn btn-sm btn-secondary btn_edit"  style="color:black; width:60px;">
+													<i class="fa fa-edit"></i>
+												</a>
+												<a class="btn btn-sm btn-secondary btn_hapus"  style="color:black; width:60px;">
+													<i class="fa fa-trash-o"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td >00230/PLG/MKS/III</td>
+											<td>Bpk. Rifal</td>
+											<td>085145322137</td>
+											<td>Jl. Poros Malino, Komplek Griya Riski Abadi C6</td>
+											<td>
+												<a class="btn btn-sm btn-secondary btn_edit"  style="color:black; width:60px;">
+													<i class="fa fa-edit"></i>
+												</a>
+												<a class="btn btn-sm btn-secondary btn_hapus"  style="color:black; width:60px;">
+													<i class="fa fa-trash-o"></i>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!--end: Datatable -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- end:: Body -->
-		<!-- begin::Footer -->
-		<footer class="m-grid__item		m-footer ">
-			<div class="m-container m-container--fluid m-container--full-height m-page__container">
-				<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
-					<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
-						<span class="m-footer__copyright">
-							Upa'na Studio
-						</span>
-					</div>
+	</div>
+	<!-- end:: Body -->
+	<!-- begin::Footer -->
+	<footer class="m-grid__item		m-footer ">
+		<div class="m-container m-container--fluid m-container--full-height m-page__container">
+			<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+				<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+					<span class="m-footer__copyright">
+						Upa'na Studio
+					</span>
 				</div>
-			</div>
-		</footer>
-		<!-- end::Footer -->
-	</div>
-	<!-- end:: Page -->		    
-	<!-- begin::Scroll Top -->
-	<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500"data-scroll-speed="300">
-		<i class="la la-arrow-up"></i>
-	</div>
-	<!-- end::Scroll Top -->		    
 
-	<!--begin::Base Scripts -->
-	<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
-	<!--end::Base Scripts -->   
-	<!--begin::Page Vendors -->
-	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-	<!--end::Page Vendors -->  
-	<!--begin::Page Snippets -->
-	<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		var tbl_material = $('#tbl_material').mDatatable({
-			data: {
-				saveState: {cookie: false},
+			</div>
+		</div>
+	</footer>
+	<!-- end::Footer -->
+</div>
+<!-- end:: Page -->		    
+<!-- begin::Scroll Top -->
+<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500"data-scroll-speed="300">
+	<i class="la la-arrow-up"></i>
+</div>
+<!-- end::Scroll Top -->		    
+
+<!--begin::Base Scripts -->
+<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+<!--end::Base Scripts -->   
+<!--begin::Page Vendors -->
+<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+<!--end::Page Vendors -->  
+<!--begin::Page Snippets -->
+<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
+
+<!--end::Page Snippets -->
+<script src="http://localhost:35729/livereload.js"></script>
+<script type="text/javascript">
+	var tbl_list_pelanggan = $('#tbl_list_pelanggan').mDatatable({
+		data: {
+			saveState: {cookie: false},
 					/*type: 'remote',
 			        source: {
 			          read: {
@@ -370,89 +497,51 @@
 				{
 					field: 'No',
 					textAlign: 'center',
+					width: 50
 				},
 				{
-					field: 'Nama Material',
-					textAlign: 'center',
-					width:300
-				},
-				{
-					field: 'Teknisi',
-					textAlign: 'center',
-					width: 75
-				},
-				{
-					field: 'Kostumer',
-					textAlign: 'center',
-					width: 75
-				},
-				{
-					field: 'Pengeluaran',
+					field: 'Id Pelanggan',
 					textAlign: 'center',
 				},
 				{
-					field: 'Retur',
+					field: 'Nama Pelanggan',
 					textAlign: 'center',
 				},
 				{
-					field: 'Total',
+					field: 'No Telpon',
+					textAlign: 'center',
+				},
+				{
+					field: 'Alamat',
 					textAlign: 'center',
 				},
 				{
 					field: 'Aksi',
 					textAlign: 'center',
-					width: 200
+					width: 180
 				}
 
 				],
 			});
 		</script>
 		<script>
-			$('.btn_hapus').click(function(e) {
-				swal({
-					title: 'Apakah anda yakin menghapus material ini?',
-					type: 'warning',
-					showCancelButton: true,
-					confirmButtonText: 'Ya,Hapus!'
-				}).then(function(result) {
-					if (result.value) {
-						swal(
-							'Berhasil!',
-							'Material telah dihapus',
-							'success'
-							)
-					}
+				$('.btn_hapus').click(function(e) {
+					swal({
+						title: 'Apakah anda yakin menghapus data pelanggan ini?',
+						type: 'warning',
+						showCancelButton: true,
+						confirmButtonText: 'Ya,Hapus!'
+					}).then(function(result) {
+						if (result.value) {
+							swal(
+								'Berhasil!',
+								'Data pelanggan telah dihapus',
+								'success'
+								)
+						}
+					});
 				});
-			});
 		</script>
-		<script>
-			//== Class definition
-			var SweetAlert2Demo = function() {
-
-			//== Demos
-			var initDemos = function() {
-
-				$('#btn_simpan').click(function(e) {
-					swal("Data Telah Tersimpan!", "data yang anda inputkan telah tersimpan", "success");
-				});
-			};
-
-			return {
-					//== Init
-					init: function() {
-						initDemos();
-					},
-				};
-			}();
-
-			//== Class Initialization
-			jQuery(document).ready(function() {
-				SweetAlert2Demo.init();
-			});
-		</script>
-
-		<!--end::Page Snippets -->
-		<script src="http://localhost:35729/livereload.js"></script>
-		
 	</body>
-<!-- end::Body -->
+	<!-- end::Body -->
+	</html>

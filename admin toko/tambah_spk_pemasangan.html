@@ -358,7 +358,17 @@
 											Nama Pelanggan
 										</label>
 										<div class="col-10">
-											<input class="form-control m-input" type="text" value="Ibu Ani" id="nama_pelanggan">
+											<select style="width: 100%" class="form-control m-select2 dropdown_search" name="nama_pelanggan">
+												<option value="1">
+													Ibu Ani
+												</option>
+												<option value="2">
+													Pak Hendy
+												</option>
+												<option value="3">
+													PT. Upana Studio
+												</option>
+											</select>
 										</div>
 									</div>
 									<div class="form-group m-form__group row">
@@ -654,6 +664,34 @@
 							)
 					}
 				});
+			});
+		</script>
+		<script>
+			var Select2 = function() {
+				var demos = function(){
+				 // basic
+				 $('.dropdown_search, .dropdown_search_validate').select2({
+				 	placeholder: "Select a state"
+				 });
+				}
+				var modalDemos = function(){
+					$('#m_select2_modal').on('shown.bs.modal', function () {
+				// basic
+				$('.dropdown_search_modal').select2({
+					placeholder: "Select a state"
+				});
+			});
+				}
+				return {
+					init: function() {
+						demos();
+						modalDemos();
+					}
+				};
+			}();
+			//== Initialization
+			jQuery(document).ready(function() {
+				Select2.init();
 			});
 		</script>
 		<script>

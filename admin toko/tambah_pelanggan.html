@@ -349,7 +349,7 @@
 											ID Pelanggan
 										</label>
 										<div class="col-10">
-											<input class="form-control m-input" type="text" value="00230/PLG/MKS/III" id="id_pelanggan">
+											<input disabled="" class="form-control m-input" type="text" value="032819-001" id="id_pelanggan">
 										</div>
 									</div>
 									<div class="form-group m-form__group row">
@@ -376,12 +376,31 @@
 											<input class="form-control m-input" type="text" value="Jl. Poros Malino, Komplek Griya Riski Abadi C6" id="alamat_pelanggan">
 										</div>
 									</div>
+									<div class="form-group m-form__group row">
+										<label  class="col-2 col-form-label">
+											Tipe Pelanggan
+										</label>
+										<div class="col-10">
+											<div class="m-radio-inline">
+												<label class="m-radio">
+													<input type="radio" name="tipe_pelanggan" value="1">
+													Korporasi
+													<span></span>
+												</label>
+												<label class="m-radio">
+													<input type="radio" name="tipe_pelanggan" value="2">
+													Personal
+													<span></span>
+												</label>
+											</div>
+										</div>
+									</div>
 									<div style="margin-top: 20px" align="center">
 										<button id="btn_tambah_data_pelanggan" type="button" class="btn btn-primary">
 											Tambah Data Pelanggan
 										</button>
 									</div>
-									</button>
+								</button>
 								</div>
 							</form>
 						</div>

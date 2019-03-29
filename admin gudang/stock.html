@@ -171,13 +171,26 @@
 							</a>
 						</li>
 						<!-- Pengeluaran Material -->
-						<li class="m-menu__item " aria-haspopup="true" >
+						<li class="m-menu__item" aria-haspopup="true" >
 							<a  href="pengeluaran_material.html" class="m-menu__link ">
 								<i class="m-menu__link-icon la 	la-stack-overflow"></i>
 								<span class="m-menu__link-title">
 									<span class="m-menu__link-wrap">
 										<span class="m-menu__link-text">
 											Pengeluaran Material
+										</span>
+									</span>
+								</span>
+							</a>
+						</li>
+						<!-- Inventory-->
+						<li class="m-menu__item" aria-haspopup="true" >
+							<a  href="inventory.html" class="m-menu__link ">
+								<i class="m-menu__link-icon fa 	fa-cube"></i>
+								<span class="m-menu__link-title">
+									<span class="m-menu__link-wrap">
+										<span class="m-menu__link-text">
+											Inventory
 										</span>
 									</span>
 								</span>
@@ -190,7 +203,7 @@
 								<span class="m-menu__link-title">
 									<span class="m-menu__link-wrap">
 										<span class="m-menu__link-text">
-											Stock
+											Manajemen Stock
 										</span>
 									</span>
 								</span>
@@ -208,7 +221,7 @@
 									</span>
 								</span>
 							</a>
-						</li>
+						</li>	
 					</ul>
 				</div>
 				<!-- END: Aside Menu -->
@@ -240,231 +253,251 @@
 								</li>
 							</ul>
 						</div>
-						<div>
-							<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
-								<span class="m-subheader__daterange-label">
-									<span class="m-subheader__daterange-title"></span>
-									<span class="m-subheader__daterange-date m--font-brand"></span>
-								</span>
-								<a
-								href="#"
-								class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
-								<i class="la la-angle-down"></i>
-							</a>
-						</span>
 					</div>
 				</div>
-			</div>
-			<!-- END: Subheader -->
-			<div class="m-content">
-				<div class="row">
-					<div class="col-xl-12">
-						<div class="m-portlet">
-							<div class="m-portlet__head">
-								<div class="m-portlet__head-caption">
-									<div class="m-portlet__head-title">
-										<h3 class="m-portlet__head-text">
-											List Stock
-										</h3>
+				<!-- END: Subheader -->
+				<div class="m-content">
+					<div class="row">
+						<div class="col-xl-12">
+							<div class="m-portlet">
+								<div class="m-portlet__head">
+									<div class="m-portlet__head-caption">
+										<div class="m-portlet__head-title">
+											<h3 class="m-portlet__head-text">
+												List Stock
+											</h3>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="m-portlet__body">
-								<ul class="nav nav-pills" role="tablist">
-									<li class="nav-item">
-										<a class="nav-link active" data-toggle="tab" href="#tab_gudang_kantor">
-											Gudang Kantor
-										</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab_gudang_toko">
-											Gudang Toko
-										</a>
-									</li>
-								</ul>
-								
-								<div style="display: inline;" class="col-md-12">
-									<div class="m-input-icon m-input-icon--left">
-										<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
-										<span class="m-input-icon__icon m-input-icon__icon--left">
-											<span>
-												<i class="la la-search"></i>
+								<div class="m-portlet__body">
+									<ul class="nav nav-pills" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active" data-toggle="tab" href="#tab_gudang_kantor">
+												Gudang Kantor
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" data-toggle="tab" href="#tab_gudang_toko">
+												Gudang Toko
+											</a>
+										</li>
+									</ul>
+									
+									<div style="display: inline;" class="col-md-12">
+										<div class="m-input-icon m-input-icon--left">
+											<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
+											<span class="m-input-icon__icon m-input-icon__icon--left">
+												<span>
+													<i class="la la-search"></i>
+												</span>
 											</span>
-										</span>
+										</div>
 									</div>
-								</div>
-								<div class="tab-content">
-									<div class="tab-pane active" id="tab_gudang_kantor" role="tabpanel">
-										<table class="table" id="tbl_list_stock_gudang_kantor">
-											<thead>
-												<tr>
-													<th>No</th>
-													<th>Tanggal</th>
-													<th>Kode</th>
-													<th>No Seri</th>
-													<th>Nama Barang</th>
-													<th>Tipe</th>
-													<th>Merek</th>
-													<th>Jumlah</th>
-													<th>Satuan</th>
-													<th>Status</th>
-													<th>Keterangan</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>1</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>1105791</td>
-													<td>Thermistor RKD25GVM</td>
-													<td>Thermistor</td>
-													<td>Daikin</td>
-													<td>20</td>
-													<td>unit</td>
-													<td>tersedia</td>
-													<td>-</td>
-												</tr>
-												<tr>
-													<td>2</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>1105791</td>
-													<td>Thermistor RKD25GVM</td>
-													<td>Thermistor</td>
-													<td>Daikin</td>
-													<td>20</td>
-													<td>unit</td>
-													<td>tersedia</td>
-													<td>-</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>1105791</td>
-													<td>Thermistor RKD25GVM</td>
-													<td>Thermistor</td>
-													<td>Daikin</td>
-													<td>20</td>
-													<td>unit</td>
-													<td>Hampir Habis</td>
-													<td>-</td>
-												</tr>
-												<tr>
-													<td>4</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>1105791</td>
-													<td>Thermistor RKD25GVM</td>
-													<td>Thermistor</td>
-													<td>Daikin</td>
-													<td>20</td>
-													<td>unit</td>
-													<td>tersedia</td>
-													<td>-</td>
-												</tr>
-												<tr>
-													<td>5</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>1105791</td>
-													<td>Thermistor RKD25GVM</td>
-													<td>Thermistor</td>
-													<td>Daikin</td>
-													<td>20</td>
-													<td>unit</td>
-													<td>Hampir habis</td>
-													<td>-</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<div class="tab-pane" id="tab_gudang_toko" role="tabpanel">
-										<table class="table" id="tbl_list_stock_gudang_toko">
-											<thead>
-												<tr>
-													<th>No</th>
-													<th>Tanggal</th>
-													<th>Kode</th>
-													<th>No Seri</th>
-													<th>Nama Barang</th>
-													<th>Tipe</th>
-													<th>Merek</th>
-													<th>Jumlah</th>
-													<th>Satuan</th>
-													<th>Status</th>
-													<th>Keterangan</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>1</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>1105791</td>
-													<td>Thermistor RKD25GVM</td>
-													<td>Thermistor</td>
-													<td>Daikin</td>
-													<td>20</td>
-													<td>unit</td>
-													<td>tersedia</td>
-													<td>-</td>
-												</tr>
-												<tr>
-													<td>2</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>1105791</td>
-													<td>Thermistor RKD25GVM</td>
-													<td>Thermistor</td>
-													<td>Daikin</td>
-													<td>20</td>
-													<td>unit</td>
-													<td>tersedia</td>
-													<td>-</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>1105791</td>
-													<td>Thermistor RKD25GVM</td>
-													<td>Thermistor</td>
-													<td>Daikin</td>
-													<td>20</td>
-													<td>unit</td>
-													<td>Hampir Habis</td>
-													<td>-</td>
-												</tr>
-												<tr>
-													<td>4</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>1105791</td>
-													<td>Thermistor RKD25GVM</td>
-													<td>Thermistor</td>
-													<td>Daikin</td>
-													<td>20</td>
-													<td>unit</td>
-													<td>tersedia</td>
-													<td>-</td>
-												</tr>
-												<tr>
-													<td>5</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>1105791</td>
-													<td>Thermistor RKD25GVM</td>
-													<td>Thermistor</td>
-													<td>Daikin</td>
-													<td>20</td>
-													<td>unit</td>
-													<td>Hampir habis</td>
-													<td>-</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="tab-content">
+										<div class="tab-pane active" id="tab_gudang_kantor" role="tabpanel">
+											<table class="table" id="tbl_list_stock_gudang_kantor">
+												<thead>
+													<tr>
+														<th>No</th>
+														<th>Tanggal</th>
+														<th>Kode</th>
+														<th>No Seri</th>
+														<th>Nama Barang</th>
+														<th>Tipe</th>
+														<th>Merek</th>
+														<th>Jumlah</th>
+														<th>Satuan</th>
+														<th>Status</th>
+														<th>Keterangan</th>
+														<th>Aksi</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>20/19/2018</td>
+														<td>#14253617</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>Thermistor</td>
+														<td>Daikin</td>
+														<td>20</td>
+														<td>unit</td>
+														<td>tersedia</td>
+														<td>-</td>
+														<td>
+															<a href="rincian_stock_kantor.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>20/19/2018</td>
+														<td>#14253617</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>Thermistor</td>
+														<td>Daikin</td>
+														<td>20</td>
+														<td>unit</td>
+														<td>tersedia</td>
+														<td>-</td>
+														<td>
+															<a href="rincian_stock_kantor.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														</td>
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>20/19/2018</td>
+														<td>#14253617</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>Thermistor</td>
+														<td>Daikin</td>
+														<td>20</td>
+														<td>unit</td>
+														<td>Hampir Habis</td>
+														<td>-</td>
+														<td>
+															<a href="rincian_stock_kantor.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														</td>
+													</tr>
+													<tr>
+														<td>4</td>
+														<td>20/19/2018</td>
+														<td>#14253617</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>Thermistor</td>
+														<td>Daikin</td>
+														<td>20</td>
+														<td>unit</td>
+														<td>tersedia</td>
+														<td>-</td>
+														<td>
+															<a href="rincian_stock_kantor.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														</td>
+													</tr>
+													<tr>
+														<td>5</td>
+														<td>20/19/2018</td>
+														<td>#14253617</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>Thermistor</td>
+														<td>Daikin</td>
+														<td>20</td>
+														<td>unit</td>
+														<td>Hampir habis</td>
+														<td>-</td>
+														<td>
+															<a href="rincian_stock_kantor.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="tab-pane" id="tab_gudang_toko" role="tabpanel">
+											<table class="table" id="tbl_list_stock_gudang_toko">
+												<thead>
+													<tr>
+														<th>No</th>
+														<th>Tanggal</th>
+														<th>Kode</th>
+														<th>No Seri</th>
+														<th>Nama Barang</th>
+														<th>Tipe</th>
+														<th>Merek</th>
+														<th>Jumlah</th>
+														<th>Satuan</th>
+														<th>Status</th>
+														<th>Keterangan</th>
+														<th>Aksi</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>20/19/2018</td>
+														<td>#14253617</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>Thermistor</td>
+														<td>Daikin</td>
+														<td>20</td>
+														<td>unit</td>
+														<td>tersedia</td>
+														<td>-</td>
+														<td>
+															<a href="rincian_stock_toko.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>20/19/2018</td>
+														<td>#14253617</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>Thermistor</td>
+														<td>Daikin</td>
+														<td>20</td>
+														<td>unit</td>
+														<td>tersedia</td>
+														<td>-</td>
+														<td>
+															<a href="rincian_stock_kantor.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														</td>
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>20/19/2018</td>
+														<td>#14253617</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>Thermistor</td>
+														<td>Daikin</td>
+														<td>20</td>
+														<td>unit</td>
+														<td>Hampir Habis</td>
+														<td>-</td>
+														<td>
+															<a href="rincian_stock_kantor.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														</td>
+													</tr>
+													<tr>
+														<td>4</td>
+														<td>20/19/2018</td>
+														<td>#14253617</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>Thermistor</td>
+														<td>Daikin</td>
+														<td>20</td>
+														<td>unit</td>
+														<td>tersedia</td>
+														<td>-</td>
+														<td>
+															<a href="rincian_stock_kantor.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														</td>
+													</tr>
+													<tr>
+														<td>5</td>
+														<td>20/19/2018</td>
+														<td>#14253617</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>Thermistor</td>
+														<td>Daikin</td>
+														<td>20</td>
+														<td>unit</td>
+														<td>Hampir habis</td>
+														<td>-</td>
+														<td>
+															<a href="rincian_stock_kantor.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -473,42 +506,41 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- end:: Body -->
-	<!-- begin::Footer -->
-	<footer class="m-grid__item		m-footer ">
-		<div class="m-container m-container--fluid m-container--full-height m-page__container">
-			<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
-				<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
-					<span class="m-footer__copyright">
-						Upa'na Studio
-					</span>
+		<!-- end:: Body -->
+		<!-- begin::Footer -->
+		<footer class="m-grid__item		m-footer ">
+			<div class="m-container m-container--fluid m-container--full-height m-page__container">
+				<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+					<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+						<span class="m-footer__copyright">
+							Upa'na Studio
+						</span>
+					</div>
+
 				</div>
-
 			</div>
-		</div>
-	</footer>
-	<!-- end::Footer -->
-</div>
-<!-- end:: Page -->		    
-<!-- begin::Scroll Top -->
-<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500"data-scroll-speed="300">
-	<i class="la la-arrow-up"></i>
-</div>
-<!-- end::Scroll Top -->		    
+		</footer>
+		<!-- end::Footer -->
+	</div>
+	<!-- end:: Page -->		    
+	<!-- begin::Scroll Top -->
+	<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500"data-scroll-speed="300">
+		<i class="la la-arrow-up"></i>
+	</div>
+	<!-- end::Scroll Top -->		    
 
-<!--begin::Base Scripts -->
-<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
-<!--end::Base Scripts -->   
-<!--begin::Page Vendors -->
-<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-<!--end::Page Vendors -->  
-<!--begin::Page Snippets -->
-<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
-<script type="text/javascript">
-	var tbl_list_stock_gudang_kantor = $('#tbl_list_stock_gudang_kantor').mDatatable({
-		data: {
+	<!--begin::Base Scripts -->
+	<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+	<!--end::Base Scripts -->   
+	<!--begin::Page Vendors -->
+	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+	<!--end::Page Vendors -->  
+	<!--begin::Page Snippets -->
+	<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var tbl_list_stock_gudang_kantor = $('#tbl_list_stock_gudang_kantor').mDatatable({
+			data: {
 				saveState: {cookie: false},
 					/*type: 'remote',
 			        source: {
@@ -550,21 +582,24 @@
 				{
 					field: 'No',
 					textAlign: 'center',
-					width: 50
+					width: 30
 				},
 				{
 					field: 'Tanggal',
 					textAlign: 'center',
 					type:'date',
 					format: 'DD/MM/YYYY',
+					width: 70
 				},
 				{
 					field: 'Kode',
 					textAlign: 'center',
+					width: 70
 				},
 				{
 					field: 'No Seri',
 					textAlign: 'center',
+					width: 70
 				},
 				{
 					field: 'Nama Barang',
@@ -573,18 +608,22 @@
 				{
 					field: 'Tipe',
 					textAlign: 'center',
+					width: 90
 				},
 				{
 					field: 'Merek',
 					textAlign: 'center',
+					width: 80
 				},
 				{
 					field: 'Jumlah',
 					textAlign: 'center',
+					width: 60
 				},
 				{
 					field: 'Satuan',
 					textAlign: 'center',
+					width: 60
 				},
 				{
 					field: 'Status',
@@ -593,15 +632,19 @@
 				{
 					field: 'Keterangan',
 					textAlign: 'center',
+				},
+				{
+					field: 'Aksi',
+					textAlign: 'center',
 				}
 
 				],
 			});
-</script>
-<script type="text/javascript">
-	var tbl_list_stock_gudang_toko = $('#tbl_list_stock_gudang_toko').mDatatable({
-		data: {
-				saveState: {cookie: false},
+		</script>
+		<script type="text/javascript">
+			var tbl_list_stock_gudang_toko = $('#tbl_list_stock_gudang_toko').mDatatable({
+				data: {
+					saveState: {cookie: false},
 					/*type: 'remote',
 			        source: {
 			          read: {
@@ -642,21 +685,24 @@
 				{
 					field: 'No',
 					textAlign: 'center',
-					width: 50
+					width: 30
 				},
 				{
 					field: 'Tanggal',
 					textAlign: 'center',
 					type:'date',
 					format: 'DD/MM/YYYY',
+					width: 70
 				},
 				{
 					field: 'Kode',
 					textAlign: 'center',
+					width: 70
 				},
 				{
 					field: 'No Seri',
 					textAlign: 'center',
+					width: 70
 				},
 				{
 					field: 'Nama Barang',
@@ -665,18 +711,22 @@
 				{
 					field: 'Tipe',
 					textAlign: 'center',
+					width: 90
 				},
 				{
 					field: 'Merek',
 					textAlign: 'center',
+					width: 80
 				},
 				{
 					field: 'Jumlah',
 					textAlign: 'center',
+					width: 60
 				},
 				{
 					field: 'Satuan',
 					textAlign: 'center',
+					width: 60
 				},
 				{
 					field: 'Status',
@@ -685,11 +735,15 @@
 				{
 					field: 'Keterangan',
 					textAlign: 'center',
+				},
+				{
+					field: 'Aksi',
+					textAlign: 'center',
 				}
 
 				],
 			});
-</script>
+		</script>
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
 	</body>

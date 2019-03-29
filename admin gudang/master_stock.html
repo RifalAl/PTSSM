@@ -181,7 +181,7 @@
 							</a>
 						</li>
 						<!-- Pengeluaran Material -->
-						<li class="m-menu__item " aria-haspopup="true" >
+						<li class="m-menu__item" aria-haspopup="true" >
 							<a  href="pengeluaran_material.html" class="m-menu__link ">
 								<i class="m-menu__link-icon la 	la-stack-overflow"></i>
 								<span class="m-menu__link-title">
@@ -193,14 +193,27 @@
 								</span>
 							</a>
 						</li>
+						<!-- Inventory-->
+						<li class="m-menu__item" aria-haspopup="true" >
+							<a  href="inventory.html" class="m-menu__link ">
+								<i class="m-menu__link-icon fa 	fa-cube"></i>
+								<span class="m-menu__link-title">
+									<span class="m-menu__link-wrap">
+										<span class="m-menu__link-text">
+											Inventory
+										</span>
+									</span>
+								</span>
+							</a>
+						</li>
 						<!-- Stock -->
-						<li class="m-menu__item " aria-haspopup="true" >
+						<li class="m-menu__item" aria-haspopup="true" >
 							<a  href="stock.html" class="m-menu__link ">
 								<i class="m-menu__link-icon flaticon-list-1"></i>
 								<span class="m-menu__link-title">
 									<span class="m-menu__link-wrap">
 										<span class="m-menu__link-text">
-											Stock
+											Manajemen Stock
 										</span>
 									</span>
 								</span>
@@ -218,7 +231,7 @@
 									</span>
 								</span>
 							</a>
-						</li>
+						</li>	
 					</ul>
 				</div>
 				<!-- END: Aside Menu -->
@@ -250,42 +263,29 @@
 								</li>
 							</ul>
 						</div>
-						<div>
-							<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
-								<span class="m-subheader__daterange-label">
-									<span class="m-subheader__daterange-title"></span>
-									<span class="m-subheader__daterange-date m--font-brand"></span>
-								</span>
-								<a
-								href="#"
-								class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
-								<i class="la la-angle-down"></i>
-							</a>
-						</span>
 					</div>
 				</div>
-			</div>
-			<!-- END: Subheader -->
-			<div class="m-content">
-				<div class="row">
-					<div class="col-xl-12">
-						<div class="m-portlet">
-							<div class="m-portlet__head">
-								<div class="m-portlet__head-caption">
-									<div class="m-portlet__head-title">
-										<span class="m-portlet__head-icon m--hide">
-											<i class="la la-gear"></i>
-										</span>
-										<h3 class="m-portlet__head-text">
-											Input Master Stock
-										</h3>
+				<!-- END: Subheader -->
+				<div class="m-content">
+					<div class="row">
+						<div class="col-xl-12">
+							<div class="m-portlet">
+								<div class="m-portlet__head">
+									<div class="m-portlet__head-caption">
+										<div class="m-portlet__head-title">
+											<span class="m-portlet__head-icon m--hide">
+												<i class="la la-gear"></i>
+											</span>
+											<h3 class="m-portlet__head-text">
+												Input Master Stock
+											</h3>
+										</div>
 									</div>
 								</div>
-							</div>
-							<!--begin::Form-->
-							<form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed">
-								<div class="m-portlet__body">
-									<div class="form-group m-form__group row">
+								<!--begin::Form-->
+								<form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed">
+									<div class="m-portlet__body">
+									<!-- <div class="form-group m-form__group row">
 										<div class="col-lg-6">
 											<label>
 												PPN:
@@ -306,7 +306,7 @@
 												Klik "ya" jika item memiliki PPN
 											</span>
 										</div>
-									</div>
+									</div> -->
 									<div class="form-group m-form__group row">
 										<div class="col-lg-6">
 											<label>
@@ -369,7 +369,7 @@
 												Keterangan:
 											</label><!-- 
 											<input style="height: 100px;" type="text" name="keterangan_barang" class="form-control m-input" placeholder=""> -->
-											<textarea style="resize: none; height: 90px" class="form-control m-input m-input--solid" id="exampleTextarea" rows="3"></textarea>
+											<textarea style="resize: none; height: 90px" class="form-control m-input m-input--solid" id="keterangan_barang" rows="3"></textarea>
 										</div>
 										<div class="col-lg-6">
 											<br><br>
@@ -546,10 +546,10 @@
 			Select2.init();
 		});
 	</script>
-			<script type="text/javascript">
-				var tbl_list_master_stock = $('#tbl_list_master_stock').mDatatable({
-					data: {
-						saveState: {cookie: false},
+	<script type="text/javascript">
+		var tbl_list_master_stock = $('#tbl_list_master_stock').mDatatable({
+			data: {
+				saveState: {cookie: false},
 					/*type: 'remote',
 			        source: {
 			          read: {
@@ -577,7 +577,7 @@
 					class: '', // custom wrapper class
 					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
 					// height: 450, // datatable's body's fixed height
-					footer: false // display/hide footer
+					footer: false, // display/hide footer
 				},
 
 				// column sorting
@@ -597,38 +597,37 @@
 					textAlign: 'center',
 					type:'date',
 					format: 'DD/MM/YYYY',
+					width: 50
 				},
 				{
 					field: 'Kode',
 					textAlign: 'center',
-				},
-				{
-					field: 'No Seri',
-					textAlign: 'center',
+					width: 70	
 				},
 				{
 					field: 'Nama Barang',
 					textAlign: 'center',
+					width: 180
 				},
 				{
 					field: 'Tipe',
 					textAlign: 'center',
+					width: 80
 				},
 				{
 					field: 'Merek',
 					textAlign: 'center',
+					width: 70
 				},
 				{
 					field: 'Jumlah',
 					textAlign: 'center',
+					width: 60
 				},
 				{
 					field: 'Satuan',
 					textAlign: 'center',
-				},
-				{
-					field: 'Status',
-					textAlign: 'center',
+					width: 60
 				},
 				{
 					field: 'Keterangan',
@@ -641,23 +640,23 @@
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
 		<script>
-				$('#btn_tambah').click(function(e) {
-					swal({
-						title: 'Apakah anda yakin menambahkan barang ini?',
-						type: 'warning',
-						showCancelButton: true,
-						confirmButtonText: 'Ya,Tambahkan!'
-					}).then(function(result) {
-						if (result.value) {
-							swal(
-								'Berhasil!',
-								'Barang telah ditambahkan',
-								'success'
-								)
-						}
-					});
+			$('#btn_tambah').click(function(e) {
+				swal({
+					title: 'Apakah anda yakin menambahkan barang ini?',
+					type: 'warning',
+					showCancelButton: true,
+					confirmButtonText: 'Ya,Tambahkan!'
+				}).then(function(result) {
+					if (result.value) {
+						swal(
+							'Berhasil!',
+							'Barang telah ditambahkan',
+							'success'
+							)
+					}
 				});
-			</script>
+			});
+		</script>
 	</body>
 	<!-- end::Body -->
 	</html>

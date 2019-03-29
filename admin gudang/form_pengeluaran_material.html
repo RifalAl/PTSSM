@@ -183,6 +183,19 @@
 								</span>
 							</a>
 						</li>
+						<!-- Inventory-->
+						<li class="m-menu__item" aria-haspopup="true" >
+							<a  href="inventory.html" class="m-menu__link ">
+								<i class="m-menu__link-icon fa 	fa-cube"></i>
+								<span class="m-menu__link-title">
+									<span class="m-menu__link-wrap">
+										<span class="m-menu__link-text">
+											Inventory
+										</span>
+									</span>
+								</span>
+							</a>
+						</li>
 						<!-- Stock -->
 						<li class="m-menu__item" aria-haspopup="true" >
 							<a  href="stock.html" class="m-menu__link ">
@@ -190,7 +203,7 @@
 								<span class="m-menu__link-title">
 									<span class="m-menu__link-wrap">
 										<span class="m-menu__link-text">
-											Stock
+											Manajemen Stock
 										</span>
 									</span>
 								</span>
@@ -208,7 +221,7 @@
 									</span>
 								</span>
 							</a>
-						</li>
+						</li>	
 					</ul>
 				</div>
 				<!-- END: Aside Menu -->
@@ -250,31 +263,18 @@
 								</li>
 							</ul>
 						</div>
-						<div>
-							<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
-								<span class="m-subheader__daterange-label">
-									<span class="m-subheader__daterange-title"></span>
-									<span class="m-subheader__daterange-date m--font-brand"></span>
-								</span>
-								<a
-								href="#"
-								class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
-								<i class="la la-angle-down"></i>
-							</a>
-						</span>
 					</div>
 				</div>
-			</div>
-			<!-- END: Subheader -->
-			<div class="m-content">
-				<div class="row">
-					<div class="col-xl-12">
-						<div class="m-portlet m-portlet--tab">
-							<div class="m-portlet__head header">
-								<h3 class="header-pesanan">
-								</h3><br>
-								<h3 name="no_surat_jalan" class="header-pesanan-no"> 
-									<i class="fa fa-check-circle"> </i> 0037/SSM/SPK-PSG/MKS/III/2019
+				<!-- END: Subheader -->
+				<div class="m-content">
+					<div class="row">
+						<div class="col-xl-12">
+							<div class="m-portlet m-portlet--tab">
+								<div class="m-portlet__head header">
+									<h3 class="header-pesanan">
+									</h3><br>
+									<h3 name="no_surat_jalan" class="header-pesanan-no"> 
+										<i class="fa fa-check-circle"> </i> 0037/SSM/SPK-PSG/MKS/III/2019
 								</h3><br><br><!-- 
 								<button onclick="window.print();return false;">
 									Print
@@ -416,7 +416,7 @@
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">
 						Tutup
 					</button>
-					<button id="btn_tambah_material" type="button" class="btn btn-primary">
+					<button id="btn_tambah_material" type="button" data-dismiss="modal" class="btn btn-primary">
 						Tambahkan
 					</button>
 				</div>
@@ -610,7 +610,7 @@
 				jQuery(document).ready(function() {
 					Select2.init();
 				});
-		</script> 
+			</script> 
 
 			<!--end::Page Snippets -->
 			<script src="http://localhost:35729/livereload.js"></script>
