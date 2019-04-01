@@ -176,3 +176,8 @@ font-weight: 500;
 .m-input{
     font-size: 1.2rem !important;
 }
+
+.gambar_inventory {
+    height: auto !important;
+    width: inherit !important;
+}
