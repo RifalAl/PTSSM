@@ -15,7 +15,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Admin Toko | Harga Item
+			Admin Finance | Harga Item
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -95,7 +95,7 @@
 							<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
 								<!-- BEGIN: Horizontal Menu -->
 								<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
-									<img style="display: inline; float: left; height: 60px; width: auto" src="../assets/demo/default/media/img/misc/admin_toko.png">
+									<img style="display: inline; float: left; height: 60px; width: auto" src="../assets/demo/default/media/img/misc/admin_finance.png">
 								</div>
 								<!-- END: Horizontal Menu -->								
 								<!-- BEGIN: Topbar -->
@@ -136,7 +136,7 @@
 						<!-- ASIDE MENU DISINI -->
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 							<!-- DASHBOARD -->
-							<li class="m-menu__item  " aria-haspopup="true" >
+							<li class="m-menu__item " aria-haspopup="true" >
 								<a  href="index.html" class="m-menu__link ">
 									<i class="m-menu__link-icon flaticon-line-graph"></i>
 									<span class="m-menu__link-title">
@@ -148,25 +148,12 @@
 									</span>
 								</a>
 							</li>
-							<!-- Manajemen Pelanggan -->
-							<li class="m-menu__item  " aria-haspopup="true" >
-								<a  href="manajemen_pelanggan.html" class="m-menu__link ">
-									<i class="m-menu__link-icon fa 	fa-user-circle-o"></i>
-									<span class="m-menu__link-title">
-										<span class="m-menu__link-wrap">
-											<span class="m-menu__link-text">
-												Manajemen	Pelanggan
-											</span>
-										</span>
-									</span>
-								</a>
-							</li>
-							<!-- Manajemen Pesanan-->
+							<!--Manajemen Invoice Keluar-->
 							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
 								<a href="#" class="m-menu__link m-menu__toggle">
 									<i class="m-menu__link-icon flaticon-folder-2"></i>
 									<span class="m-menu__link-text">
-										Manajemen Pesanan
+										Manajemen Invoice Keluar
 									</span>
 									<i style="font-size: 1.5rem" class="m-menu__ver-arrow fa fa-caret-right"></i>
 								</a>
@@ -176,80 +163,37 @@
 										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
 											<span class="m-menu__link">
 												<span class="m-menu__link-text">
-													Pesanan
+													Manajemen Invoice Keluar
 												</span>
 											</span>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="spk_pemasangan.html" class="m-menu__link ">
+											<a href="invoice_barang.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
 												<span class="m-menu__link-text">
-													SPK Pemasangan
+													Invoice Barang
 												</span>
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="spk_servis.html"  class="m-menu__link ">
+											<a href="invoice_material.html"  class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
 												<span class="m-menu__link-text">
-													SPK Servis
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true">
-											<a href="spk_free.html"  class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													SPK Free
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true">
-											<a href="spk_komplain.html"  class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													SPK Komplain
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true">
-											<a href="spk_survey.html"  class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													SPK Survey
+													Invoice Material
 												</span>
 											</a>
 										</li>
 									</ul>
 								</div>
 							</li>
-							<!-- Manajemen Penawaran -->
-							<li class="m-menu__item" aria-haspopup="true" >
-								<a  href="manajemen_penawaran.html" class="m-menu__link ">
-									<i class="m-menu__link-icon fa 	fa-handshake-o"></i>
-									<span class="m-menu__link-title">
-										<span class="m-menu__link-wrap">
-											<span class="m-menu__link-text">
-												Manajemen Penawaran
-											</span>
-										</span>
-									</span>
-								</a>
-							</li>
 							<!-- Master Stock -->
-							<li class="m-menu__item" aria-haspopup="true" >
+							<li class="m-menu__item  " aria-haspopup="true" >
 								<a  href="master_stock.html" class="m-menu__link ">
-									<i class="m-menu__link-icon flaticon-list-1"></i>
+									<i class="m-menu__link-icon  flaticon-open-box"></i>
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
@@ -259,27 +203,15 @@
 									</span>
 								</a>
 							</li>
-							<!-- Harga Item dan Jasa -->
-							<li class="m-menu__item m-menu__item--active" aria-haspopup="true" >
+							
+							<!-- Manajemen Harga -->
+							<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
 								<a  href="manajemen_harga.html" class="m-menu__link ">
 									<i class="m-menu__link-icon la la-list"></i>
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
 												Manajemen Harga
-											</span>
-										</span>
-									</span>
-								</a>
-							</li>
-							<!-- Manajemen Pembayaran -->
-							<li class="m-menu__item" aria-haspopup="true" >
-								<a  href="manajemen_pembayaran.html" class="m-menu__link ">
-									<i class="m-menu__link-icon flaticon-file-1"></i>
-									<span class="m-menu__link-title">
-										<span class="m-menu__link-wrap">
-											<span class="m-menu__link-text">
-												manajemen pembayaran
 											</span>
 										</span>
 									</span>
@@ -310,7 +242,7 @@
 									<li class="m-nav__item">
 										<a href="manajemen_harga.html" class="m-nav__link">
 											<span class="m-nav__link-text">
-												Harga item
+												Manajemen harga
 											</span>
 										</a>
 									</li>
@@ -378,7 +310,7 @@
 																<th>Harga Toko</th>
 																<th>Modal</th>
 																<th>Keterangan</th>
-																<!-- <th>Aksi</th> -->
+																<th>Aksi</th>
 															</tr>
 														</thead>
 														<tbody>
@@ -393,9 +325,9 @@
 																<td>Rp3,100,00</td>
 																<td>Rp2,900,00</td>
 																<td>-</td>
-																<!-- <td>
+																<td>
 																	<a class="btn btn-sm btn-primary" style="color:white; width:80px;" data-toggle="modal" data-target="#m_edit_data_harga">Edit</a>
-																</td> -->
+																</td>
 															</tr>
 															<tr>
 																<td>2</td>
@@ -408,9 +340,9 @@
 																<td>Rp3,100,00</td>
 																<td>Rp2,900,00</td>
 																<td>-</td>
-																<!-- <td>
+																<td>
 																	<a class="btn btn-sm btn-primary" style="color:white; width:80px;" data-toggle="modal" data-target="#m_edit_data_harga">Edit</a>
-																</td> -->
+																</td>
 															</tr>
 															<tr>
 																<td>3</td>
@@ -423,9 +355,9 @@
 																<td>Rp3,100,00</td>
 																<td>Rp2,900,00</td>
 																<td>-</td>
-																<!-- <td>
+																<td>
 																	<a class="btn btn-sm btn-primary" style="color:white; width:80px;" data-toggle="modal" data-target="#m_edit_data_harga">Edit</a>
-																</td> -->
+																</td>
 															</tr>
 															<tr>
 																<td>4</td>
@@ -438,9 +370,9 @@
 																<td>Rp3,100,00</td>
 																<td>Rp2,900,00</td>
 																<td>-</td>
-																<!-- <td>
+																<td>
 																	<a class="btn btn-sm btn-primary" style="color:white; width:80px;" data-toggle="modal" data-target="#m_edit_data_harga">Edit</a>
-																</td> -->
+																</td>
 															</tr>
 															<tr>
 																<td>5</td>
@@ -453,9 +385,9 @@
 																<td>Rp3,100,00</td>
 																<td>Rp2,900,00</td>
 																<td>-</td>
-																<!-- <td>
+																<td>
 																	<a class="btn btn-sm btn-primary" style="color:white; width:80px;" data-toggle="modal" data-target="#m_edit_data_harga">Edit</a>
-																</td> -->
+																</td>
 															</tr>
 														</tbody>
 													</table>

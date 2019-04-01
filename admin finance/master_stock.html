@@ -15,7 +15,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Admin Toko | SPK Servis
+			Admin Finance | Master Stock
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -90,7 +90,7 @@
 							<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
 								<!-- BEGIN: Horizontal Menu -->
 								<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
-									<img style="display: inline; float: left; height: 60px; width: auto" src="../assets/demo/default/media/img/misc/admin_toko.png">
+									<img style="display: inline; float: left; height: 60px; width: auto" src="../assets/demo/default/media/img/misc/admin_finance.png">
 								</div>
 								<!-- END: Horizontal Menu -->								
 								<!-- BEGIN: Topbar -->
@@ -131,7 +131,7 @@
 						<!-- ASIDE MENU DISINI -->
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 							<!-- DASHBOARD -->
-							<li class="m-menu__item " aria-haspopup="true" >
+							<li class="m-menu__item  " aria-haspopup="true" >
 								<a  href="index.html" class="m-menu__link ">
 									<i class="m-menu__link-icon flaticon-line-graph"></i>
 									<span class="m-menu__link-title">
@@ -143,25 +143,12 @@
 									</span>
 								</a>
 							</li>
-							<!-- Manajemen Pelanggan -->
-							<li class="m-menu__item  " aria-haspopup="true" >
-								<a  href="manajemen_pelanggan.html" class="m-menu__link ">
-									<i class="m-menu__link-icon fa 	fa-user-circle-o"></i>
-									<span class="m-menu__link-title">
-										<span class="m-menu__link-wrap">
-											<span class="m-menu__link-text">
-												Manajemen	Pelanggan
-											</span>
-										</span>
-									</span>
-								</a>
-							</li>
-							<!-- Manajemen Pesanan -->
-							<li class="m-menu__item  m-menu__item--submenu m-menu__item--open m-menu__item--expanded" aria-haspopup="true" data-menu-submenu-toggle="hover">
+							<!--Manajemen Invoice Keluar-->
+							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
 								<a href="#" class="m-menu__link m-menu__toggle">
 									<i class="m-menu__link-icon flaticon-folder-2"></i>
 									<span class="m-menu__link-text">
-										Manajemen Pesanan
+										Manajemen Invoice Keluar
 									</span>
 									<i style="font-size: 1.5rem" class="m-menu__ver-arrow fa fa-caret-right"></i>
 								</a>
@@ -171,80 +158,37 @@
 										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
 											<span class="m-menu__link">
 												<span class="m-menu__link-text">
-													Pesanan
+													Manajemen Invoice Keluar
 												</span>
 											</span>
 										</li>
-										<li class="m-menu__item  " aria-haspopup="true">
-											<a href="spk_pemasangan.html" class="m-menu__link ">
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="invoice_barang.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
 												<span class="m-menu__link-text">
-													SPK Pemasangan
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item m-menu__item--active" aria-haspopup="true">
-											<a href="spk_servis.html"  class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													SPK Servis
+													Invoice Barang
 												</span>
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true">
-											<a href="spk_free.html"  class="m-menu__link ">
+											<a href="invoice_material.html"  class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
 												<span class="m-menu__link-text">
-													SPK Free
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true">
-											<a href="spk_komplain.html"  class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													SPK Komplain
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true">
-											<a href="spk_survey.html"  class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													SPK Survey
+													Invoice Material
 												</span>
 											</a>
 										</li>
 									</ul>
 								</div>
 							</li>
-							<!-- Manajemen Penawaran -->
-							<li class="m-menu__item" aria-haspopup="true" >
-								<a  href="manajemen_penawaran.html" class="m-menu__link ">
-									<i class="m-menu__link-icon fa 	fa-handshake-o"></i>
-									<span class="m-menu__link-title">
-										<span class="m-menu__link-wrap">
-											<span class="m-menu__link-text">
-												Manajemen Penawaran
-											</span>
-										</span>
-									</span>
-								</a>
-							</li>
 							<!-- Master Stock -->
-							<li class="m-menu__item" aria-haspopup="true" >
+							<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
 								<a  href="master_stock.html" class="m-menu__link ">
-									<i class="m-menu__link-icon flaticon-list-1"></i>
+									<i class="m-menu__link-icon  flaticon-open-box"></i>
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
@@ -254,7 +198,8 @@
 									</span>
 								</a>
 							</li>
-							<!-- Harga Item dan Jasa -->
+							
+							<!-- Manajemen Harga -->
 							<li class="m-menu__item" aria-haspopup="true" >
 								<a  href="manajemen_harga.html" class="m-menu__link ">
 									<i class="m-menu__link-icon la la-list"></i>
@@ -262,19 +207,6 @@
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
 												Manajemen Harga
-											</span>
-										</span>
-									</span>
-								</a>
-							</li>
-							<!-- Manajemen Pembayaran -->
-							<li class="m-menu__item" aria-haspopup="true" >
-								<a  href="manajemen_pembayaran.html" class="m-menu__link ">
-									<i class="m-menu__link-icon flaticon-file-1"></i>
-									<span class="m-menu__link-title">
-										<span class="m-menu__link-wrap">
-											<span class="m-menu__link-text">
-												manajemen pembayaran
 											</span>
 										</span>
 									</span>
@@ -291,7 +223,7 @@
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
 								<h3 class="m-subheader__title m-subheader__title--separator">
-									SPK Servis
+									Master Stock
 								</h3>
 								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
 									<li class="m-nav__item m-nav__item--home">
@@ -303,19 +235,9 @@
 										-
 									</li>
 									<li class="m-nav__item">
-										<a href="#.html" class="m-nav__link">
+										<a href="master_stock.html" class="m-nav__link">
 											<span class="m-nav__link-text">
-												Manajemen Pesanan
-											</span>
-										</a>
-									</li>
-									<li class="m-nav__separator">
-										-
-									</li>
-									<li class="m-nav__item">
-										<a href="spk_servis.html.html" class="m-nav__link">
-											<span class="m-nav__link-text">
-												SPK Servis
+												Master Stock
 											</span>
 										</a>
 									</li>
@@ -337,9 +259,8 @@
 														<div class="col-md-4">
 															<div class="m-portlet__head-title">
 																<h3 class="m-portlet__head-text">
-																	List SPK Servis
+																	List Master Stock
 																</h3>
-																<button onclick="window.location.href = 'tambah_spk_servis	.html';" type="button" href="tambah_spk_pemasangan.html" class="btn btn-success btn_tambah_spk">Tambah SPK</button>
 															</div>
 														</div>
 														<div class="col-md-4 offset-md-4">
@@ -359,73 +280,69 @@
 										<!--end: Search Form -->
 										<!--begin: Datatable -->
 										<!-- <div class="m_datatable" id="local_data"></div> -->
-										<table class="table" id="tbl_spk_servis">
+										<table class="table" id="tbl_list_master_stock">
 											<thead>
 												<tr>
 													<th>No</th>
-													<th>Tanggal</th>
-													<th>No SPK</th>
-													<th>Nama Pelanggan</th>
-													<th>No Telpon</th>
-													<th>Status</th>
-													<th>Aksi</th>
+													<th>Kode</th>
+													<th>Nama Barang</th>
+													<th>Tipe</th>
+													<th>Merek</th>
+													<th>Jumlah</th>
+													<th>Satuan</th>
+													<th>Keterangan</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Bpk. Hendy</td>
-													<td>085145322137</td>
-													<td>Selesai</td>
-													<td>
-														<a href="rincian_spk_servis.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
+													<td>#14253617</td>
+													<td>Thermistor RKD25GVM</td>
+													<td>Thermistor</td>
+													<td>Daikin</td>
+													<td>20</td>
+													<td>unit</td>
+													<td>-</td>
 												</tr>
 												<tr>
 													<td>2</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Bpk. Suminto</td>
-													<td>085145322137</td>
-													<td>Pengerjaan</td>
-													<td>
-														<a href="rincian_spk_servis.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
+													<td>#14253617</td>
+													<td>Thermistor RKD25GVM</td>
+													<td>Thermistor</td>
+													<td>Daikin</td>
+													<td>20</td>
+													<td>unit</td>
+													<td>-</td>
 												</tr>
 												<tr>
 													<td>3</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Bpk. Suminto</td>
-													<td>085145322137</td>
-													<td>Pengerjaan</td>
-													<td>
-														<a href="rincian_spk_servis.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
+													<td>#14253617</td>
+													<td>Thermistor RKD25GVM</td>
+													<td>Thermistor</td>
+													<td>Daikin</td>
+													<td>20</td>
+													<td>unit</td>
+													<td>-</td>
 												</tr>
 												<tr>
 													<td>4</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Ibu Ida</td>
-													<td>085145322137</td>
-													<td>Selesai</td>
-													<td>
-														<a href="rincian_spk_servis.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
+													<td>#14253617</td>
+													<td>Thermistor RKD25GVM</td>
+													<td>Thermistor</td>
+													<td>Daikin</td>
+													<td>20</td>
+													<td>unit</td>
+													<td>-</td>
 												</tr>
 												<tr>
 													<td>5</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Ibu Munna</td>
-													<td>085145322137</td>
-													<td>Selesai</td>
-													<td>
-														<a href="rincian_spk_servis.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
+													<td>#14253617</td>
+													<td>Thermistor RKD25GVM</td>
+													<td>Thermistor</td>
+													<td>Daikin</td>
+													<td>20</td>
+													<td>unit</td>
+													<td>-</td>
 												</tr>
 											</tbody>
 										</table>
@@ -469,13 +386,12 @@
 		<!--end::Page Vendors -->  
 		<!--begin::Page Snippets -->
 		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
-
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
 		<script type="text/javascript">
-			var tbl_spk_servis = $('#tbl_spk_servis').mDatatable({
-				data: {
-					saveState: {cookie: false},
+		var tbl_list_master_stock = $('#tbl_list_master_stock').mDatatable({
+			data: {
+				saveState: {cookie: false},
 					/*type: 'remote',
 			        source: {
 			          read: {
@@ -503,7 +419,7 @@
 					class: '', // custom wrapper class
 					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
 					// height: 450, // datatable's body's fixed height
-					footer: false // display/hide footer
+					footer: false, // display/hide footer
 				},
 
 				// column sorting
@@ -523,31 +439,46 @@
 					textAlign: 'center',
 					type:'date',
 					format: 'DD/MM/YYYY',
+					width: 50
 				},
 				{
-					field: 'No SPK',
+					field: 'Kode',
 					textAlign: 'center',
+					width: 70	
 				},
 				{
-					field: 'Nama Pelanggan',
+					field: 'Nama Barang',
 					textAlign: 'center',
+					width: 180
 				},
 				{
-					field: 'No Telpon',
+					field: 'Tipe',
 					textAlign: 'center',
+					width: 80
 				},
 				{
-					field: 'Status',
+					field: 'Merek',
 					textAlign: 'center',
+					width: 70
 				},
 				{
-					field: 'Aksi',
+					field: 'Jumlah',
+					textAlign: 'center',
+					width: 60
+				},
+				{
+					field: 'Satuan',
+					textAlign: 'center',
+					width: 60
+				},
+				{
+					field: 'Keterangan',
 					textAlign: 'center',
 				}
 
 				],
 			});
-		</script>
+	</script>
 	</body>
 	<!-- end::Body -->
 	</html>
