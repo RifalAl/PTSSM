@@ -1,0 +1,273 @@
+	<!DOCTYPE html>
+	<!-- 
+	Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4
+	Author: KeenThemes
+	Website: http://www.keenthemes.com/
+	Contact: support@keenthemes.com
+	Follow: www.twitter.com/keenthemes
+	Dribbble: www.dribbble.com/keenthemes
+	Like: www.facebook.com/keenthemes
+	Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+	Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+	License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.-->
+	<html lang="en" >
+	<!-- begin::Head -->
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Teknisi | Form Pemasangan / Service
+		</title>
+		<meta name="description" content="Latest updates and statistic charts">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--begin::Web font -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+			WebFont.load({
+				google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+				active: function() {
+					sessionStorage.fonts = true;
+				}
+			});
+		</script>
+		<!--end::Web font -->
+		<!--begin::Base Styles -->  
+		<!--begin::Page Vendors -->
+		<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendors -->
+		<link href="../assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<!-- begin:: Style tambahan -->
+		<link href="../assets/demo/default/base/pelangi-style.css" rel="stylesheet" type="text/css">
+		<link href="../assets/demo/default/base/sejuk-sukses-style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="mobile_teknisi.css">
+		<!-- end:: Style tambahan -->
+		<!--end::Base Styles -->
+		<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
+		<style>
+			#canvasInAPerfectWorld {
+				background-color: #ededed;
+			}
+		</style>
+	</head>
+	<!-- end::Head -->
+	<!-- end::Body -->
+	<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+		<!-- begin:: Page -->
+		<div class="m-subheader ">
+			<div class="d-flex align-items-center">
+				<div class="mr-auto col-sm">
+					<a href="index.html"><img style="height: auto; width: 80px;" src="assets/img/logo_2.png"></a>
+				</div>
+				<div align="right" class="col-sm">
+					<span style="color: #30bcb8;font-size: 2rem" class="fa fa-user-circle-o"></span>
+				</div>
+			</div>
+		</div>
+		<div class="m-content">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="m-portlet m-portlet--mobile">
+						<div class="m-portlet__body" style="width: 100vw">
+							<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
+								<div class="row align-items-center">
+									<div class="col-md-12">
+										<div class="info row">
+											<div class="col-sm">
+												<h3>Respon Konsumen</h3>
+											</div>
+											<div class="col-sm">
+												<div align="center">
+													<label>Tanda Tangan Kostumer</label>
+													<canvas id="canvas" style="width: 80vw" height="220"></canvas>
+													<label id="nama_pelanggan">Ahmad Rifaldi</label>
+												</div>
+												<button id="clear">clear</button>
+											</div>
+											<div style="margin-top: 20px" class="col-sm">
+												<h5>Komentar</h5>
+												<textarea style="resize: none" class="form-control m-input m-input--air" id="komentar" rows="3"></textarea>
+											</div>
+											<div style="margin-top: 20px; " class="m-radio-inline col-xl-12 row">
+												<div align="center" class="col-4">
+													<span style="font-size: 5rem" class="fa fa-frown-o"></span><br>
+													<label style="margin-left:10px" class="m-radio">
+														<input type="radio" name="nilai_konsumen" value="1">
+														<span></span>
+													</label>
+												</div>
+												<div align="center" class="col-4">
+													<span style="font-size: 5rem" class="fa 	fa-meh-o"></span><br>
+													<label style="margin-left:10px" class="m-radio">
+														<input type="radio" name="nilai_konsumen" value="2">
+														<span></span>
+													</label>
+												</div>
+												<div align="center" class="col-4">
+													<span style="font-size: 5rem" class="fa 	fa-smile-o"></span><br>
+													<label style="margin-left:10px" class="m-radio">
+														<input type="radio" name="nilai_konsumen" value="3">
+														<span></span>
+													</label>
+												</div>
+												<div align="center" style="margin-top: 20px" class="col-sm">
+													<p>Saya mengisi form ini setelah mengecek semua AC yang telah di service/pasang dan menyatakan pekerjaan ini telah selesai setelah menekan tombol dibawah</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div align="center">
+								<button style="height: 60px;width: 300px; margin-top: 30px" type="button" class="btn btn-primary warna-biru btn_selesai">
+									Selesai
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--begin::Base Scripts -->
+		<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+		<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+		<!--end::Base Scripts -->   
+		<!--begin::Page Vendors -->
+		<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+		<!--end::Page Vendors -->  
+		<!--begin::Page Snippets -->
+		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
+		<!--end::Page Snippets -->
+		<script src="http://localhost:35729/livereload.js"></script>
+		<script>
+			function myFunction() {
+				var checkBox = document.getElementById("trouble[0]");
+				if (checkBox.checked == true){
+					 $('#btn-keterangan[0]').prop('disabled', false);
+					 window.alert("mantap");
+				} else {
+					 $('#btn-keterangan[0]').prop('disabled', true);
+				}
+			}
+		</script>
+		<script>
+			//== Class definition
+			var SweetAlert2Demo = function() {
+
+			//== Demos
+			var initDemos = function() {
+
+				
+				$('.btn_selesai').click(function(e) {
+					swal("Berhasil!", "Respon anda telah kami terima, terimakasih", "success");
+				});
+			};
+
+			return {
+					//== Init
+					init: function() {
+						initDemos();
+					},
+				};
+			}();
+
+			//== Class Initialization
+			jQuery(document).ready(function() {
+				SweetAlert2Demo.init();
+			});
+		</script>
+		<script type="text/javascript">
+			$(function () {
+				var canvas = document.getElementById("canvas"),
+				ctx = canvas.getContext("2d"),
+				offset = $("#canvas").offset(),
+				storedLines = [],
+				polyLines = [],
+				start = {x: 0, y: 0},
+				radius = 7;
+
+				function canvasPosition(e) {
+					return {
+						x: parseInt(e.clientX - offset.left),
+						y: parseInt(e.clientY - offset.top)
+					};
+				}
+
+				$("#canvas").mousedown(function (e) {
+					var pos = canvasPosition(e);
+					if (hitStartCircle(pos)) {
+						polyLines.push(storedLines);
+						storedLines = [];
+						draw();
+					}
+					else
+					{
+						storedLines.push(pos);
+						update(pos);
+					}
+				})
+				.mousemove(function (e) {
+					update(canvasPosition(e));
+				});
+
+        // Draw completed polylines
+        function draw() {
+        	ctx.clearRect(0, 0, canvas.width, canvas.height);
+        	$.each(polyLines, function (idx, polyLine) {
+        		fillPolyline(polyLine);
+        	});
+        }
+
+        // Update shape currently being drawn
+        function update(position) {
+        	var len = storedLines.length;
+        	if(len==0) return;
+
+        	draw();
+        	ctx.fillStyle = "green";
+        	ctx.beginPath();
+        	ctx.arc(storedLines[0].x, storedLines[0].y, radius, 0, 2 * Math.PI, false);
+        	ctx.fill();
+
+        	ctx.strokeStyle = "orange";
+        	ctx.lineWidth = 3;
+        	ctx.beginPath();
+        	ctx.moveTo(storedLines[0].x, storedLines[0].y);
+        	for(var i=1; i<len; ++i) {
+        		ctx.lineTo(storedLines[i].x, storedLines[i].y)
+        	}
+        	ctx.lineTo(position.x, position.y);
+        	ctx.stroke();
+        };
+
+        function hitStartCircle(pos) {
+        	var start = storedLines[0] || {x:0, y:0},
+        	dx = pos.x - start.x,
+        	dy = pos.y - start.y;
+        	return (dx * dx + dy * dy < radius * radius)
+        }
+
+        function fillPolyline(lines) {
+        	ctx.strokeStyle = "red";
+        	ctx.fillStyle = "blue";
+        	ctx.lineWidth = 3;
+        	ctx.beginPath();
+        	ctx.moveTo(lines[0].x, lines[0].y);
+        	for (var i = 0; i < lines.length; i++) {
+        		ctx.lineTo(lines[i].x, lines[i].y);
+        	}
+        	ctx.closePath();
+        	ctx.fill();
+        	ctx.stroke();
+        }
+
+        $("#clear").click(function () {
+        	polyLines = [];
+        	draw();
+        });
+    });
+</script>
+
+	</body>
+	<!-- end::Body -->
+	</html>

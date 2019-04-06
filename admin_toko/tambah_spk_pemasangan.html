@@ -1,0 +1,752 @@
+	<!DOCTYPE html>
+	<!-- 
+	Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4
+	Author: KeenThemes
+	Website: http://www.keenthemes.com/
+	Contact: support@keenthemes.com
+	Follow: www.twitter.com/keenthemes
+	Dribbble: www.dribbble.com/keenthemes
+	Like: www.facebook.com/keenthemes
+	Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+	Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+	License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.-->
+	<html lang="en" >
+	<!-- begin::Head -->
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Admin Toko | Tambah SPK Pemasangan
+		</title>
+		<meta name="description" content="Latest updates and statistic charts">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--begin::Web font -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+			WebFont.load({
+				google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+				active: function() {
+					sessionStorage.fonts = true;
+				}
+			});
+		</script>
+		<!--end::Web font -->
+		<!--begin::Base Styles -->  
+		<!--begin::Page Vendors -->
+		<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendors -->
+		<link href="../assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<!-- begin:: Style tambahan -->
+		<link href="../assets/demo/default/base/pelangi-style.css" rel="stylesheet" type="text/css">
+		<link href="../assets/demo/default/base/sejuk-sukses-style.css" rel="stylesheet" type="text/css">
+		<!-- end:: Style tambahan -->
+		<!--end::Base Styles -->
+		<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
+		<style>
+			.m-datatable.m-datatable--default > .m-datatable__pager > .m-datatable__pager-info {
+				display: none !important;
+			}
+
+			.modal-dialog {
+				max-width: 600px;
+			}
+		</style>
+	</head>
+	<!-- end::Head -->
+	<!-- end::Body -->
+	<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+		<!-- begin:: Page -->
+		<div class="m-grid m-grid--hor m-grid--root m-page">
+			<!-- BEGIN: Header -->
+			<header class="m-grid__item    m-header "  data-minimize-offset="200" data-minimize-mobile-offset="200" >
+				<div class="m-container m-container--fluid m-container--full-height">
+					<div class="m-stack m-stack--ver m-stack--desktop">
+						<div class="m-stack m-stack--ver m-stack--desktop">
+							<!-- BEGIN: Brand -->
+							<div class="m-stack__item m-brand  m-brand--skin-dark ">
+								<div class="m-stack m-stack--ver m-stack--general">
+									<div class="m-stack__item m-stack__item--middle m-brand__logo">
+										<a href="index.html" class="m-brand__logo-wrapper">
+											<img alt="" src="../assets/demo/default/media/img/logo/Asset 5.png"/>
+										</a>
+									</div>
+									<div class="m-stack__item m-stack__item--middle m-brand__tools">
+										<!-- BEGIN: Left Aside Minimize Toggle -->
+										<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block">
+											<span></span>
+										</a>
+										<!-- END -->
+										<!-- BEGIN: Responsive Aside Left Menu Toggler -->
+										<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
+											<span></span>
+										</a>
+										<!-- END -->
+										<!-- BEGIN: Responsive Header Menu Toggler -->
+										<a id="m_aside_header_menu_mobile_toggle" href="javascript:;" class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block">
+											<span></span>
+										</a>
+										<!-- END -->
+										<!-- BEGIN: Topbar Toggler -->
+										<a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" class="m-brand__icon m--visible-tablet-and-mobile-inline-block">
+											<i class="flaticon-more"></i>
+										</a>
+										<!-- BEGIN: Topbar Toggler -->
+									</div>
+								</div>
+							</div>
+							<!-- END: Brand -->
+							<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
+								<!-- BEGIN: Horizontal Menu -->
+								<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
+									<img style="display: inline; float: left; height: 60px; width: auto" src="../assets/demo/default/media/img/misc/admin_toko.png">
+								</div>
+								<!-- END: Horizontal Menu -->								
+								<!-- BEGIN: Topbar -->
+								<div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
+									<div class="m-stack__item m-topbar__nav-wrapper inline">
+										<ul class="m-topbar__nav m-nav m-nav--inline">
+											<li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click">
+												<div class="user_wrapper">
+													<p style="margin-bottom: 0px"><i class="fa fa-user"> </i> Ahmad Rifaldi</p>
+												</div>
+											</li>
+											<li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click">
+												<div class="logout_wrapper">
+													<a margin-right: 10px;" href="snippets/pages/user/login-1.html" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
+														Logout
+													</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- END: Topbar -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- END: Header -->		
+			<!-- begin::Body -->
+			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+				<!-- BEGIN: Left Aside -->
+				<button class="m-aside-left-close  m-aside-left-close--skin-dark " id="m_aside_left_close_btn">
+					<i class="la la-close"></i>
+				</button>
+				<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
+					<!-- BEGIN: Aside Menu -->
+					<div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark" data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500" >
+						<!-- ASIDE MENU DISINI -->
+						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
+							<!-- DASHBOARD -->
+							<li class="m-menu__item " aria-haspopup="true" >
+								<a  href="index.html" class="m-menu__link ">
+									<i class="m-menu__link-icon flaticon-line-graph"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Dashboard
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<!-- Manajemen Pelanggan -->
+							<li class="m-menu__item  " aria-haspopup="true" >
+								<a  href="manajemen_pelanggan.html" class="m-menu__link ">
+									<i class="m-menu__link-icon fa 	fa-user-circle-o"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Manajemen	Pelanggan
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<!-- Manajemen Pesanan -->
+							<li class="m-menu__item  m-menu__item--submenu m-menu__item--open m-menu__item--expanded" aria-haspopup="true" data-menu-submenu-toggle="hover">
+								<a href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon flaticon-folder-2"></i>
+									<span class="m-menu__link-text">
+										Manajemen Pesanan
+									</span>
+									<i style="font-size: 1.5rem" class="m-menu__ver-arrow fa fa-caret-right"></i>
+								</a>
+								<div class="m-menu__submenu " style="">
+									<span class="m-menu__arrow"></span>
+									<ul class="m-menu__subnav">
+										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
+											<span class="m-menu__link">
+												<span class="m-menu__link-text">
+													Pesanan
+												</span>
+											</span>
+										</li>
+										<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">
+											<a href="spk_pemasangan.html" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													SPK Pemasangan
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="spk_servis.html"  class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													SPK Servis
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="spk_free.html"  class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													SPK Free
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="spk_komplain.html"  class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													SPK Komplain
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="spk_survey.html"  class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													SPK Survey
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<!-- Manajemen Penawaran -->
+							<li class="m-menu__item" aria-haspopup="true" >
+								<a  href="manajemen_penawaran.html" class="m-menu__link ">
+									<i class="m-menu__link-icon fa 	fa-handshake-o"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Manajemen Penawaran
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<!-- Master Stock -->
+							<li class="m-menu__item" aria-haspopup="true" >
+								<a  href="master_stock.html" class="m-menu__link ">
+									<i class="m-menu__link-icon flaticon-list-1"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Master Stock
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<!-- Harga Item dan Jasa -->
+							<li class="m-menu__item" aria-haspopup="true" >
+								<a  href="manajemen_harga.html" class="m-menu__link ">
+									<i class="m-menu__link-icon la la-list"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Manajemen Harga
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<!-- Manajemen Pembayaran -->
+							<li class="m-menu__item" aria-haspopup="true" >
+								<a  href="manajemen_pembayaran.html" class="m-menu__link ">
+									<i class="m-menu__link-icon flaticon-file-1"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												manajemen pembayaran
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- END: Aside Menu -->
+				</div>
+				<!-- END: Left Aside -->
+				<div class="m-grid__item m-grid__item--fluid m-wrapper">
+					<!-- BEGIN: Subheader -->
+					<div class="m-subheader ">
+						<div class="d-flex align-items-center">
+							<div class="mr-auto">
+								<h3 class="m-subheader__title m-subheader__title--separator">
+									SPK Pemasangan
+								</h3>
+								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+									<li class="m-nav__item m-nav__item--home">
+										<a href="index.html" class="m-nav__link m-nav__link--icon">
+											<i class="m-nav__link-icon la la-home"></i>
+										</a>
+									</li>
+									<li class="m-nav__separator">
+										-
+									</li>
+									<li class="m-nav__item">
+										<a href="#.html" class="m-nav__link">
+											<span class="m-nav__link-text">
+												Manajemen Pesanan
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__separator">
+										-
+									</li>
+									<li class="m-nav__item">
+										<a href="spk_pemasangan.html" class="m-nav__link">
+											<span class="m-nav__link-text">
+												SPK Pemasangan
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__separator">
+										-
+									</li>
+									<li class="m-nav__item">
+										<a href="tambah_spk_pemasangan.html" class="m-nav__link">
+											<span class="m-nav__link-text">
+												Tambah
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- END: Subheader -->
+					<div class="m-content">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="m-portlet m-portlet--tab">
+									<div class="m-portlet__head">
+										<div class="m-portlet__head-caption">
+											<div class="m-portlet__head-title">
+												<span class="m-portlet__head-icon m--hide">
+													<i class="la la-gear"></i>
+												</span>
+												<h3 class="m-portlet__head-text">
+													Tambah SPK Pemasangan
+												</h3>
+											</div>
+										</div>
+									</div>
+									<!--begin::Form-->
+									<form class="m-form m-form--fit m-form--label-align-right">
+										<div class="m-portlet__body">
+											<div class="form-group m-form__group row">
+												<label  class="col-2 col-form-label">
+													No. SPK
+												</label>
+												<div class="col-10">
+													<input class="form-control m-input" type="text" value="0037/SSM/SPK-PSG/MKS/III/2019" id="no_spk">
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label class="col-2 col-form-label">
+													Tanggal
+												</label>
+												<div class="col-10">
+													<input class="form-control m-input" type="date" value="" id="tanggal_pembuatan_spk">
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label  class="col-2 col-form-label">
+													Nama Pelanggan
+												</label>
+												<div class="col-10">
+													<select style="width: 100%" class="form-control m-select2 dropdown_search" name="nama_pelanggan">
+														<option value="1">
+															Ibu Ani
+														</option>
+														<option value="2">
+															Pak Hendy
+														</option>
+														<option value="3">
+															PT. Upana Studio
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label  class="col-2 col-form-label">
+													Nomer Telpon
+												</label>
+												<div class="col-10">
+													<input class="form-control m-input" type="tel" value="085 145 322 137" id="no_telpon">
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label for="example-email-input" class="col-2 col-form-label">
+													Email
+												</label>
+												<div class="col-10">
+													<input class="form-control m-input" type="email" value="nihonggomantappu@example.com" id="email_pelanggan">
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label  class="col-2 col-form-label">
+													Alamat
+												</label>
+												<div class="col-10">
+													<input class="form-control m-input" type="text" value="Jl. Angkasa 5, Panaikang, Makassar" id="alamat_pelanggan">
+												</div>
+											</div>
+									<!-- <div class="form-group m-form__group row">
+										<label  class="col-2 col-form-label">
+											Teknisi
+										</label>
+										<div class="col-10">
+											<select class="form-control m-input" id="nama_teknisi">
+												<option value="agus">
+													Agus
+												</option>
+												<option selected="" value="rahman">
+													Rahman
+												</option>
+												<option value="ridwan">
+													Ridwan
+												</option>
+												<option value="badu">
+													Badu
+												</option>
+												<option value="aldi">
+													Aldi
+												</option>
+											</select>
+										</div>
+									</div> -->
+									<div class="form-group m-form__group row">
+										<label for="example-datetime-local-input" class="col-2 col-form-label">
+											Waktu Pengerjaan
+										</label>
+										<div class="col-10">
+											<input class="form-control m-input" type="datetime-local" value="2019-03-19T10:10:00" id="tgl_mulai">
+										</div>
+									</div>
+									<div align="center">
+										<button data-toggle="modal" data-target="#modal_tambah_pemasangan" type="button" class="btn btn-success btn_pemasangan">Tambah Pemasangan</button>
+									</div>
+								</div>
+							</form>
+							<div class="m-portlet__body">
+								<div class="m-portlet__head-title">
+									<h3 align="center" class="m-portlet__head-text">
+										List Item Pemasangan
+									</h3><br>
+								</div>
+								<table class="table" id="tbl_item_pemasangan">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Nama Barang</th>
+											<th>Jumlah</th>
+											<th>Keterangan</th>
+											<th>Aksi</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>AC Split 1/2 PK daikin R32 Non Inverter Thailand</td>
+											<td>2</td>
+											<td>-</td>
+											<td>
+												<a class="btn btn-sm btn-danger btn_hapus" style="color:white; width:80px;">Hapus</a>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>AC Split 1 PK daikin R32 Non Inverter Thailand</td>
+											<td>1</td>
+											<td>-</td>
+											<td>
+												<a class="btn btn-sm btn-danger btn_hapus" style="color:white; width:80px;">Hapus</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div align="center">
+									<button id="btn_terbitkan_spk" type="button" class="btn btn-primary btn_pemasangan">Terbitkan SPK</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end:: Body -->
+	<!--  Begin::Modals -->
+	<div class="modal fade" id="modal_tambah_pemasangan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						Tambah Pemasangan
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-2 col-form-label">
+							Nama Barang
+						</label>
+						<div class="col-10">
+							<select style="width: 100%" class="form-control" name="nama_barang">
+								<option value="1">
+									AC Split 1/2 PK Malaysia
+								</option>
+								<option value="2">
+									AC Daikin 1 PK 
+								</option>
+								<option value="3">
+									AC Split 1 PK Thailand
+								</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-2 col-form-label">
+							Jumlah
+						</label>
+						<div class="col-10">
+							<div class="input-group">
+								<input name="jumlah_barang" type="text" class="form-control m-input" value="2" aria-describedby="basic-addon2">
+								<div class="input-group-append">
+									<span class="input-group-text" id="basic-addon2">
+										Unit
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-2 col-form-label">
+							Keterangan
+						</label>
+						<div class="col-10">
+							<textarea class="form-control m-input m-input--solid" name="keterangan" rows="3"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						Tutup
+					</button>
+					<button id="btn_tambah_pemasangan" data-dismiss="modal" type="button" class="btn btn-primary">
+						Tambahkan
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End::Modals -->
+	<!-- begin::Footer -->
+	<footer class="m-grid__item		m-footer ">
+		<div class="m-container m-container--fluid m-container--full-height m-page__container">
+			<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+				<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+					<span class="m-footer__copyright">
+						Upa'na Studio
+					</span>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	<!-- end::Footer -->
+</div>
+<!-- end:: Page -->		    
+<!-- begin::Scroll Top -->
+<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500"data-scroll-speed="300">
+	<i class="la la-arrow-up"></i>
+</div>
+<!-- end::Scroll Top -->		    
+
+<!--begin::Base Scripts -->
+<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+<!--end::Base Scripts -->   
+<!--begin::Page Vendors -->
+<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+<!--end::Page Vendors -->  
+<!--begin::Page Snippets -->
+<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
+
+<!--end::Page Snippets -->
+<script src="http://localhost:35729/livereload.js"></script>
+<script type="text/javascript">
+	var tbl_item_pemasangan = $('#tbl_item_pemasangan').mDatatable({
+		data: {
+			saveState: {cookie: false},
+					/*type: 'remote',
+			        source: {
+			          read: {
+			            // sample GET method
+			            method: 'GET',
+			            url: 'https://keenthemes.com/metronic/preview/inc/api/datatables/demos/default.php',
+			            map: function(raw) {
+			              // sample data mapping
+			              var dataSet = raw;
+			              if (typeof raw.data !== 'undefined') {
+			                dataSet = raw.data;
+			              }
+			              return dataSet;
+			            },
+			          },
+			        },
+			        pageSize: 10,
+			        serverPaging: true,
+			        serverFiltering: true,
+			        serverSorting: true,*/
+			    },
+				// layout definition
+				layout: {
+					theme: 'default', // datatable theme
+					class: '', // custom wrapper class
+					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
+					// height: 450, // datatable's body's fixed height
+					footer: false // display/hide footer
+				},
+
+				// column sorting
+				sortable: false,
+				search: {
+					input: $('#generalSearch'),
+				},
+				columns: [
+
+				{
+					field: 'No',
+					textAlign: 'center',
+				},
+				{
+					field: 'Nama Barang',
+					textAlign: 'center',
+				},
+				{
+					field: 'Jumlah',
+					textAlign: 'center',
+				},
+				{
+					field: 'Keterangan',
+					textAlign: 'center',
+				},
+				{
+					field: 'Aksi',
+					textAlign: 'center',
+				}
+
+				],
+			});
+		</script>
+		<script>
+			$('.btn_hapus').click(function(e) {
+				swal({
+					title: 'Apakah anda yakin menghapus item ini?',
+					type: 'warning',
+					showCancelButton: true,
+					confirmButtonText: 'Ya,Hapus!'
+				}).then(function(result) {
+					if (result.value) {
+						swal(
+							'Dihapus!',
+							'item telah dihapus dari item pemasangan',
+							'success'
+							)
+					}
+				});
+			});
+		</script>
+		<script>
+			var Select2 = function() {
+				var demos = function(){
+				 // basic
+				 $('.dropdown_search, .dropdown_search_validate').select2({
+				 	placeholder: "Select a state"
+				 });
+				}
+				var modalDemos = function(){
+					$('#m_select2_modal').on('shown.bs.modal', function () {
+				// basic
+				$('.dropdown_search_modal').select2({
+					placeholder: "Select a state"
+				});
+			});
+				}
+				return {
+					init: function() {
+						demos();
+						modalDemos();
+					}
+				};
+			}();
+			//== Initialization
+			jQuery(document).ready(function() {
+				Select2.init();
+			});
+		</script>
+		<script>
+			//== Class definition
+			var SweetAlert2Demo = function() {
+
+			//== Demos
+			var initDemos = function() {
+
+				$('#btn_terbitkan_spk').click(function(e) {
+					swal("SPK Telah Terbit!", "SPK yang anda buat telah terbit","success");
+				});
+				$('#btn_tambah_pemasangan').click(function(e) {
+					swal("Telah ditambahkan!", "data yang anda inputkan telah tersimpan", "success");
+				});
+			};
+
+			return {
+					//== Init
+					init: function() {
+						initDemos();
+					},
+				};
+			}();
+
+			//== Class Initialization
+			jQuery(document).ready(function() {
+				SweetAlert2Demo.init();
+			});
+		</script>
+	</body>
+	<!-- end::Body -->
+	</html>
