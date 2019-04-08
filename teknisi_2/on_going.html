@@ -52,6 +52,20 @@
 			p {
 				margin-bottom: .2rem;
 			}
+			a {
+				text-decoration: none;
+				display: inline-block;
+				padding: 8px 16px;
+			}
+
+			a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+			.previous {
+				background-color: #f1f1f1;
+				color: black;
+			}
 		</style>
 	</head>
 	<!-- end::Head -->
@@ -102,7 +116,6 @@
 								</button>
 							</div>
 						</div>
-						
 					</div>
 					<div  align="left" class="m-portlet m-portlet--mobile list-kerjaan" id="list_kerjaan[1]" style="width: 97vw;">
 						<div class="row">
@@ -124,12 +137,15 @@
 								<p id="tipe_kerjaan[2]" class="tipe-kerjaan">Survey</p>
 							</div>
 							<div class="col-4">
-								<button onclick="window.location.href = 'rincian_spk.html';" class="btn btn-primary warna-biru btn_rincian">
+								<button onclick="window.location.href = 'rincian_spk_survey.html';" class="btn btn-primary warna-biru btn_rincian">
 									Rincian
 								</button>
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="bagian-previous"> 
+					<a style="margin-left: 10px" href="javascript:history.back()" class="previous">&laquo; Previous</a>
 				</div>
 			</div>
 		</div>

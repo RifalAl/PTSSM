@@ -15,7 +15,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Teknisi | Kerjaan Masuk
+			Teknisi | Rincian SPK Selesai
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,10 +43,25 @@
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
 		<style>
-			p {
-				margin-bottom: .2rem;
+			.portlet-foto {
+				margin-top: 10px;
 			}
-			
+			.gambar {
+				margin-bottom: 10px !important;
+			}
+			.img-wrap {
+				position: relative;
+				...
+			}
+			.img-wrap .close {
+				position: absolute;
+				top: 2px;
+				right: 2px;
+				z-index: 100;
+				font-size: 2.5rem !important;
+				color: red;
+				...
+			}
 			a {
 				text-decoration: none;
 				display: inline-block;
@@ -61,6 +76,7 @@
 				background-color: #f1f1f1;
 				color: black;
 			}
+
 		</style>
 	</head>
 	<!-- end::Head -->
@@ -78,72 +94,76 @@
 			</div>
 		</div>
 		<div class="m-content">
-			<div>
-				<div  style="width: 100vw" class="col-xl-12">
-					<div class="m-portlet warna-merah m-portlet--bordered-semi m-portlet--skin-dark m-portlet--full-height ">
-						<div class="m-portlet__body body_menu_1a row">
-							<div align="left"  class="col-4">
-								<span>
-									<i style="font-size: 4rem; color: white; margin-top: 10px" class="fa fa-briefcase"></i>
-								</span>
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="bagian-previous"> 
+						<a style="margin-left: 10px" href="javascript:history.back()" class="previous">&laquo; Previous</a>
+					</div>
+					<div class="m-portlet">
+						<div class="m-portlet__body">
+							<ul class="nav nav-tabs" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" data-toggle="tab" href="#m_tabs_sebelum">
+										Foto Sebelum
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#m_tabs_sesudah">
+										Foto Sesudah
+									</a>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="m_tabs_sebelum" role="tabpanel">
+									<div class="col-xl-12">
+										<button class="btn btn-primary">
+											Upload Foto
+										</button>
+										<div class="portlet-foto">
+											<div class="img-wrap">
+												<span class="close">&times;</span>
+												<img class="gambar" id="foto-sebelum[0]" style="width: 80vw;height: auto;" src="https://www.lg.com/id/images/split-air-conditioning/md06042899/gallery/P10RV3_ac-dual-cool-smart_D4.jpg">
+												<button class="btn btn-secondary">
+											</div>
+											<div class="img-wrap">
+												<span class="close">&times;</span>
+												<img class="gambar" id="foto-sebelum[1]" style="width: 80vw;height: auto;" src="https://esa-surya.com/wp-content/uploads/2018/03/nHBfsgAABQAAAAEAC13POgAAiPo.jpg">
+											</div>
+											<div class="img-wrap">
+												<span class="close">&times;</span>
+												<img class="gambar" id="foto-sebelum[2]" style="width: 80vw;height: auto;" src="https://apollo-singapore.akamaized.net/v1/files/no0g3gank9n41-ID/image;s=966x691;olx-st/_1_.jpg">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane" id="m_tabs_sesudah" role="tabpanel">
+									<div class="col-xl-12">
+										<button class="btn btn-primary">
+											Upload Foto
+										</button>
+										<div class="portlet-foto">
+											<div class="img-wrap">
+												<span class="close">&times;</span>
+												<img class="gambar" id="foto-sesudah[0]" style="width: 80vw;height: auto;" src="https://s.kaskus.id/r480x480//images/fjb/2016/09/10/tmp_php9s515a_1491602_1473507572.jpg">
+											</div>
+											<div class="img-wrap">
+												<span class="close">&times;</span>
+												<img class="gambar" id="foto-sesudah[1]" style="width: 80vw;height: auto;" src="https://i0.wp.com/serviceacjogja.pro/wp-content/uploads/2016/11/AC-Standard.jpg">
+											</div>
+											<div class="img-wrap">
+												<span class="close">&times;</span>
+												<img class="gambar" id="foto-sesudah[2]" style="width: 80vw;height: auto;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8MezaAJXtLlpj5beJQKZOAC0sANwN5at8GSUbIs-Vdb_KcRcNhw">
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div style="margin-top: 20px" align="right"  class="col-8">
-								<h3>Kerjaan Masuk</h3>
-							</div>
-							<!--begin::Widget 7-->
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div  class="row">
-			<div class="col-xl-12">
-				<div align="center">
-					<div  align="left" class="m-portlet m-portlet--mobile list-kerjaan" id="list_kerjaan[0]" style="width: 97vw;">
-						<div class="row">
-							<div class="col-8">
-								<p id="nama_pelanggan[0]" class="nama-pelanggan">PT. UPANA STUDIO</p>
-								<p id="tipe_kerjaan[0]" class="tipe-kerjaan">Pemasangan</p>
-							</div>
-							<div class="col-4">
-								<button  class="btn btn-primary warna-biru btn_kerjakan">
-									Kerjakan
-								</button>
-							</div>
-						</div>
-					</div>
-					<div  align="left" class="m-portlet m-portlet--mobile list-kerjaan" id="list_kerjaan[1]" style="width: 97vw;">
-						<div class="row">
-							<div class="col-8">
-								<p id="nama_pelanggan[1]" class="nama-pelanggan">PT ALGRAPHICD</p>
-								<p id="tipe_kerjaan[1]" class="tipe-kerjaan">Servis</p>
-							</div>
-							<div class="col-4">
-								<button  class="btn btn-primary warna-biru btn_kerjakan">
-									Kerjakan
-								</button>
-							</div>
-						</div>
-					</div>
-					<div onclick="window.location.href = 'rincian_spk.html';" align="left" class="m-portlet m-portlet--mobile list-kerjaan" id="list_kerjaan[2]" style="width: 97vw;">
-						<div class="row">
-							<div class="col-8">
-								<p id="nama_pelanggan[2]" class="nama-pelanggan">Pak Fascal</p>
-								<p id="tipe_kerjaan[2]" class="tipe-kerjaan">Servis</p>
-							</div>
-							<div class="col-4">
-								<button  class="btn btn-primary warna-biru btn_kerjakan">
-									Kerjakan
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="bagian-previous"> 
-					<a style="margin-left: 10px" href="javascript:history.back()" class="previous">&laquo; Previous</a>
-				</div>
-			</div>
-		</div>
+		
 		<!--begin::Base Scripts -->
 		<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
 		<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -156,17 +176,17 @@
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
 		<script>
-			$('.btn_kerjakan').click(function(e) {
+			$('.close').click(function(e) {
 				swal({
-					title: 'Apakah anda yakin ingin mengerjakan tugas ini?',
+					title: 'Apakah anda yakin ingin menghapus gambar ini?',
 					type: 'warning',
 					showCancelButton: true,
-					confirmButtonText: 'Ya,Kerjakan!'
+					confirmButtonText: 'Ya,Hapus!'
 				}).then(function(result) {
 					if (result.value) {
 						swal(
 							'Berhasil!',
-							'Kerjaan ini telah dipindahkan ke menu "On Going"',
+							'Gambar telah dihapus"',
 							'success'
 							)
 					}

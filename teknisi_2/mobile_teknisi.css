@@ -103,3 +103,8 @@ body.m-content--skin-light2 {
 .modal-dialog {
 	margin-right: 10px!important;
 }
+
+.nav-link {
+	font-size: 1.4rem !important;
+ 	font-weight: 600;
+}
