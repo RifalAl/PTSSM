@@ -601,7 +601,7 @@
 											</div>
 										</div>
 										<div align="center">
-											<button style="height: 60px;width: 300px; margin-top: 30px" onclick="window.location.href = 'respon_konsumen.html';" type="button" class="btn btn-primary warna-biru">
+											<button style="height: 60px;width: 300px; margin-top: 30px" type="button" class="btn btn-primary warna-biru" id="btn_selesai">
 												Selesai
 											</button>
 										</div>
@@ -687,6 +687,25 @@
 			//== Class Initialization
 			jQuery(document).ready(function() {
 				SweetAlert2Demo.init();
+			});
+		</script>
+		<script>
+			$('#btn_selesai').click(function(e) {
+				swal({
+					title: 'Apakah anda yakin telah menyelesaikan tugas ini?',
+					type: 'warning',
+					showCancelButton: true,
+					confirmButtonText: 'Ya,Selesai!'
+				}).then(function(result) {
+					if (result.value) {
+						/*swal(
+							'Berhasil!',
+							'Kerjaan ini telah selesai dan dipindahkan ke menu "Tugas Selesai"',
+							'success'
+							)*/
+						window.location.href = "respon_konsumen.html";
+					}
+				});
 			});
 		</script>
 	</body>
