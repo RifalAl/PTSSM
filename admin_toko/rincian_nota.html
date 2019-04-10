@@ -81,7 +81,7 @@
 								<div class="m-stack m-stack--ver m-stack--general">
 									<div class="m-stack__item m-stack__item--middle m-brand__logo">
 										<a href="index.html" class="m-brand__logo-wrapper">
-											<img alt="" src="../assets/demo/default/media/img/logo/Asset 5.png"/>
+											<img alt="" src="../assets/demo/default/media/img/logo/logo_pt_ssm.png"/>
 										</a>
 									</div>
 									<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -371,6 +371,7 @@
 												<p id="no_telpon">
 													<i class="fa fa-phone"> </i> 085-145-322-137
 												</p>
+												<p>Tipe Pajak : <span id="tipe_pajak">Non-Pajak</span></p>
 											</div>
 											<div style="margin-bottom: 10px" class="col-sm">
 												<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
@@ -396,6 +397,7 @@
 														</select>
 													</div>
 												</div>
+
 											</div>
 										</div>	
 									</div>
@@ -409,27 +411,27 @@
 													<th>Qty</th>
 													<th>Sat</th>
 													<th>Nama Barang</th>
+													<th>Kategori</th>
 													<th>Harga</th>
-													<th>Harga Khusus</th>
 													<th>Jumlah</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<td>4</td>
-													<td>unit</td>
-													<td>AC Daikin 1/2 PK Thailand</td>
-													<td>31,640,000</td>
-													<td>-</td>
-													<td>126,560,000</td>
+													<td name="jumlah">4</td>
+													<td name="satuan">unit</td>
+													<td name="nama_barang">AC Daikin 1/2 PK Thailand</td>
+													<td name="kategori">Item</td>
+													<td name="Harga">31,640,000</td>
+													<td name="total">126,560,000</td>
 												</tr>
 												<tr>
-													<td>3</td>
-													<td>meter</td>
-													<td>Pipa</td>
-													<td>30,000</td>
-													<td>25,000</td>
-													<td>75,000</td>
+													<td name="jumlah">3</td>
+													<td name="satuan">>meter</td>
+													<td name="nama_barang">Pipa</td>
+													<td name="kategori">Material</td>
+													<td name="Harga">30,000</td>
+													<td name="total">75,000</td>
 												</tr>
 											</tbody>
 										</table>
@@ -585,7 +587,7 @@
 					textAlign: 'center',
 				},
 				{
-					field: 'Harga Khusus',
+					field: 'Kategori',
 					textAlign: 'center',
 				}
 

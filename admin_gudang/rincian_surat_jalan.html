@@ -64,7 +64,7 @@
 								<div class="m-stack m-stack--ver m-stack--general">
 									<div class="m-stack__item m-stack__item--middle m-brand__logo">
 										<a href="index.html" class="m-brand__logo-wrapper">
-											<img alt="" src="../assets/demo/default/media/img/logo/Asset 5.png"/>
+											<img alt="" src="../assets/demo/default/media/img/logo/logo_pt_ssm.png"/>
 										</a>
 									</div>
 									<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -148,6 +148,19 @@
 									</span>
 								</a>
 							</li>
+								<!-- Barang Masuk -->
+							<li class="m-menu__item" aria-haspopup="true" >
+								<a  href="barang_masuk.html" class="m-menu__link ">
+									<i class="m-menu__link-icon fa fa-shopping-cart"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Barang Masuk
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
 							<!-- Surat jalan-->
 							<li class="m-menu__item m-menu__item--active" aria-haspopup="true" >
 								<a  href="surat_jalan.html" class="m-menu__link ">
@@ -156,19 +169,6 @@
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
 												Surat jalan
-											</span>
-										</span>
-									</span>
-								</a>
-							</li>
-							<!-- Barang Masuk -->
-							<li class="m-menu__item" aria-haspopup="true" >
-								<a  href="barang_masuk.html" class="m-menu__link ">
-									<i class="m-menu__link-icon fa fa-shopping-cart"></i>
-									<span class="m-menu__link-title">
-										<span class="m-menu__link-wrap">
-											<span class="m-menu__link-text">
-												Barang Masuk
 											</span>
 										</span>
 									</span>
@@ -297,9 +297,8 @@
 
 											</div>
 											<div class="col-sm">
-												<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
 												<p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6,Gowa</p>
-												<p>Pasang : <span id="status_spk">Ya</span></p>
+												<p>Tipe Pajak : <span id="tipe_pajak">Non-Pajak</span></p>
 											</div>
 										</div>	
 									</div>
@@ -311,43 +310,41 @@
 										<table class="table" id="tbl_rincian_surat_jalan">
 											<thead>
 												<tr>
-													<th>Banyaknya</th>
+													<th>Qty</th>
+													<th>Satuan</th>
 													<th>Nama Barang</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<td>1 unit</td>
+													<td>1</td>
+													<td>Unit</td>
 													<td>AC Split 1/2 PK Daikin R32 Non Inverter Thailand</td>
 												</tr>
 												<tr>
-													<td>3 meter</td>
+													<td>3</td>
+													<td>meter</td>
 													<td>Pipa</td>
 												</tr>
 												<tr>
-													<td>4 meter</td>
+													<td>4</td>
+													<td>meter</td>
 													<td>Kable</td>
 												</tr>
 												<tr>
-													<td>3 meter</td>
+													<td>3</td>
+													<td>meter</td>
 													<td>Drain Air</td>
 												</tr>
 												<tr>
-													<td>1 Set</td>
+													<td>1</td>
+													<td>Set</td>
 													<td>Bracket</td>
-												</tr>
-												<tr>
-													<td>-</td>
-													<td>Remote</td>
-												</tr>
-												<tr>
-													<td>-</td>
-													<td>Kartu Garansi</td>
 												</tr>
 											</tbody>
 										</table>
 										<!--end: Datatable -->
-										<div class="row">
+										<div style="display: none" class="row">
 											<div align="center" class="col-sm">
 												<p>Tanda Terima</p>
 												<br>
@@ -447,7 +444,12 @@
 				columns: [
 
 				{
-					field: 'Banyaknya',
+					field: 'Qty',
+					textAlign: 'center',
+					width: 200
+				},
+				{
+					field: 'Satuan',
 					textAlign: 'center',
 					width: 200
 				},

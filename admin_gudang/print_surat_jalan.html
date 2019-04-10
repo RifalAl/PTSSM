@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>
-		INVOICE
+		Print Surat Jalan
 	</title>
 	<meta name="description" content="Latest updates and statistic charts">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,10 +42,12 @@
 
 			th {
 				font-size: 1.7rem !important;
+				border: 1px solid black !important;
 			}
 
 			td {
 				font-size: 1.7rem !important;
+				border: 1px solid black;
 			}
 
 			p {
@@ -97,7 +99,9 @@
 			}
 
 		}
-
+		.m-datatable__pager-info {
+			display: none;
+		}
 	</style>
 </head>
 <!-- end::Head -->
@@ -109,29 +113,27 @@
 				<div class="col-xl-12">
 					<div class="m-portlet m-portlet--tab">
 						<div class="m-portlet__head header">
-							<h3 class="header-pesanan">
-								SURAT JALAN
-							</h3><br>
-							<h3 name="no_surat_jalan" class="header-pesanan-no"> 
-								<i class="fa fa-check-circle"> </i> 0037/SSM/SPK-PSG/MKS/III/2019
-							</h3><br><br>
-							<div class="info row">
-								<div class="col-sm">
-									<p id="tanggal_surat">
-										<i class="flaticon-calendar-2"> </i>20/11/19
-									</p> 
-									<p id="nama_pelanggan">
-										<i class="flaticon-users"> </i> Ahmad Rifaldi
-									</p>
-									<p id="no_telpon">
-										<i class="fa fa-phone"> </i> 085-145-322-137
-									</p>
-
+							<div style="margin-top: 10px" align="center">
+								<img style="height: auto;width: 280px" src="../assets/demo/default/media/img/misc/logo_print.png">
+								<h2 class="header-pesanan">
+									SURAT JALAN
+								</h2>
+								<h4>No Surat : <span name="no_surat_jalan">0037/SSM/SPK-PSG/MKS/III/2019</span></h4>
+								<h4>Tanggal : <span name="tanggal_surat">20/11/2019</span></h4>
+								<h5>Tipe Pajak : <span name="tipe_pajak">Non-Pajak</span></h5>
+							</div>
+							<div class="col-xl-12 row">
+								<div align="center" class="col-sm">
+									<h4>Pemesan</h4>
+									<h5>Nama : <span name="nama_pemesan">Ahmad Rifaldi</span></h5>
+									<h5>Alamat : <span name="alamat_pemesan">Jl. Poros Malino, Griya Riski Abadi blok C6,Gowa</span></h5>
+									<h5>Telpon : <span name="telpon_pemesan">085145322xxx</span></h5>
 								</div>
-								<div class="col-sm">
-									<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
-									<p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6,Gowa</p>
-									<p>Pasang : <span id="status_spk">Ya</span></p>
+								<div align="center" class="col-sm">
+									<h4>Penerima</h4>
+									<h5>Nama : <span name="nama_penerima">Ahmad Rifaldi</span></h5>
+									<h5>Alamat : <span name="alamat_penerima">Jl. Poros Malino, Griya Riski Abadi blok C6,Gowa</span></h5>
+									<h5>Telpon : <span name="telpon_penerima">085145322xxx</span></h5	>
 								</div>
 							</div>	
 						</div>
@@ -140,41 +142,39 @@
 							<!--begin: Datatable -->
 							<!-- <div class="m_datatable" id="local_data"></div> -->
 							<p>Kami kirimkan barang-barang tersebut dibawah ini dengan kendaraan <span id="merek_kendaraan">Toyota</span> No. <span id="dd_kendaraan">DD 1234 BC</span></p>
-							<table class="table" id="tbl_rincian_surat_jalan">
+							<table style="width: 100%" class="table" id="tbl_rincian_surat_jalan">
 								<thead>
 									<tr>
-										<th>Banyaknya</th>
+										<th>Qty</th>
+										<th>Satuan</th>
 										<th>Nama Barang</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td>1 unit</td>
+										<td>1</td>
+										<td>Unit</td>
 										<td>AC Split 1/2 PK Daikin R32 Non Inverter Thailand</td>
 									</tr>
 									<tr>
-										<td>3 meter</td>
+										<td>3</td>
+										<td>meter</td>
 										<td>Pipa</td>
 									</tr>
 									<tr>
-										<td>4 meter</td>
+										<td>4</td>
+										<td>meter</td>
 										<td>Kable</td>
 									</tr>
 									<tr>
-										<td>3 meter</td>
+										<td>3</td>
+										<td>meter</td>
 										<td>Drain Air</td>
 									</tr>
 									<tr>
-										<td>1 Set</td>
+										<td>1</td>
+										<td>Set</td>
 										<td>Bracket</td>
-									</tr>
-									<tr>
-										<td>-</td>
-										<td>Remote</td>
-									</tr>
-									<tr>
-										<td>-</td>
-										<td>Kartu Garansi</td>
 									</tr>
 								</tbody>
 							</table>
@@ -186,6 +186,7 @@
 									<br>
 									<br>
 									<br>
+									<div style="width: 15vw;border-bottom: 1px solid black"></div>
 								</div>
 								<div align="center" class="col-sm">
 									<p>Hormat Kami</p>
@@ -193,6 +194,7 @@
 									<br>
 									<br>
 									<br>
+									<div style="width: 15vw;border-bottom: 1px solid black"></div>
 								</div>
 							</div>
 						</div>
@@ -248,12 +250,19 @@
 				columns: [
 
 				{
-					field: 'Banyaknya',
+					field: 'Qty',
 					textAlign: 'center',
+					
+				},
+				{
+					field: 'Satuan',
+					textAlign: 'center',
+					
 				},
 				{
 					field: 'Nama Barang',
 					textAlign: 'center',
+
 				}
 
 				],
@@ -263,7 +272,7 @@
 			var delayInMilliseconds = 1000; //1 second
 
 			setTimeout(function() {
-			print();	
-		}, delayInMilliseconds);
+				print();	
+			}, delayInMilliseconds);
 		</script>
 		</html>
