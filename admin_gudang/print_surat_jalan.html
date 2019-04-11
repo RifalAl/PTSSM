@@ -97,7 +97,26 @@
 				display: none;
 			}
 
-		}
+			.surat_jalan td, th {
+				padding: 10px;
+			}
+
+			th { 
+				background-color: #eaeaea;
+			}
+
+			table {
+				margin: 20px;
+			}
+
+			@media print {
+				th {
+				background-color: #eaeaea;
+				-webkit-print-color-adjust: exact; 
+
+				}
+    		}
+
 	</style>
 </head>
 <!-- end::Head -->
@@ -138,7 +157,7 @@
 							<!--begin: Datatable -->
 							<!-- <div class="m_datatable" id="local_data"></div> -->
 							<p>Kami kirimkan barang-barang tersebut dibawah ini dengan kendaraan <span id="merek_kendaraan">Toyota</span> No. <span id="dd_kendaraan">DD 1234 BC</span></p>
-							<table style="width: 100%" class="table" id="tbl_rincian_surat_jalan">
+							<table style="width: 100%" class="surat_jalan" id="table_surat_jalan">
 								<thead>
 									<tr>
 										<th>Qty</th>

@@ -326,8 +326,8 @@
 										<!--end: Search Form -->
 										<!--begin: Datatable -->
 										<!-- <div class="m_datatable" id="local_data"></div> -->
-										<table  class="table" id="tbl_list_item_masuk">
-											<thead >
+										<table  class="table m-datatable" id="tbl_list_item_masuk">
+											<!-- <thead >
 												<tr>
 													<th>No</th>
 													<th>Tanggal</th>
@@ -402,7 +402,7 @@
 													<td>unit</td>
 													<td>-</td>
 												</tr>
-											</tbody>
+											</tbody> -->
 										</table>
 										<!--end: Datatable -->
 									</div>
@@ -444,7 +444,7 @@
 		<!--end::Page Vendors -->  
 		<!--begin::Page Snippets -->
 		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			var tbl_list_item_masuk = $('#tbl_list_item_masuk').mDatatable({
 				data: {
 					saveState: {cookie: false},
@@ -538,6 +538,78 @@
 				}
 
 				],
+			});
+		</script> -->
+		<script>
+			var datatable;
+
+			$(document).ready(function() {
+				datatable = $('.m-datatable').mDatatable({
+					data: {
+						type: 'remote',
+						source: {
+							read: {
+								url: 'data/data.php'
+							}
+						},
+						serverPaging: true,
+						serverFiltering: true,
+						serverSorting: true
+					},
+					search: {
+						input: $('#generalSearch'),
+					},
+					columns: [
+					{
+						field: 'no',
+						title: 'No',
+						textAlign: 'center',
+						width: 50,
+						sortable: false,
+						template: function(row, rowIndex, datatable) {
+							return ((datatable.getCurrentPage() - 1) * datatable.getPageSize()) + rowIndex + 1;
+						}
+					}, {
+						field: 'tanggal',
+						title: 'Tanggal',
+						textAlign: 'center'
+
+					}, {
+						field: 'kode_barang',
+						title: 'Kode',
+						textAlign: 'center'
+					}, {
+						field: 'no_seri',
+						title: 'No. Seri',
+						textAlign: 'center'
+					}, {
+						field: 'nama_barang',
+						title: 'Nama Barang',
+						textAlign: 'center'
+					}, {
+						field: 'tipe_barang',
+						title: 'Tipe',
+						textAlign: 'center'
+					}, {
+						field: 'merek_barang',
+						title: 'Merek',
+						textAlign: 'center'
+					}, {
+						field: 'jumlah_barang',
+						title: 'Jumlah',
+						textAlign: 'center'
+					}, {
+						field: 'satuan_barang',
+						title: 'Satuan',
+						textAlign: 'center'
+					}, {
+						field: 'keterangan_barang',
+						title: 'Keterangan',
+						textAlign: 'center'
+
+					} 
+					]
+				});
 			});
 		</script>
 		<!--end::Page Snippets -->

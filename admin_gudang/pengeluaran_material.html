@@ -300,7 +300,7 @@
 										</div>
 										<div class="tab-content">
 											<div class="tab-pane active" id="tab_antrian" role="tabpanel">
-												<table class="table" id="tbl_antrian">
+												<table class="table responsive m-datatable-antrian" id="tbl_antrian">
 													<thead>
 														<tr>
 															<th>No</th>
@@ -390,7 +390,7 @@
 															<td>Ibu Heni</td>
 															<td>Pemasangan</td>
 															<td>
-																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rician</a>
+																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rincian</a>
 															</td>
 														</tr>
 														<tr>
@@ -400,7 +400,7 @@
 															<td>Ibu Heni</td>
 															<td>Servis</td>
 															<td>
-																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rician</a>
+																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rincian</a>
 															</td>
 														</tr>
 														<tr>
@@ -410,7 +410,7 @@
 															<td>Ibu Heni</td>
 															<td>Free</td>
 															<td>
-																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rician</a>
+																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rincian</a>
 															</td>
 														</tr>
 														<tr>
@@ -420,7 +420,7 @@
 															<td>Ibu Heni</td>
 															<td>Survey</td>
 															<td>
-																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rician</a>
+																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rincian</a>
 															</td>
 														</tr>
 														<tr>
@@ -430,7 +430,7 @@
 															<td>Ibu Heni</td>
 															<td>Pemasangan</td>
 															<td>
-																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rician</a>
+																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rincian</a>
 															</td>
 														</tr>
 													</tbody>
@@ -456,7 +456,7 @@
 															<td>Ibu Heni</td>
 															<td>Pemasangan</td>
 															<td>
-																<a href="batal_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rician</a>
+																<a href="batal_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rincian</a>
 															</td>
 														</tr>
 														<tr>
@@ -466,7 +466,7 @@
 															<td>Ibu Heni</td>
 															<td>Servis</td>
 															<td>
-																<a href="batal_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rician</a>
+																<a href="batal_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rincian</a>
 															</td>
 														</tr>
 														<tr>
@@ -476,7 +476,7 @@
 															<td>Ibu Heni</td>
 															<td>Free</td>
 															<td>
-																<a href="batal_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rician</a>
+																<a href="batal_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rincian</a>
 															</td>
 														</tr>
 														<tr>
@@ -486,7 +486,7 @@
 															<td>Ibu Heni</td>
 															<td>Survey</td>
 															<td>
-																<a href="batal_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rician</a>
+																<a href="batal_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rincian</a>
 															</td>
 														</tr>
 														<tr>
@@ -496,7 +496,7 @@
 															<td>Ibu Heni</td>
 															<td>Pemasangan</td>
 															<td>
-																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rician</a>
+																<a href="rincian_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Rincian</a>
 															</td>
 														</tr>
 													</tbody>
@@ -542,9 +542,15 @@
 		<!--end::Page Vendors -->  
 		<!--begin::Page Snippets -->
 		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
+
+
 		<script type="text/javascript">
+
+
+
 			var tbl_antrian = $('#tbl_antrian').mDatatable({
 				data: {
+
 					saveState: {cookie: false},
 						/*type: 'remote',
 				        source: {
@@ -573,11 +579,12 @@
 						class: '', // custom wrapper class
 						scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
 						// height: 450, // datatable's body's fixed height
+						
 						footer: false // display/hide footer
 					},
 
 					// column sorting
-					sortable: false,
+					sortable: true,
 					search: {
 						input: $('#generalSearch'),
 					},
@@ -586,17 +593,20 @@
 					{
 						field: 'No',
 						textAlign: 'center',
-						width: 50
+						width: 20
 					},
 					{
 						field: 'Tanggal',
 						textAlign: 'center',
 						type:'date',
 						format: 'DD/MM/YYYY',
+						width: 80
 					},
 					{
 						field: 'No SPK',
 						textAlign: 'center',
+						width: 250
+
 					},
 					{
 						field: 'Nama Pelanggan',
@@ -613,7 +623,7 @@
 					}
 
 					],
-				});
+				});=
 			</script>
 			<script type="text/javascript">
 				var tbl_telah_terbit = $('#tbl_telah_terbit').mDatatable({
@@ -732,7 +742,7 @@
 					{
 						field: 'No',
 						textAlign: 'center',
-						width: 50
+						width: 20
 					},
 					{
 						field: 'Tanggal',
@@ -758,6 +768,68 @@
 					}
 
 					],
+				});
+			</script>
+			<script>
+				var datatable;
+
+				$(document).ready(function() {
+					datatable = $('.m-datatable-antrian').mDatatable({
+						data: {
+							type: 'remote',
+							source: {
+								read: {
+								url: 'data/antrian.php' //Data dari database
+							}
+						},
+						serverPaging: true,
+						serverFiltering: true,
+						serverSorting: true
+					},
+					search: {
+						input: $('#generalSearch'),
+					},
+					columns: [
+					{
+						field: 'no',
+						title: 'No',
+						textAlign: 'center',
+						width: 20,
+						sortable: false,
+						template: function(row, rowIndex, datatable) {
+							return ((datatable.getCurrentPage() - 1) * datatable.getPageSize()) + rowIndex + 1;
+						}
+					}, {
+						field: 'tanggal',
+						title: 'Tanggal',
+						textAlign: 'center',
+						width : 80
+
+					}, {
+						field: 'no_spk',
+						title: 'No. SPK',
+						textAlign: 'center',
+						width : 250
+					}, {
+						field: 'nama_pelanggan',
+						title: 'Nama Pelanggan',
+						textAlign: 'center',
+					}, {
+						field: 'tipe_spk',
+						title: 'Tipe SPK',
+						textAlign: 'center',
+					},  {
+						field: 'aksi',
+						title: 'Aksi',
+						width: 200,
+						textAlign: 'center',
+						template: function (row) {
+							return '<a href="form_pengeluaran_material.html" class="btn btn-sm btn-primary btn_material" style="color:white; width:80px;">Material</a>' +
+									'<a href="#" class="btn btn-sm btn-danger btn_batal" style="color:white; width:80px;">Batal</a>';
+						}
+					} 
+					]
+				});
 				});
 			</script>
 			<script>
