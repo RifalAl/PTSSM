@@ -34,7 +34,7 @@
 	<!--end::Base Styles -->
 	<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
 	<style>
-		@media print {
+		/*@media print {*/
 
 			.table {
 				min-height : 300px !important;
@@ -42,10 +42,12 @@
 
 			th {
 				font-size: 1.7rem !important;
+				border: 1px solid black !important;
 			}
 
 			td {
 				font-size: 1.5rem !important;
+				border: 1px solid black;
 			}
 
 			p {
@@ -97,6 +99,9 @@
 			}
 
 		}
+		.m-datatable__pager-info {
+			display: none;
+		/*}*/
 
 	</style>
 </head>
@@ -109,38 +114,27 @@
 				<div class="col-xl-12">
 					<div class="m-portlet m-portlet--tab">
 						<div class="m-portlet__head header">
-							<h3 class="header-pesanan">
-								SPK Pemasangan
-							</h3><br>
-							<h3 name="no_surat_jalan" class="header-pesanan-no"> 
-								<i class="fa fa-check-circle"> </i> 0037/SSM/SPK-PSG/MKS/III/2019
-							</h3><br><br>
-							<div class="info row">
-								<div class="col-sm">
-									<p id="tanggal_surat">
-										<i class="flaticon-calendar-2"> </i>20/11/19
-									</p> 
-									<p id="nama_pelanggan">
-										<i class="flaticon-users"> </i> Ahmad Rifaldi
-									</p>
-									<p id="no_telpon">
-										<i class="fa fa-phone"> </i> 085-145-322-137
-									</p>
-									<p>
-										Tanggal Mulai : 
-										<span id="tgl_mulai">
-										23/03/19 10.10</span>
-									</p>
-									<p>
-										Tanggal Selesai : <span id="tgl_selesai">25/03/19 11.15</span>
-									</p>
+							<div style="margin-top: 10px" align="center">
+								<img style="height: auto;width: 280px" src="../assets/demo/default/media/img/misc/logo_print.png">
+								<h2 class="header-pesanan">
+									SPK PEMASANGAN
+								</h2>
+								<h4>No Surat : <span name="no_surat_jalan">0037/SSM/SPK-PSG/MKS/III/2019</span></h4>
+								<h4>Tanggal : <span name="tanggal_surat">20/11/2019</span></h4>
+								<h5>Tipe Pajak : <span name="tipe_pajak">Non-Pajak</span></h5>
+							</div>
+							<div style="margin-top: 20px" class="info row">
+								<div align="center" class="col-sm">
+									<h5>Nama Pelanggan: <span name="nama_pelanggan">Ahmad Rifaldi</span></h5>
+									<h5>Telpon: <span name="telpon_pelanggan"> 085-145-322-137</span></h5>
+									<h5>Tanggal Mulai: <span name="tgl_mulai"> 23/03/19 10.10</span></h5>
+									<h5>Tanggal Selesai: <span name="tgl_selesai"> 24/03/19 11.10</span></h5>
 								</div>
-								<div class="col-sm">
-									<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
-									<p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
-									<p>Teknisi : <span id="nama_teknisi">Ridwan</span></p>
-									<p>Status : <span id="status_spk">Selesai</span></p>
-									<p>Tipe Pajak : <span id="tipe_pajak">Non-Pajak</span></p>
+								<div align="center" class="col-sm">
+									<h5>Alamat: <span name="alamat_pelanggan"> Jl. Poros Malino, Griya Riski Abadi blok C6</span></h5>
+									<h5>Teknisi: <span name="nama_teknisi"> Ridwan</span></h5>
+									<h5>Tipe Pajak: <span name="tipe_pajak">Non-Pajak</span></h5>
+									<h5>Status: <span name="status_spk">SELESAI</span></h5>
 								</div>
 							</div>	
 						</div>
@@ -169,33 +163,33 @@
 							<!--end: Datatable -->
 						</div>
 						<div class="m-accordion__item-content">
-													<div class="row">
-														<div class="heading col-sm">
-															<h5 align="center">Sebelum</h5>
-														</div>
-														<div class="heading col-sm">
-															<h5 align="center">Sesudah</h5>
-														</div>
-													</div>
-													<div id="item[0]" class="row">
-														<div class=" col-sm">
-															<img name="gambar_sebelum" class="gambar" src="https://s1.bukalapak.com/img/1376695601/w-1000/LG_AC_INVERTER_3_4_PK_T08EMV1_TERMURAH.jpg">
+							<div class="row">
+								<div class="heading col-sm">
+									<h5 align="center">Sebelum</h5>
+								</div>
+								<div class="heading col-sm">
+									<h5 align="center">Sesudah</h5>
+								</div>
+							</div>
+							<div id="item[0]" class="row">
+								<div class=" col-sm">
+									<img name="gambar_sebelum" class="gambar" src="https://id-live-01.slatic.net/original/dacc9ce9456092852a813a9302be1292.jpg">
 
-														</div>
-														<div class=" col-sm">
-															<img name="gambar_sesudah" class="gambar" src="https://s1.bukalapak.com/img/1376695601/w-1000/LG_AC_INVERTER_3_4_PK_T08EMV1_TERMURAH.jpg">
+								</div>
+								<div class=" col-sm">
+									<img name="gambar_sesudah" class="gambar" src="https://id-live-01.slatic.net/original/dacc9ce9456092852a813a9302be1292.jpg">
 
-														</div>
-													</div>
-													<div id="item[1]" class="row">
-														<div class=" col-sm">
-															<img name="gambar_sebelum" class="gambar" src="http://cdn2.tstatic.net/tribunnews/foto/bank/images/20141027_213611_air-conditioner-ac.jpg">
-														</div>
-														<div class=" col-sm">
-															<img name="gambar_sesudah" class="gambar" src="http://cdn2.tstatic.net/tribunnews/foto/bank/images/20141027_213611_air-conditioner-ac.jpg">
-														</div>
-													</div>
-												</div>
+								</div>
+							</div>
+							<div id="item[1]" class="row">
+								<div class=" col-sm">
+									<img name="gambar_sebelum" class="gambar" src="http://cdn2.tstatic.net/tribunnews/foto/bank/images/20141027_213611_air-conditioner-ac.jpg">
+								</div>
+								<div class=" col-sm">
+									<img name="gambar_sesudah" class="gambar" src="http://cdn2.tstatic.net/tribunnews/foto/bank/images/20141027_213611_air-conditioner-ac.jpg">
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>	
 			</div>

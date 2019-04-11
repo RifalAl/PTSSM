@@ -332,18 +332,18 @@
 									<div class="m-portlet__body">
 										<ul class="nav nav-pills" role="tablist">
 											<li class="nav-item">
-												<a class="nav-link active" data-toggle="tab" href="#m_tabs_list_spk">
-													SPK
+												<a class="nav-link active" data-toggle="tab" href="#m_tabs_buat_spk_komplain">
+													Buat SPK Komplain
 												</a>
 											</li>
 											<li class="nav-item">
 												<a class="nav-link" data-toggle="tab" href="#m_tabs_list_spk_komplain">
-													SPK Komplain 
+													SPK Komplain Terbit
 												</a>
 											</li>
 										</ul>
 										<div class="tab-content">
-											<div class="tab-pane active" id="m_tabs_list_spk" role="tabpanel">
+											<div class="tab-pane active" id="m_tabs_buat_spk_komplain" role="tabpanel">
 												<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
 													<div class="row align-items-center">
 														<div class="col-md-12">
@@ -351,88 +351,73 @@
 																<div class="col-md-4">
 																	<div class="m-portlet__head-title">
 																		<h3 class="m-portlet__head-text">
-																			List SPK 
+																			Buat SPK Komplain 
 																		</h3>
-																	</div>
-																</div>
-																<div class="col-md-4 offset-md-4">
-																	<div class="m-input-icon m-input-icon--left">
-																		<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
-																		<span class="m-input-icon__icon m-input-icon__icon--left">
-																			<span>
-																				<i class="la la-search"></i>
-																			</span>
-																		</span>
 																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
+													<div class="form-group m-form__group row">
+														<label  class="col-2 col-form-label">
+															No. SPK
+														</label>
+														<div class="col-10">
+															<select style="width: 100%" class="form-control m-select2 dropdown_search" name="nama_pelanggan">
+																<option value="0">
+																	--Pilih No SPK--
+																</option>
+																<option value="1">
+																	0037/SSM/SPK-PSG/MKS/III/2019
+																</option>
+																<option value="2">
+																	0038/SSM/SPK-PSG/MKS/III/2019
+																</option>
+																<option value="3">
+																	0040/SSM/SPK-PSG/MKS/III/2019
+																</option>
+																<option value="4">
+																	0041/SSM/SPK-PSG/MKS/III/2019
+																</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2 col-form-label">
+															Nama Pelanggan
+														</label>
+														<div class="col-10">
+															<input disabled="" class="form-control m-input" type="text" value="Ibu Ani" id="nama_pelanggan">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2 col-form-label">
+															Telpon
+														</label>
+														<div  class="col-10">
+															<input disabled="" class="form-control m-input" type="text" value="085145322xxx" id="telpon_pelanggan">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2 col-form-label">
+															Alamat
+														</label>
+														<div class="col-10">
+															<input disabled="" class="form-control m-input" type="text" value="Jl. Angkasa 5, Panaikang, Makassar" id="alamat_pelanggan">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2 col-form-label">
+															Keterangan Komplain
+														</label>
+														<div class="col-10">
+															<textarea  style="resize: none;font-size: 1.2rem" class="form-control m-input" name="keterangan_komplain"rows="3">Pipa Bocor dan Remote Ac tidak berfungsi</textarea>
+														</div>
+													</div>
+													<div style="margin-top: 30px" align="center">
+														<button id="btn_terbitkan_spk" type="button" class="btn btn-primary btn_pemasangan">Terbitkan SPK</button>
+													</div>
 												</div>
-												<table class="table" id="tbl_spk">
-													<thead>
-														<tr>
-															<th>No</th>
-															<th>Tanggal</th>
-															<th>No SPK</th>
-															<th>Nama Pelanggan</th>
-															<th>No Telpon</th>
-															<th>Aksi</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>1</td>
-															<td>20/19/2018</td>
-															<td>1923102301</td>
-															<td>Bpk. Hendy</td>
-															<td>085145322137</td>
-															<td>
-																<a href="rincian_spk_komplain.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-															</td>
-														</tr>
-														<tr>
-															<td>2</td>
-															<td>20/19/2018</td>
-															<td>1923102301</td>
-															<td>Bpk. Suminto</td>
-															<td>085145322137</td>
-															<td>
-																<a href="rincian_spk_komplain.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-															</td>
-														</tr>
-														<tr>
-															<td>3</td>
-															<td>20/19/2018</td>
-															<td>1923102301</td>
-															<td>Bpk. Suminto</td>
-															<td>085145322137</td>
-															<td>
-																<a href="rincian_spk_komplain.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-															</td>
-														</tr>
-														<tr>
-															<td>4</td>
-															<td>20/19/2018</td>
-															<td>1923102301</td>
-															<td>Ibu Ida</td>
-															<td>085145322137</td>
-															<td>
-																<a href="rincian_spk_komplain.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-															</td>
-														</tr>
-														<tr>
-															<td>5</td>
-															<td>20/19/2018</td>
-															<td>1923102301</td>
-															<td>Ibu Sry</td>
-															<td>085145322137</td>
-															<td>
-																<a href="rincian_spk_komplain.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-															</td>
-														</tr>
-													</tbody>
-												</table>
 											</div>
 											<div class="tab-pane " id="m_tabs_list_spk_komplain" role="tabpanel">
 												<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
@@ -569,7 +554,7 @@
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
 		<script type="text/javascript">
-			var tbl_spk = $('#tbl_spk').mDatatable({
+			var tbl_list_komplain = $('#tbl_list_komplain').mDatatable({
 				data: {
 					saveState: {cookie: false},
 					/*type: 'remote',
@@ -644,80 +629,57 @@
 				],
 			});
 		</script>
-		<script type="text/javascript">
-			var tbl_list_komplain = $('#tbl_list_komplain').mDatatable({
-				data: {
-					saveState: {cookie: false},
-					/*type: 'remote',
-			        source: {
-			          read: {
-			            // sample GET method
-			            method: 'GET',
-			            url: 'https://keenthemes.com/metronic/preview/inc/api/datatables/demos/default.php',
-			            map: function(raw) {
-			              // sample data mapping
-			              var dataSet = raw;
-			              if (typeof raw.data !== 'undefined') {
-			                dataSet = raw.data;
-			              }
-			              return dataSet;
-			            },
-			          },
-			        },
-			        pageSize: 10,
-			        serverPaging: true,
-			        serverFiltering: true,
-			        serverSorting: true,*/
-			    },
-				// layout definition
-				layout: {
-					theme: 'default', // datatable theme
-					class: '', // custom wrapper class
-					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
-					// height: 450, // datatable's body's fixed height
-					footer: false // display/hide footer
-				},
-
-				// column sorting
-				sortable: false,
-				search: {
-					input: $('#generalSearch'),
-				},
-				columns: [
-
-				{
-					field: 'No',
-					textAlign: 'center',
-					width: 50
-				},
-				{
-					field: 'Tanggal',
-					textAlign: 'center',
-					type:'date',
-					format: 'DD/MM/YYYY',
-				},
-				{
-					field: 'No SPK',
-					textAlign: 'center',
-				},
-				{
-					field: 'Nama Pelanggan',
-					textAlign: 'center',
-				},
-				{
-					field: 'No Telpon',
-					textAlign: 'center',
-				},
-				{
-					field: 'Status',
-					textAlign: 'center',
-				},
-				{
-					field: 'Aksi',
-					textAlign: 'center',
+		<script>
+			var Select2 = function() {
+				var demos = function(){
+				 // basic
+				 $('.dropdown_search, .dropdown_search_validate').select2({
+				 	placeholder: "Select a state"
+				 });
 				}
+				var modalDemos = function(){
+					$('#m_select2_modal').on('shown.bs.modal', function () {
+				// basic
+				$('.dropdown_search_modal').select2({
+					placeholder: "Select a state"
+				});
+			});
+				}
+				return {
+					init: function() {
+						demos();
+						modalDemos();
+					}
+				};
+			}();
+			//== Initialization
+			jQuery(document).ready(function() {
+				Select2.init();
+			});
+		</script>
+		<script>
+			//== Class definition
+			var SweetAlert2Demo = function() {
 
-				],
+			//== Demos
+			var initDemos = function() {
+
+				$('#btn_terbitkan_spk').click(function(e) {
+					swal("SPK Telah Terbit!", "SPK yang anda buat telah terbit","success");
+				});
+			};
+
+			return {
+					//== Init
+					init: function() {
+						initDemos();
+					},
+				};
+			}();
+
+			//== Class Initialization
+			jQuery(document).ready(function() {
+				SweetAlert2Demo.init();
 			});
 		</script>
 	</body>

@@ -381,7 +381,7 @@
 										<!--end: Search Form -->
 										<!--begin: Datatable -->
 										<!-- <div class="m_datatable" id="local_data"></div> -->
-										<table class="table" id="tbl_rincian_spk_pemasangan">
+										<table class="table" id="tbl_rincian_spk">
 											<thead>
 												<tr>
 													<th>No</th>
@@ -400,7 +400,14 @@
 											</tbody>
 										</table>
 										<!--end: Datatable -->
+										<div class="form-group m-form__group">
+										<label for="exampleTextarea">
+											Keterangan Komplain
+										</label>
+										<textarea style="resize: none" id="keterangan_komplain" class="form-control m-input" rows="3"></textarea>
 									</div>
+									</div>
+
 									<div class="m-portlet__body gambar_pemasangan">
 										<div class="m-accordion__item">
 											<div class="m-accordion__item-head collapsed" role="tab" id="m_accordion_1_item_3_head" data-toggle="collapse" href="#m_accordion_1_item_3_body" aria-expanded="    false">
@@ -488,7 +495,7 @@
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
 		<script type="text/javascript">
-			var tbl_list_item_masuk = $('#tbl_rincian_spk_pemasangan').mDatatable({
+			var tbl_rincian_spk = $('#tbl_rincian_spk').mDatatable({
 				data: {
 					saveState: {cookie: false},
 					/*type: 'remote',

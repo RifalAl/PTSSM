@@ -471,7 +471,12 @@
 										<div class="m-portlet__head-title">
 											<h3 align="center" class="m-portlet__head-text">
 												Jasa Pemasangan dan Material AC
-											</h3><br>
+											</h3>
+											<div style="padding: 10px" align="right">
+												<button type="button" data-toggle="modal" data-target="#modal_tambah_pekerjaan" class="btn btn-primary">
+													Tambah Pekerjaan
+												</button>	
+											</div>
 										</div>
 										<table class="table" id="tbl_item_jasa_pemasangan">
 											<thead>
@@ -583,7 +588,7 @@
 													<td>
 														<input disabled="" class="form-control m-input" type="text" value="Rp33,000" id="">
 													</td>
-												</tr>
+												</tr><!-- 
 												<tr>
 													<td>4</td>
 													<td>Pipa PVC+T+L+Armaflex</td>
@@ -715,7 +720,7 @@
 													<td>
 														<input disabled="" class="form-control m-input" type="text" value="Rp330,000" id="">
 													</td>
-												</tr>
+												</tr> -->
 											</tbody>
 										</table>
 										<table style="width: 100%" class="tg">
@@ -847,6 +852,96 @@
 								Tutup
 							</button>
 							<button id="btn_tambah_pemasangan" data-dismiss="modal" type="button" class="btn btn-primary">
+								Tambahkan
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" id="modal_tambah_pekerjaan" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">
+								Tambah Pekerjaan
+							</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">
+									&times;
+								</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-group m-form__group row">
+								<label for="example-text-input" class="col-2 col-form-label">
+									Uriaan Pekerjaan
+								</label>
+								<div class="col-10">
+									<select style="width: 100%" class="form-control m-select2 dropdown_search" name="type">
+										<option value="0">
+											--Pilih Pekerjaan--
+										</option>
+										<option value="1">
+											Jasa Pemasangan
+										</option>
+										<option value="2">
+											Pipa Refrigrant
+										</option>
+										<option value="3">
+											Kabel Kontrol Supreme
+										</option>
+										<option value="4">
+											Pipa PVC+T+L+Armaflex
+										</option>
+										<option value="5">
+											Pipa PVC 3
+										</option>
+										<option value="3">
+											Dudukan Indoor
+										</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label for="example-text-input" class="col-2 col-form-label">
+									Model 
+								</label>
+								<div class="col-10">
+									<select style="width: 100%" class="form-control m-select2 dropdown_search" name="model">
+										<option value="1">
+											Model 1
+										</option>
+										<option value="2">
+											Model 2 
+										</option>
+										<option value="3">
+											Model 3
+										</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label for="example-text-input" class="col-2 col-form-label">
+									Jumlah
+								</label>
+								<div class="col-10">
+									<div class="input-group">
+										<input name="jumlah_barang" type="text" class="form-control m-input" value="2" aria-describedby="basic-addon2">
+										<div class="input-group-append">
+											<span class="input-group-text" id="basic-addon2">
+												Unit
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">
+								Tutup
+							</button>
+							<button id="btn_tambah_pekerjaan" data-dismiss="modal" type="button" class="btn btn-primary">
 								Tambahkan
 							</button>
 						</div>
@@ -1061,6 +1156,9 @@
 					swal("Berhasil!", "Penawaran telah dibuat","success");
 				});
 				$('#btn_tambah_pemasangan').click(function(e) {
+					swal("Telah ditambahkan!", "data yang anda inputkan telah tersimpan", "success");
+				});
+				$('#btn_tambah_pekerjaan').click(function(e) {
 					swal("Telah ditambahkan!", "data yang anda inputkan telah tersimpan", "success");
 				});
 			};

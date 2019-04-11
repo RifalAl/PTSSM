@@ -376,6 +376,7 @@
 											<div style="margin-bottom: 10px" class="col-sm">
 												<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
 												<p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
+												<p>No. Faktur Pajak : <span id="no_faktur_pajak">123</span></p>
 												<div class="form-group m-form__group row">
 													<label for="example-search-input" class="col-2 col-form-label">
 														Norek :
@@ -392,7 +393,10 @@
 																BCA | 797-013-3393
 															</option>
 															<option value="3">
-																MANDIRI | 130003302363
+																BPD | 130003302363
+															</option>
+															<option value="4">
+																BRI | 022501001344308
 															</option>
 														</select>
 													</div>
@@ -412,6 +416,7 @@
 													<th>Sat</th>
 													<th>Nama Barang</th>
 													<th>Kategori</th>
+													<th>No Kartu Garansi</th>
 													<th>Harga</th>
 													<th>Jumlah</th>
 												</tr>
@@ -422,14 +427,16 @@
 													<td name="satuan">unit</td>
 													<td name="nama_barang">AC Daikin 1/2 PK Thailand</td>
 													<td name="kategori">Item</td>
+													<td name="no_kartu_garansi">123</td>
 													<td name="Harga">31,640,000</td>
 													<td name="total">126,560,000</td>
 												</tr>
 												<tr>
 													<td name="jumlah">3</td>
-													<td name="satuan">>meter</td>
+													<td name="satuan">meter</td>
 													<td name="nama_barang">Pipa</td>
 													<td name="kategori">Material</td>
+													<td name="no_kartu_garansi">123</td>
 													<td name="Harga">30,000</td>
 													<td name="total">75,000</td>
 												</tr>
@@ -576,7 +583,11 @@
 				{
 					field: 'Nama Barang',
 					textAlign: 'center',
-					width: 250,
+					width: 230,
+				},
+				{
+					field: 'No Kartu Garansi',
+					textAlign: 'center',
 				},
 				{
 					field: 'Jumlah',
