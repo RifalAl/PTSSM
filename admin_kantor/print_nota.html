@@ -216,6 +216,16 @@
 								</div>
 							</div>
 						</div>
+						<div class="m-portlet__body">
+							<div  class="form-group m-form__group row">
+								<label  class="col-xl-12">
+									Catatan
+								</label>
+								<div class="col-xl-12">
+									<textarea disabled="" style="resize: none" class="form-control m-input " id="catatan" rows="4">lorem ipsum dolor sit amet</textarea>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>	
 			</div>
@@ -227,9 +237,9 @@
 <script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 <script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
 <script type="text/javascript">
-			var tbl_list_item_masuk = $('#tbl_rincian_nota').mDatatable({
-				data: {
-					saveState: {cookie: false},
+	var tbl_list_item_masuk = $('#tbl_rincian_nota').mDatatable({
+		data: {
+			saveState: {cookie: false},
 					/*type: 'remote',
 			        source: {
 			          read: {
