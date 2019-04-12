@@ -15,7 +15,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Admin Gudang | Proses -Barang Masuk
+			Admin Gudang | Rinican Stock Kantor
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -131,7 +131,7 @@
 						<!-- ASIDE MENU DISINI -->
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 							<!-- DASHBOARD -->
-							<li class="m-menu__item " aria-haspopup="true" >
+							<li class="m-menu__item  " aria-haspopup="true" >
 								<a  href="index.html" class="m-menu__link ">
 									<i class="m-menu__link-icon flaticon-line-graph"></i>
 									<span class="m-menu__link-title">
@@ -144,7 +144,7 @@
 								</a>
 							</li>
 							<!-- Barang Masuk -->
-							<li class="m-menu__item m-menu__item--active" aria-haspopup="true" >
+							<li class="m-menu__item" aria-haspopup="true" >
 								<a  href="barang_masuk.html" class="m-menu__link ">
 									<i class="m-menu__link-icon fa fa-shopping-cart"></i>
 									<span class="m-menu__link-title">
@@ -196,7 +196,7 @@
 								</a>
 							</li>
 							<!-- Stock -->
-							<li class="m-menu__item" aria-haspopup="true" >
+							<li class="m-menu__item m-menu__item--active" aria-haspopup="true" >
 								<a  href="stock.html" class="m-menu__link ">
 									<i class="m-menu__link-icon flaticon-list-1"></i>
 									<span class="m-menu__link-title">
@@ -232,7 +232,7 @@
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
 								<h3 class="m-subheader__title m-subheader__title--separator">
-									Proses Barang Masuk
+									Stock
 								</h3>
 								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
 									<li class="m-nav__item m-nav__item--home">
@@ -244,9 +244,9 @@
 										-
 									</li>
 									<li class="m-nav__item">
-										<a href="barang_masuk.html" class="m-nav__link">
+										<a href="stock.html" class="m-nav__link">
 											<span class="m-nav__link-text">
-												Barang Masuk
+												Stock
 											</span>
 										</a>
 									</li>
@@ -254,9 +254,9 @@
 										-
 									</li>
 									<li class="m-nav__item">
-										<a href="proses_barang_masuk.html" class="m-nav__link">
+										<a href="rincian_stock_kantor.html" class="m-nav__link">
 											<span class="m-nav__link-text">
-												Proses
+												Rincian
 											</span>
 										</a>
 									</li>
@@ -271,82 +271,74 @@
 								<div class="m-portlet">
 									<div class="m-portlet__head">
 										<div class="m-portlet__head-caption">
-											<div class="m-portlet__head-title">
-												<h3 class="m-portlet__head-text">
-													List Item
-												</h3>
+											<div class="m-portlet__head-title col-xl-12">
+												<div style="margin-top: 20px" class=" row">
+													<div class="col-sm">
+														<h3 class="m-portlet__head-text">
+															Rincian Kartu Stock Barang
+														</h3>
+													</div>
+													
+												</div>
 											</div>
 										</div>
 									</div>
 									<div class="m-portlet__body">
-										<div style="display: inline;" class="col-md-12">
-											<div class="m-input-icon m-input-icon--left">
-												<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
-												<span class="m-input-icon__icon m-input-icon__icon--left">
-													<span>
-														<i class="la la-search"></i>
+										<div class="form-group m-form__group row">
+											<label  class="col-2 col-form-label">
+												Jenis Barang
+											</label>
+											<div class="col-md-5">
+												<input disabled="" class="form-control m-input" type="text" value="AC Split Daikin 2 PK Standar" id="jenis_barang">
+											</div>
+											<div class="offset-md-1 col-md-4 ">
+												<div class="m-input-icon m-input-icon--left">
+													<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
+													<span class="m-input-icon__icon m-input-icon__icon--left">
+														<span>
+															<i class="la la-search"></i>
+														</span>
 													</span>
-												</span>
+												</div>
 											</div>
 										</div>
-										<div class="tab-content">
-											<table class="table" id="tbl_proses_barang_masuk">
-												<thead>
-													<tr>
-														<th>No</th>
-														<th>Kode</th>
-														<th>Nama Barang</th>
-														<th>Serial Number</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1</td>
-														<td>123123135</td>
-														<td>AC DAIKIN 1/2 PK Malaysia</td>
-														<td>
-															<input required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">
-														</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>123123135</td>
-														<td>AC DAIKIN 1/2 PK Malaysia</td>
-														<td>
-															<input required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">
-														</td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td>123123135</td>
-														<td>AC DAIKIN 1/2 PK Malaysia</td>
-														<td>
-															<input required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">
-														</td>
-													</tr>
-													<tr>
-														<td>4</td>
-														<td>123123135</td>
-														<td>AC DAIKIN 1/2 PK Malaysia</td>
-														<td>
-															<input required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">
-														</td>
-													</tr>
-													<tr>
-														<td>5</td>
-														<td>123123135</td>
-														<td>AC DAIKIN 1/2 PK Malaysia</td>
-														<td>
-															<input required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">
-														</td>
-													</tr>
-												</tbody>
-												
-											</table>
-											<div align="center">
-												<button type="submit" id="btn_simpan" class="btn btn-success">Simpan</button>	
-											</div>
-										</div>
+
+										<table class="table" id="tbl_rincian_stock">
+											<thead>
+												<tr>
+													<th>No Seri</th>
+													<th>Tanggal Masuk</th>
+													<th>Tanggal Keluar</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>123123123</td>
+													<td>20/11/19</td>
+													<td>25/11/19</td>
+												</tr>
+												<tr>
+													<td>134523462</td>
+													<td>20/11/19</td>
+													<td>25/11/19</td>
+												</tr>
+												<tr>
+													<td>987655673</td>
+													<td>20/11/19</td>
+													<td>25/11/19</td>
+												</tr>
+												<tr>
+													<td>098745656</td>
+													<td>20/11/19</td>
+													<td>-</td>
+												</tr>
+												<tr>
+													<td>164553323</td>
+													<td>20/11/19</td>
+													<td>-</td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
 								</div>
 							</div>
@@ -387,7 +379,7 @@
 		<!--begin::Page Snippets -->
 		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
 		<script type="text/javascript">
-			var tbl_proses_barang_masuk = $('#tbl_proses_barang_masuk').mDatatable({
+			var tbl_rincian_stock = $('#tbl_rincian_stock').mDatatable({
 				data: {
 					saveState: {cookie: false},
 					/*type: 'remote',
@@ -417,8 +409,7 @@
 					class: '', // custom wrapper class
 					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
 					// height: 450, // datatable's body's fixed height
-					footer: false, // display/hide footer
-					"autoWidth": false,
+					footer: false // display/hide footer
 				},
 
 				// column sorting
@@ -427,96 +418,29 @@
 					input: $('#generalSearch'),
 				},
 				columns: [
-
 				{
-					field: 'No',
+					field: 'Tanggal Masuk',
 					textAlign: 'center',
-					width: 30
+					type:'date',
+					format: 'DD/MM/YYYY',
 				},
 				{
-					field: 'Kode',
+					field: 'Tanggal Keluar',
 					textAlign: 'center',
+					type:'date',
+					format: 'DD/MM/YYYY',
 				},
-				{
-					field: 'Nama Barang',
-					textAlign: 'center',
-				},
-				{
-					field: 'Serian Number',
+					{
+					field: 'No Seri',
 					textAlign: 'center',
 				}
+
 
 				],
 			});
 		</script>
-		<!-- <script>
-			var datatable;
-			$(document).ready(function() {
-				datatable = $('.m-datatable').mDatatable({
-					data: {
-						type: 'remote',
-						source: {
-							read: {
-								url: 'data/proses-barang.php' //Data dari database
-							}
-						},
-						serverPaging: true,
-						serverFiltering: true,
-						serverSorting: true
-					},
-					search: {
-						input: $('#generalSearch'),
-					},
-					columns: [
-					{
-						field: 'no',
-						title: 'No',
-						textAlign: 'center',
-						width: 50,
-						sortable: false,
-						template: function(row, rowIndex, datatable) {
-							return ((datatable.getCurrentPage() - 1) * datatable.getPageSize()) + rowIndex + 1;
-						}
-					},  {
-						field: 'kode_barang',
-						title: 'Kode',
-						textAlign: 'center'
-					}, {
-						field: 'nama_barang',
-						title: 'Nama Barang',
-						textAlign: 'center',
-					}, {
-						field: 'serial_number',
-						title: 'Serial Number',
-						textAlign: 'center',
-						template: function (row) {
-							return '<input required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">';
-						}
-					} 
-					]
-				});
-			});
-		</script> -->
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
-		<script>
-			$('#btn_simpan').click(function(e) {
-				swal({
-					title: 'Apakah anda yakin menyimpan data ini?',
-					type: 'warning',
-					showCancelButton: true,
-					confirmButtonText: 'Ya,Simpan!'
-				}).then(function(result) {
-					if (result.value) {
-						swal(
-							'Berhasil!',
-							'Data anda telah tersimpan',
-							'success'
-							)
-					}
-				});
-			});
-		</script>
 	</body>
 	<!-- end::Body -->
 	</html>

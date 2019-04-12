@@ -393,10 +393,10 @@ float: right;
     background: #5be647;
 }
 
-#merek_kendaraan {
+.merek_kendaraan {
     font-weight: 600 !important;
 }
-#dd_kendaraan {
+.dd_kendaraan {
     font-weight: 600 !important;
 }
 

@@ -51,6 +51,11 @@
 				font-weight: 400;
 				font-size: 1.1rem;
 			}
+			#image-preview{
+				display:none;
+				width : 250px;
+				height : auto;
+			}
 		</style>
 	</head>
 	<!-- end::Head -->
@@ -368,8 +373,12 @@
 													</label>
 													<textarea style="resize: none; height: 90px" class="form-control m-input m-input--solid" id="keterangan_barang" rows="3"></textarea>
 												</div>
-												<div class="offset-lg-6 col-lg-6">
-													<br><br>
+												<div align="center" style="margin-top: 30px" class="offset-lg-3 col-lg-6">
+													<img style="display: none" id="image-preview" alt="image preview"/>
+													<br/>
+													<input type="file" id="image-source" onchange="previewImage();"/>
+												</div>
+												<div  class="offset-lg-3 col-lg-6">
 													<button type="button" style="width:inherit;" class="btn btn-success" id="btn_tambah" >tambahkan</button>
 												</div>
 											</div>
@@ -410,18 +419,22 @@
 												<thead>
 													<tr>
 														<th>No</th>
+														<th>Kategori</th>
 														<th>Kode</th>
-														<th>Nama Barang</th>
+														<th>Nama Item</th>
 														<th>Tipe</th>
 														<th>Merek</th>
 														<th>Jumlah</th>
 														<th>Satuan</th>
 														<th>Keterangan</th>
+														<th>Gambar</th>
+														<th>Aksi</th>
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
 														<td>1</td>
+														<td>Unit</td>
 														<td>#14253617</td>
 														<td>Thermistor RKD25GVM</td>
 														<td>Thermistor</td>
@@ -429,9 +442,17 @@
 														<td>20</td>
 														<td>unit</td>
 														<td>-</td>
+														<td>
+															<img class="gambar_inventory" src="https://s0.bukalapak.com/img/5371113482/w-1000/Freonr22ACR22isi5kgpraktisfreetabung_1_scaledjpg_scaled.jpg">
+														</td>
+														<td>
+															<a class="btn btn-sm btn-primary" style="color:white; width:80px;">Edit</a>
+															<a class="btn btn-sm btn-secondary" style="	 width:80px;">Hapus</a>
+														</td>
 													</tr>
 													<tr>
 														<td>2</td>
+														<td>Material</td>
 														<td>#14253617</td>
 														<td>Thermistor RKD25GVM</td>
 														<td>Thermistor</td>
@@ -439,19 +460,36 @@
 														<td>20</td>
 														<td>unit</td>
 														<td>-</td>
+														<td>
+															<img class="gambar_inventory" src="https://s0.bukalapak.com/img/5371113482/w-1000/Freonr22ACR22isi5kgpraktisfreetabung_1_scaledjpg_scaled.jpg">
+														</td>
+														<td>
+															<a class="btn btn-sm btn-primary" style="color:white; width:80px;">Edit</a>
+															<a class="btn btn-sm btn-secondary" style="	 width:80px;">Hapus</a>
+														</td>
+														
 													</tr>
 													<tr>
 														<td>3</td>
-														<td>#14253617</td>
-														<td>Thermistor RKD25GVM</td>
-														<td>Thermistor</td>
+														<td>Jasa</td>
+														<td>#J12</td>
+														<td>Cuci AC Dalam</td>
+														<td> - </td>
 														<td>Daikin</td>
-														<td>20</td>
+														<td> - </td>
 														<td>unit</td>
-														<td>-</td>
+														<td> Jasa pekerjaan </td>
+														<td>
+															<img class="gambar_inventory" src="">
+														</td>
+														<td>
+															<a class="btn btn-sm btn-primary" style="color:white; width:80px;">Edit</a>
+															<a class="btn btn-sm btn-secondary" style="	 width:80px;">Hapus</a>
+														</td>
 													</tr>
 													<tr>
 														<td>4</td>
+														<td>Sparepart</td>
 														<td>#14253617</td>
 														<td>Thermistor RKD25GVM</td>
 														<td>Thermistor</td>
@@ -459,9 +497,17 @@
 														<td>20</td>
 														<td>unit</td>
 														<td>-</td>
+														<td>
+															<img class="gambar_inventory" src="https://s0.bukalapak.com/img/5371113482/w-1000/Freonr22ACR22isi5kgpraktisfreetabung_1_scaledjpg_scaled.jpg">
+														</td>
+														<td>
+															<a class="btn btn-sm btn-primary" style="color:white; width:80px;">Edit</a>
+															<a class="btn btn-sm btn-secondary" style="	 width:80px;">Hapus</a>
+														</td>
 													</tr>
 													<tr>
 														<td>5</td>
+														<td>Sparepart</td>
 														<td>#14253617</td>
 														<td>Thermistor RKD25GVM</td>
 														<td>Thermistor</td>
@@ -469,6 +515,13 @@
 														<td>20</td>
 														<td>unit</td>
 														<td>-</td>
+														<td>
+															<img class="gambar_inventory" src="https://s0.bukalapak.com/img/5371113482/w-1000/Freonr22ACR22isi5kgpraktisfreetabung_1_scaledjpg_scaled.jpg">
+														</td>
+														<td>
+															<a class="btn btn-sm btn-primary" style="color:white; width:80px;">Edit</a>
+															<a class="btn btn-sm btn-secondary" style="	 width:80px;">Hapus</a>
+														</td>
 													</tr>
 												</tbody>
 											</table>
@@ -596,6 +649,16 @@
 					width: 50
 				},
 				{
+					field: 'Gambar',
+					textAlign: 'center',
+						
+				},
+				{
+					field: 'Kategori',
+					textAlign: 'center',
+						
+				},
+				{
 					field: 'Kode',
 					textAlign: 'center',
 					width: 70	
@@ -628,6 +691,10 @@
 				{
 					field: 'Keterangan',
 					textAlign: 'center',
+				},
+				{
+					field: 'Aksi',
+					textAlign: 'center',
 				}
 
 				],
@@ -652,6 +719,17 @@
 					}
 				});
 			});
+		</script>
+		<script>
+			function previewImage() {
+				document.getElementById("image-preview").style.display = "block";
+				var oFReader = new FileReader();
+				oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+
+				oFReader.onload = function(oFREvent) {
+					document.getElementById("image-preview").src = oFREvent.target.result;
+				};
+			};
 		</script>
 	</body>
 	<!-- end::Body -->

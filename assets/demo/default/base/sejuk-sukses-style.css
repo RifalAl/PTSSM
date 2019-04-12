@@ -187,3 +187,13 @@ font-weight: 500;
     height:100px;
     background-color: #1973c5;
 }
+
+#image-preview{
+    display:none;
+    width : 250px;
+    height : auto;
+}
+
+.m-form.m-form--label-align-right .m-form__group > label {
+    text-align: left;
+}

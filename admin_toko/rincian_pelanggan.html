@@ -367,6 +367,18 @@
 								</button>
 							</div> -->
 							<div class="m-portlet__body">
+								<div class="list_item_pemasangan">
+									<div class="m-portlet__head-title row" style="margin-bottom: 20px;">
+										<div class="col-6">
+											<h4>
+												List AC
+											</h4>	
+										</div>
+										<div align="right" class="col-6">
+											<button style="width: 200px"  data-toggle="modal" data-target="#modal_tambah_item" type="button" class="btn btn-success">Tambah Item</button>	
+										</div>
+									</div>
+								</div>
 								<table class="table" id="tbl_item_ac">
 									<thead>
 										<tr>
@@ -426,6 +438,62 @@
 		</div>
 	</div>
 	<!-- end:: Body -->
+	<div class="modal fade" id="modal_tambah_item"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						Tambah Item
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-3 col-form-label">
+							Nama Barang
+						</label>
+						<div class="col-9">
+							<select style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="nama_barang">
+								<option value="1">
+									AC Split 1/2 PK Malaysia
+								</option>
+								<option value="2">
+									AC Daikin 1 PK 
+								</option>
+								<option value="3">
+									AC Split 1 PK Thailand
+								</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-3 col-form-label">
+							ID Unit
+						</label>
+						<div class="col-9">
+							<div class="input-group">
+								<input name="jumlah_barang" type="text" class="form-control m-input" value="2" aria-describedby="basic-addon2">
+								<div class="input-group-append">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						Tutup
+					</button>
+					<button id="btn_tambah_item" data-dismiss="modal" type="button" class="btn btn-primary">
+						Tambahkan
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- begin::Footer -->
 	<footer class="m-grid__item		m-footer ">
 		<div class="m-container m-container--fluid m-container--full-height m-page__container">
@@ -520,6 +588,60 @@
 				}
 
 				],
+			});
+		</script>
+		<script>
+			var Select2 = function() {
+				var demos = function(){
+				 // basic
+				 $('.dropdown_search, .dropdown_search_validate').select2({
+				 	placeholder: "Select a state"
+				 });
+				}
+				var modalDemos = function(){
+					$('#m_select2_modal').on('shown.bs.modal', function () {
+				// basic
+				$('.dropdown_search_modal').select2({
+					placeholder: "Select a state"
+				});
+			});
+				}
+				return {
+					init: function() {
+						demos();
+						modalDemos();
+					}
+				};
+			}();
+			//== Initialization
+			jQuery(document).ready(function() {
+				Select2.init();
+			});
+		</script>
+		<script>
+			//== Class definition
+			var SweetAlert2Demo = function() {
+
+			//== Demos
+			var initDemos = function() {
+
+				
+				$('#btn_tambah_item').click(function(e) {
+					swal("Telah ditambahkan!", "data yang anda inputkan telah tersimpan", "success");
+				});
+			};
+
+			return {
+					//== Init
+					init: function() {
+						initDemos();
+					},
+				};
+			}();
+
+			//== Class Initialization
+			jQuery(document).ready(function() {
+				SweetAlert2Demo.init();
 			});
 		</script>
 	</body>

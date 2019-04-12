@@ -35,69 +35,88 @@
 	<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
 	<style>
 		
-			.table {
-				min-height : 500px !important;
-			}
-
-			th {
-				font-size: 1.7rem !important;
-				border: 1px solid black !important;
-			}
-
-			td {
-				font-size: 1.7rem !important;
-				border: 1px solid black;
-			}
-
-			p {
-				font-size: 1.8rem !important;
-			}
-			label {
-				font-size: 1.6rem !important;
-			}
-			input {
-				font-size: 1.6rem !important;
-			}
-			h3 {
-				font-size: 2rem !important;
-			}
-
-			.font-print {
-				font-size: 1.8rem !important;
-			}
-
-			.m-portlet .m-portlet__body {
-				padding: 2.2rem 2.2rem;
-			}
-
-			.informasinya {
-				padding-bottom: .1rem !important;
-			}
-
-			.col-form-label {
-				padding-top : 0px !important;
-				padding-bottom: 0px !important;
-			}
-
-			.m-datatable__table {
-				min-height: 0 !important;
-			}
-
-			.input_nama_material {
-				background-color: rgba(255,255,255,.0) !important;
-				border-color: rgba(255,255,255,.0)!important;
-			}
-
-			.input_material {
-				background-color: rgba(255,255,255,.0) !important;
-				border-color: rgba(255,255,255,.0)!important;
-			}
-
-			.m-datatable__pager-info{
-				display: none;
-			}
-
+		.table {
+			min-height : 500px !important;
 		}
+
+		th {
+			font-size: 1.7rem !important;
+			border: 1px solid black !important;
+		}
+
+		td {
+			font-size: 1.7rem !important;
+			border: 1px solid black;
+		}
+
+		p {
+			font-size: 1.8rem !important;
+		}
+		label {
+			font-size: 1.6rem !important;
+		}
+		input {
+			font-size: 1.6rem !important;
+		}
+		h3 {
+			font-size: 2rem !important;
+		}
+
+		.font-print {
+			font-size: 1.8rem !important;
+		}
+
+		.m-portlet .m-portlet__body {
+			padding: 2.2rem 2.2rem;
+		}
+
+		.informasinya {
+			padding-bottom: .1rem !important;
+		}
+
+		.col-form-label {
+			padding-top : 0px !important;
+			padding-bottom: 0px !important;
+		}
+
+		.m-datatable__table {
+			min-height: 0 !important;
+		}
+
+		.input_nama_material {
+			background-color: rgba(255,255,255,.0) !important;
+			border-color: rgba(255,255,255,.0)!important;
+		}
+
+		.input_material {
+			background-color: rgba(255,255,255,.0) !important;
+			border-color: rgba(255,255,255,.0)!important;
+		}
+
+		.m-datatable__pager-info{
+			display: none;
+		}
+
+		.surat_jalan td, th {
+			padding: 10px;
+		}
+
+		th { 
+			background-color: #eaeaea;
+		}
+
+		table {
+			margin: 20px;
+		}
+
+		@media print {
+			th {
+				background-color: #eaeaea;
+				-webkit-print-color-adjust: exact; 
+
+			}
+		}
+
 	</style>
 </head>
 <!-- end::Head -->
@@ -138,7 +157,7 @@
 							<!--begin: Datatable -->
 							<!-- <div class="m_datatable" id="local_data"></div> -->
 							<p>Kami kirimkan barang-barang tersebut dibawah ini dengan kendaraan <span id="merek_kendaraan">Toyota</span> No. <span id="dd_kendaraan">DD 1234 BC</span></p>
-							<table style="width: 100%" class="table" id="tbl_rincian_surat_jalan">
+							<table style="width: 100%" class="surat_jalan" id="table_surat_jalan">
 								<thead>
 									<tr>
 										<th>Qty</th>
@@ -191,6 +210,14 @@
 									<br>
 									<br>
 									<div style="width: 15vw;border-bottom: 1px solid black"></div>
+								</div>
+							</div>
+							<div style="margin-top: 90px" class="form-group m-form__group row">
+								<label  class="col-xl-12 col-form-label">
+									Catatan
+								</label>
+								<div class="col-xl-12">
+									<textarea disabled="" style="resize: none" class="form-control m-input " id="catatan" rows="3">lorem ipsum dolor sit amet</textarea>
 								</div>
 							</div>
 						</div>

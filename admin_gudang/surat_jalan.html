@@ -290,8 +290,8 @@
 										<!--end: Search Form -->
 										<!--begin: Datatable -->
 										<!-- <div class="m_datatable" id="local_data"></div> -->
-										<table class="table m-datatable" id="tbl_list_surat_jalan">
-											<!--  <thead>
+										<table class="table " id="tbl_list_surat_jalan">
+											<thead>
 												<tr>
 													<th>No</th>
 													<th>Tanggal</th>
@@ -304,55 +304,45 @@
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>Ibu Aida</td>
-													<td>Jl. Aroepala no. 10, Makassar</td>
-													<td>
-														<a href="rincian_surat_jalan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
+													<td>20/11/19</td>
+													<td>#12312321</td>
+													<td>Pak hendy</td>
+													<td>Jl. Poros Malino Komplek Griya Riski Abadi C6</td>
+													<td><a href="rincian_surat_jalan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a></td>
 												</tr>
 												<tr>
 													<td>2</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>Ibu Aida</td>
-													<td>Jl. Aroepala no. 10, Makassar</td>
-													<td>
-														<a href="rincian_surat_jalan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
+													<td>20/11/19</td>
+													<td>#12312321</td>
+													<td>Pak hendy</td>
+													<td>Jl. Poros Malino Komplek Griya Riski Abadi C6</td>
+													<td><a href="rincian_surat_jalan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a></td>
 												</tr>
 												<tr>
 													<td>3</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>Ibu Aida</td>
-													<td>Jl. Aroepala no. 10, Makassar</td>
-													<td>
-														<a href="rincian_surat_jalan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
+													<td>20/11/19</td>
+													<td>#12312321</td>
+													<td>Pak hendy</td>
+													<td>Jl. Poros Malino Komplek Griya Riski Abadi C6</td>
+													<td><a href="rincian_surat_jalan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a></td>
 												</tr>
 												<tr>
 													<td>4</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>Ibu Aida</td>
-													<td>Jl. Aroepala no. 10, Makassar</td>
-													<td>
-														<a href="rincian_surat_jalan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
+													<td>20/11/19</td>
+													<td>#12312321</td>
+													<td>Pak hendy</td>
+													<td>Jl. Poros Malino Komplek Griya Riski Abadi C6</td>
+													<td><a href="rincian_surat_jalan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a></td>
 												</tr>
 												<tr>
 													<td>5</td>
-													<td>20/19/2018</td>
-													<td>#14253617</td>
-													<td>Ibu Aida</td>
-													<td>Jl. Aroepala no. 10, Makassar</td>
-													<td>
-														<a href="rincian_surat_jalan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
+													<td>20/11/19</td>
+													<td>#12312321</td>
+													<td>Pak hendy</td>
+													<td>Jl. Poros Malino Komplek Griya Riski Abadi C6</td>
+													<td><a href="rincian_surat_jalan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a></td>
 												</tr>
-											</tbody>  -->
+											</tbody>
 										</table>
 										<!--end: Datatable -->
 									</div>
@@ -394,7 +384,7 @@
 		<!--end::Page Vendors -->  
 		<!--begin::Page Snippets -->
 		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
-		<!-- <script type="text/javascript">
+		<script type="text/javascript">
 			var tbl_list_surat_jalan = $('#tbl_list_surat_jalan').mDatatable({
 				data: {
 					saveState: {cookie: false},
@@ -425,7 +415,8 @@
 					class: '', // custom wrapper class
 					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
 					// height: 450, // datatable's body's fixed height
-					footer: false // display/hide footer
+					footer: false, // display/hide footer
+					"autoWidth": false,
 				},
 
 				// column sorting
@@ -438,7 +429,7 @@
 				{
 					field: 'No',
 					textAlign: 'center',
-					width: 50
+					width: 30
 				},
 				{
 					field: 'Tanggal',
@@ -465,8 +456,8 @@
 
 				],
 			});
-		</script>  -->
-		<script>
+		</script>
+	<!-- 	<script>
 			var datatable;
 
 			$(document).ready(function() {
@@ -523,7 +514,7 @@
 					]
 				});
 			});
-		</script>
+		</script> -->
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
 	</body>

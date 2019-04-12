@@ -43,6 +43,11 @@
 		<!-- end:: Style tambahan -->
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
+		<style>
+			.m-form.m-form--label-align-right .m-form__group > label {
+				text-align: left;
+			}
+		</style>
 	</head>
 	<!-- end::Head -->
 	<!-- end::Body -->
@@ -274,10 +279,7 @@
 										</h3><br>
 										<h3 name="no_surat_jalan" class="header-pesanan-no"> 
 											<i class="fa fa-check-circle"> </i> 0037/SSM/SPK-PSG/MKS/III/2019
-								</h3><br><br><!-- 
-								<button onclick="window.print();return false;">
-									Print
-								</button> -->
+								</h3><br><br>
 								<div class="info row">
 									<div class="col-sm">
 										<p id="tanggal_surat"><i class="flaticon-calendar-2"> </i>20/11/19</p> 
@@ -321,16 +323,41 @@
 													<td>Kabel NYM</td>
 													<td><i class="fa fa-check"> </i></td>
 													<td><i class="fa fa-check"> </i></td>
-													<td>54</td>
-													<td>40</td>
-													<td>14</td>
+													<td> 
+														<div class="input-group input-group-sm">
+															<input type="number" class="form-control m-input" value="100" aria-describedby="basic-addon2">
+														<div class="input-group-append"><span class="input-group-text" id="">m </span></div>
+														</div> 
+													</td>
 													<td>
-														<a href="#" class="btn btn-sm btn-secondary btn_hapus"; width:80px;">Hapus</a>
+														<div class="input-group input-group-sm">
+															<input type="number" class="form-control m-input" value="100" aria-describedby="basic-addon2">
+														<div class="input-group-append"><span class="input-group-text" id="">m </span></div>
+														</div>
+
+													</td>
+													<td>
+														<div class="input-group input-group-sm">
+															<input type="number" class="form-control m-input" value="100" aria-describedby="basic-addon2">
+														<div class="input-group-append"><span class="input-group-text" id="">m </span></div>
+														</div>
+														
+													</td>
+													<td>
+														<a href="#" class="btn btn-sm btn-secondary btn_hapus">Hapus</a>
 													</td>
 												</tr>
 											</tbody>
 										</table>
-										<div align="center">
+										<div class="form-group m-form__group ">
+											<label  class="col-xl-12 col-form-label">
+												Catatan
+											</label>
+											<div class="col-xl-12">
+												<textarea style="resize: none" class="form-control m-input " id="catatan" rows="3">lorem ipsum dolor sit amet</textarea>
+											</div>
+										</div>
+										<div style="margin-top: 20px" align="center">
 											<button type="button" id="btn_simpan" class="btn btn-success">Simpan Data Material</button>	
 										</div>
 									</div>

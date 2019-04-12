@@ -37,7 +37,7 @@
 		<!--end::Page Vendors -->
 		<link href="../assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
-		<!-- begin:: Style tambahan -->
+		<!-- begin:: Style tambahan -->	
 		<link href="../assets/demo/default/base/pelangi-style.css" rel="stylesheet" type="text/css">
 		<link href="../assets/demo/default/base/sejuk-sukses-style.css" rel="stylesheet" type="text/css">
 		<!-- end:: Style tambahan -->
@@ -326,8 +326,8 @@
 										<!--end: Search Form -->
 										<!--begin: Datatable -->
 										<!-- <div class="m_datatable" id="local_data"></div> -->
-										<table  class="table m-datatable" id="tbl_list_item_masuk">
-											<!-- <thead >
+										<table  class="table" id="tbl_list_item_masuk">
+											 <thead >
 												<tr>
 													<th>No</th>
 													<th>Tanggal</th>
@@ -402,7 +402,7 @@
 													<td>unit</td>
 													<td>-</td>
 												</tr>
-											</tbody> -->
+											</tbody> 
 										</table>
 										<!--end: Datatable -->
 									</div>
@@ -444,7 +444,7 @@
 		<!--end::Page Vendors -->  
 		<!--begin::Page Snippets -->
 		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
-		<!-- <script type="text/javascript">
+		<script type="text/javascript">
 			var tbl_list_item_masuk = $('#tbl_list_item_masuk').mDatatable({
 				data: {
 					saveState: {cookie: false},
@@ -539,8 +539,8 @@
 
 				],
 			});
-		</script> -->
-		<script>
+		</script> 
+		<!-- <script>
 			var datatable;
 
 			$(document).ready(function() {
@@ -549,7 +549,7 @@
 						type: 'remote',
 						source: {
 							read: {
-								url: 'data.php'
+								url: 'data/data.php'
 							}
 						},
 						serverPaging: true,
@@ -611,7 +611,7 @@
 					]
 				});
 			});
-		</script>
+		</script> -->
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
 	</body>
