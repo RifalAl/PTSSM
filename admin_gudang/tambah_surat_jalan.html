@@ -432,8 +432,8 @@
 											<button style="width: 200px"  data-toggle="modal" data-target="#modal_tambah_item" type="button" class="btn btn-success">Tambah Item</button>	
 										</div>
 									</div>
-									<table class="table" id="tbl_item_pesanan">
-										<thead>
+									<table class="table m-datatable-item" id="tbl_item_pesanan">
+										<!-- <thead>
 											<tr>
 												<th>No</th>
 												<th>Nama Barang</th>
@@ -458,7 +458,7 @@
 													<a class="btn btn-sm btn-secondary btn_hapus" style="color:black; width:80px;">Hapus</a>
 												</td>
 											</tr>
-										</tbody>
+										</tbody> -->
 									</table>
 								</div>
 								<div style="margin-top: 50px;" class="list_item_Material">
@@ -472,8 +472,8 @@
 											<button style="width: 200px;"  data-toggle="modal" data-target="#modal_tambah_material" type="button" class="btn btn-success">Tambah Material</button>	
 										</div>
 									</div>
-									<table class="table" id="tbl_item_material">
-										<thead>
+									<table class="table m-datatable-material" id="tbl_item_material">
+										<!-- <thead>
 											<tr>
 												<th>No</th>
 												<th>Nama Material</th>
@@ -498,7 +498,7 @@
 													<a class="btn btn-sm btn-secondary btn_hapus" style="color:black; width:80px;">Hapus</a>
 												</td>
 											</tr>
-										</tbody>
+										</tbody> -->
 									</table>
 									<div align="center">
 										<button style="margin-top: 50px" id="btn_terbitkan_surat_jalan" type="button" class="btn btn-primary btn_pemasangan">Terbitkan Surat Jalan</button>
@@ -668,7 +668,7 @@
 
 <!--end::Page Snippets -->
 <script src="http://localhost:35729/livereload.js"></script>
-<script type="text/javascript">
+	<!-- <script type="text/javascript">
 	var tbl_item_pesanan = $('#tbl_item_pesanan').mDatatable({
 		data: {
 			saveState: {cookie: false},
@@ -728,8 +728,8 @@
 
 				],
 			});
-		</script>
-		<script type="text/javascript">
+		</script> -->
+		<!-- <script type="text/javascript">
 			var tbl_item_material = $('#tbl_item_material').mDatatable({
 				data: {
 					saveState: {cookie: false},
@@ -789,7 +789,7 @@
 
 				],
 			});
-		</script>
+		</script> -->
 		<script>
 			$('.btn_hapus').click(function(e) {
 				swal({
@@ -865,6 +865,106 @@
 			//== Initialization
 			jQuery(document).ready(function() {
 				Select2.init();
+			});
+		</script>
+		<script>
+			var datatable;
+
+			$(document).ready(function() {
+				datatable = $('.m-datatable-item').mDatatable({
+					data: {
+						type: 'remote',
+						source: {
+							read: {
+								url: 'surat_jalan.php' //Data dari database
+							}
+						},
+						serverPaging: true,
+						serverFiltering: true,
+						serverSorting: true
+					},
+					search: {
+						input: $('#generalSearch'),
+					},
+					columns: [
+					{
+						field: 'no',
+						title: 'No',
+						textAlign: 'center',
+						width: 50,
+						sortable: false,
+						template: function(row, rowIndex, datatable) {
+							return ((datatable.getCurrentPage() - 1) * datatable.getPageSize()) + rowIndex + 1;
+						}
+					}, {
+						field: 'nama_item',
+						title: 'Nama Item',
+						textAlign: 'center'
+
+					}, {
+						field: 'jumlah_item',
+						title: 'Jumlah (Unit)',
+						textAlign: 'center'
+					},  {
+						field: 'aksi',
+						title: 'Aksi',
+						textAlign: 'center',
+						template: function (row) {
+							return '<a class="btn btn-sm btn-secondary btn_hapus" style="color:black; width:80px;">Hapus</a>';
+						}
+					} 
+					]
+				});
+			});
+		</script>
+		<script>
+			var datatable;
+
+			$(document).ready(function() {
+				datatable = $('.m-datatable-material').mDatatable({
+					data: {
+						type: 'remote',
+						source: {
+							read: {
+								url: 'surat_jalan.php' //Data dari database
+							}
+						},
+						serverPaging: true,
+						serverFiltering: true,
+						serverSorting: true
+					},
+					search: {
+						input: $('#generalSearch'),
+					},
+					columns: [
+					{
+						field: 'no',
+						title: 'No',
+						textAlign: 'center',
+						width: 50,
+						sortable: false,
+						template: function(row, rowIndex, datatable) {
+							return ((datatable.getCurrentPage() - 1) * datatable.getPageSize()) + rowIndex + 1;
+						}
+					}, {
+						field: 'nama_material',
+						title: 'Nama material',
+						textAlign: 'center'
+
+					}, {
+						field: 'jumlah_material',
+						title: 'Jumlah',
+						textAlign: 'center'
+					},  {
+						field: 'aksi',
+						title: 'Aksi',
+						textAlign: 'center',
+						template: function (row) {
+							return '<a class="btn btn-sm btn-secondary btn_hapus" style="color:black; width:80px;">Hapus</a>';
+						}
+					} 
+					]
+				});
 			});
 		</script>
 	</body>
