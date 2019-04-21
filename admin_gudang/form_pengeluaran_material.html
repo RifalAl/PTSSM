@@ -285,6 +285,7 @@
 										<p id="tanggal_surat"><i class="flaticon-calendar-2"> </i>20/11/19</p> 
 										<p id="nama_pelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p>
 										<p id="no_telpon"><i class="fa fa-phone"> </i> 085-145-322-137</p>
+										<p> <i class="fa fa-home"></i> Gudang Kantor</p>
 									</div>
 									<div class="col-sm">
 										<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
@@ -318,6 +319,7 @@
 												</tr>
 											</thead>
 											<tbody>
+
 												<tr>
 													<td>1</td>
 													<td>Kabel NYM</td>
@@ -337,11 +339,36 @@
 
 													</td>
 													<td>
+														100 m
+
+														
+													</td>
+													<td>
+														<a href="#" class="btn btn-sm btn-secondary btn_hapus">Hapus</a>
+													</td>
+												</tr>
+
+												<tr>
+													<td>2</td>
+													<td>Stand Kaki Kaki</td>
+													<td><i class="fa fa-check"> </i></td>
+													<td> </td>
+													<td> 
+														<div class="input-group input-group-sm">
+															<input type="number" class="form-control m-input" value="100" aria-describedby="basic-addon2">
+
+														<div class="input-group-append"><span class="input-group-text" id="">m </span></div>
+														</div> 
+													</td>
+													<td>
 														<div class="input-group input-group-sm">
 															<input type="number" class="form-control m-input" value="100" aria-describedby="basic-addon2">
 														<div class="input-group-append"><span class="input-group-text" id="">m </span></div>
 														</div>
-														
+
+													</td>
+													<td>
+														100 m
 													</td>
 													<td>
 														<a href="#" class="btn btn-sm btn-secondary btn_hapus">Hapus</a>
@@ -357,6 +384,19 @@
 												<textarea style="resize: none" class="form-control m-input " id="catatan" rows="3">lorem ipsum dolor sit amet</textarea>
 											</div>
 										</div>
+										<div class="form-group m-form__group row">
+											<label  class="col-2 col-form-label">
+												Status
+											</label>
+											<div class="col-10">
+												<select class="col-8 form-control m-input" id="exampleSelect1">
+													<option>Aktif</option>
+													<option>Tidak Aktif (Batal)</option>
+												
+												</select>
+											</div>
+										</div>
+											
 										<div style="margin-top: 20px" align="center">
 											<button type="button" id="btn_simpan" class="btn btn-success">Simpan Data Material</button>	
 										</div>
@@ -393,50 +433,26 @@
 					</button>
 				</div>
 				<div class="modal-body">
+					
 					<div class="form-group m-form__group row">
-						<label for="example-text-input" class="col-2 col-form-label">
-							Kode Material
+						<label for="example-text-input" class="col-3 col-form-label">
+							Kode / Nama Material
 						</label>
-						<div class="col-10">
+						<div class="col-9">
 							<select style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="kode_barang">
 								<option value="1">
-									2342e23
+									2342e23 || Pipa AC
 								</option>
 								<option value="2">
-									2342e23
+									2342e21 || Sekrup
 								</option>
 								<option value="3">
-									2342e23
+									2342e22 || Freon
 								</option>
 							</select>
 						</div>
 					</div>
-					<div class="form-group m-form__group row">
-						<label for="example-text-input" class="col-2 col-form-label">
-							Material
-						</label>
-						<div class="col-10">
-							<select style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="kode_barang">
-								<option value="1">
-									Material 1
-								</option>
-								<option value="2">
-									Material 2
-								</option>
-								<option value="3">
-									Material 3
-								</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group m-form__group row">
-						<label for="example-text-input" class="col-2 col-form-label">
-							Jumlah
-						</label>
-						<div class="col-10">
-							<input class="form-control m-input" type="number" name="input_jumlah">
-						</div>
-					</div>
+
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">

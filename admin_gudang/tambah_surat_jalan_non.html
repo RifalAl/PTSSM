@@ -288,6 +288,8 @@
 													Tambah Surat jalan
 												</h3>
 											</div>
+
+											
 										</div>
 									</div>
 									<!--begin::Form-->
@@ -316,7 +318,7 @@
 													No. SPK
 												</label>
 												<div class="col-10">
-													<select style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="nama_barang">
+													<select style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible " disabled="disabled"  name="spk">
 														<option value="0">
 															--Pilih SPK--
 														</option>
@@ -337,10 +339,10 @@
 											</div>
 											<div class="form-group m-form__group row">
 												<label class="col-2 col-form-label">
-													Tanggal
+													Tanggal Terbit
 												</label>
 												<div class="col-10">
-													<input class="form-control m-input" type="date" value="" id="tanggal_pembuatan_spk">
+													<input class="form-control m-input" type="date" value="" id="tanggal_pembuatan_spk" >
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -348,7 +350,7 @@
 													Nama Pelanggan
 												</label>
 												<div class="col-10">
-													<input disabled="" class="form-control m-input" type="text" value="Ibu Ani" id="nama_pelanggan">
+													<input class="form-control m-input" type="text" value="Ibu Ani" id="nama_pelanggan">
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -356,7 +358,7 @@
 													Nomer Telpon
 												</label>
 												<div class="col-10">
-													<input disabled="" class="form-control m-input" type="tel" value="085 145 322 137" id="no_telpon">
+													<input class="form-control m-input" type="tel" value="085 145 322 137" id="no_telpon">
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -364,7 +366,7 @@
 													Email
 												</label>
 												<div class="col-10">
-													<input disabled="" class="form-control m-input" type="email" value="nihonggomantappu@example.com" id="email_pelanggan">
+													<input class="form-control m-input" type="email" value="nihonggomantappu@example.com" id="email_pelanggan">
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -372,7 +374,7 @@
 													Alamat
 												</label>
 												<div class="col-10">
-													<input disabled="" class="form-control m-input" type="text" value="Jl. Angkasa 5, Panaikang, Makassar" id="alamat_pelanggan">
+													<input  class="form-control m-input" type="text" value="Jl. Angkasa 5, Panaikang, Makassar" id="alamat_pelanggan">
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -399,33 +401,19 @@
 													<textarea style="resize: none" class="form-control m-input " id="catatan" rows="3"></textarea>
 												</div>
 											</div>
-									<!-- <div class="form-group m-form__group row">
-										<label  class="col-2 col-form-label">
-											Teknisi
-										</label>
-										<div class="col-10">
-											<select class="form-control m-input" id="nama_teknisi">
-												<option value="agus">
-													Agus
-												</option>
-												<option selected="" value="rahman">
-													Rahman
-												</option>
-												<option value="ridwan">
-													Ridwan
-												</option>
-												<option value="badu">
-													Badu
-												</option>
-												<option value="aldi">
-													Aldi
-												</option>
-											</select>
-										</div>
-									</div> -->
-									<div align="center">
-										
-									</div>
+											<div class="form-group m-form__group row">
+												<label  class="col-2 col-form-label">
+													Status
+												</label>
+												<div class="col-10">
+													<select class="col-8 form-control m-input" id="exampleSelect1">
+														<option>Aktif</option>
+														<option>Tidak Aktif (Batal)</option>
+													
+													</select>
+												</div>
+											</div>
+											
 								</div>
 							</form>
 							<div class="m-portlet__body">
@@ -433,7 +421,7 @@
 									<div class="m-portlet__head-title row" style="margin-bottom: 20px;">
 										<div class="col-6">
 											<h4>
-												List Item Pemasangan
+												List Item Unit
 											</h4>	
 										</div>
 										<div align="right" class="col-6">
@@ -441,6 +429,27 @@
 										</div>
 									</div>
 									<table class="table m-datatable-item" id="tbl_item_pesanan">
+										<tr>
+											<th>No</th>
+											<th>Nama Item</th>
+											<th>Kode</th>
+											<th>Gudang</th>
+											<th>Serial Number</th>
+											<th>Aksi</th>
+										</tr>		
+										<tr>
+											<td>1</td>
+											<td>Ac Daikin 2 PK Malaysia</td>
+											<td>#123231</td>
+											<td>Toko </td>
+											<td>
+												<input type="" name="" required="required"> 
+											</td>
+											<td>
+												<button class="btn  btn-sm btn-danger"> Hapus </button>
+											</td>
+											
+										</tr>	
 			
 									</table>
 								</div>
@@ -674,55 +683,61 @@
 			});
 		</script>
 		<script>
-			var datatable;
+			var tbl_list_surat_jalan = $('#tbl_item_pesanan').mDatatable({
+				data: {
+					saveState: {cookie: false},
+				
+			    },
+				// layout definition
+				layout: {
+					theme: 'default', // datatable theme
+					class: '', // custom wrapper class
+					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
+					// height: 450, // datatable's body's fixed height
+					footer: false, // display/hide footer
+					"autoWidth": false,
+				},
 
-			$(document).ready(function() {
-				datatable = $('.m-datatable-item').mDatatable({
-					data: {
-						type: 'remote',
-						source: {
-							read: {
-								url: 'data/list-item.php' //Data dari database
-							}
-						},
-						serverPaging: true,
-						serverFiltering: true,
-						serverSorting: true
-					},
-					search: {
-						input: $('#generalSearch'),
-					},
-					columns: [
-					{
-						field: 'no',
-						title: 'No',
-						textAlign: 'center',
-						width: 50,
-						sortable: false,
-						template: function(row, rowIndex, datatable) {
-							return ((datatable.getCurrentPage() - 1) * datatable.getPageSize()) + rowIndex + 1;
-						}
-					}, {
-						field: 'nama_item',
-						title: 'Nama Item',
-						textAlign: 'center',
-						width : 300
+				// column sorting
+				sortable: false,
+				search: {
+					input: $('#generalSearch'),
+				},
+				columns: [
 
-					}, {
-						field: 'jumlah_item',
-						title: 'Jumlah (Unit)',
-						textAlign: 'center',
-						width : 60
-					},  {
-						field: 'aksi',
-						title: 'Aksi',
-						textAlign: 'center',
-						template: function (row) {
-							return '<a class="btn btn-sm btn-secondary btn_hapus" style="color:black; width:80px;" data-id="'+row.id+'">Hapus</a>';
-						}
-					} 
-					]
-				});
+				{
+					field: 'No',
+					textAlign: 'center',
+					width: 30
+				},
+				{
+					field: 'Nama Item',
+					textAlign: 'center',
+					type:'date',
+					format: 'DD/MM/YYYY',
+					width:120
+				},
+				{
+					field: 'Kode',
+					textAlign: 'center',
+					width:80
+				},
+				{
+					field: 'Gudang',
+					textAlign: 'center',
+					width:80
+				},
+				{
+					field: 'Serial Number',
+					textAlign: 'center',
+					width:150
+				},
+				{
+					field: 'Aksi',
+					textAlign: 'center',
+				}
+
+				],
 			});
 		</script>
 		<script>

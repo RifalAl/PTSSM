@@ -13,9 +13,9 @@
 	<html lang="en" >
 	<!-- begin::Head -->
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title>
-			Admin Gudang | Proses -Barang Masuk
+			Admin Gudang | Proses Barang Masuk
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -290,11 +290,11 @@
 											</div>
 										</div>
 										<div class="tab-content">
-											<table class="table" id="tbl_proses_barang_masuk">
+											<table class="table " id="tbl_proses_barang_masuk">
 												<thead>
 													<tr>
 														<th>No</th>
-														<th>Kode</th>
+														<th>Kode Barang</th>
 														<th>Nama Barang</th>
 														<th>Serial Number</th>
 													</tr>
@@ -304,8 +304,11 @@
 														<td>1</td>
 														<td>123123135</td>
 														<td>AC DAIKIN 1/2 PK Malaysia</td>
-														<td>
-															<input required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">
+														<td >
+
+															
+															  	<input class="inputs" required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">
+															
 														</td>
 													</tr>
 													<tr>
@@ -313,7 +316,7 @@
 														<td>123123135</td>
 														<td>AC DAIKIN 1/2 PK Malaysia</td>
 														<td>
-															<input required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">
+															<input  class="inputs" required="" type="text" name="" id="t" class="form-control m-input" placeholder="">
 														</td>
 													</tr>
 													<tr>
@@ -321,7 +324,7 @@
 														<td>123123135</td>
 														<td>AC DAIKIN 1/2 PK Malaysia</td>
 														<td>
-															<input required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">
+															<input  class="inputs" required="" type="text" name="" id="t1" class="form-control m-input" placeholder="">
 														</td>
 													</tr>
 													<tr>
@@ -329,7 +332,8 @@
 														<td>123123135</td>
 														<td>AC DAIKIN 1/2 PK Malaysia</td>
 														<td>
-															<input required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">
+															<input class="inputs" name="ragsoc" type="text" id="ragsoc" value="" />
+
 														</td>
 													</tr>
 													<tr>
@@ -337,7 +341,7 @@
 														<td>123123135</td>
 														<td>AC DAIKIN 1/2 PK Malaysia</td>
 														<td>
-															<input required="" type="text" name="input_serial_number[]" class="form-control m-input" placeholder="">
+															<input class="inputs" name="mnemo" type="text" id="mnemo" value="" />
 														</td>
 													</tr>
 												</tbody>
@@ -386,7 +390,26 @@
 		<!--end::Page Vendors -->  
 		<!--begin::Page Snippets -->
 		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
+
+		<!-- This Page JS Setting For Auto Focus to the next row--> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js" type="text/javascript"></script>
 		<script type="text/javascript">
+
+			  $('.inputs').keydown(function (e) {
+		         if (e.which === 13) {
+		             var index = $('.inputs').index(this) + 1;
+		             $('.inputs').eq(index).focus();
+		         }
+		     });
+		</script>
+
+		<!-- This Page JS Setting For Auto Focus to the next row--> 
+
+
+		<script type="text/javascript"> 
+
+
+
 			var tbl_proses_barang_masuk = $('#tbl_proses_barang_masuk').mDatatable({
 				data: {
 					saveState: {cookie: false},

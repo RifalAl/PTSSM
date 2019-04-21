@@ -13,7 +13,7 @@
 	<html lang="en" >
 	<!-- begin::Head -->
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title>
 			Admin kantor | Rincian Pelanggan
 		</title>
@@ -330,6 +330,8 @@
 					</div>
 					<!-- END: Subheader -->
 					<div class="m-content">
+
+						<!-- Daftar AC Milik Pelanggan  -->
 						<div class="row">
 							<div class="col-xl-12">
 								<div class="m-portlet m-portlet--mobile">
@@ -357,15 +359,13 @@
 												<p>Tipe : <span id="tipe_pelanggan">Personal</span></p>
 											</div>
 										</div>	
-							</div><!-- 
+							</div>
 							<div class="m-portlet__body">
-								<button onclick="window.location.href='print_rincian_pelanggan.html'" class="btn btn-primary">
-									Print
+								
+								<button onclick="window.location.href='riwayat_pelanggan_new.html'" class="btn btn-success">
+									<i class="fa fa-paper-plane-o"></i> Riwayat Pekerjaan
 								</button>
-								<button onclick="window.location.href='riwayat_pelanggan.html'" class="btn btn-success">
-									Riwayat
-								</button>
-							</div> -->
+							</div>
 							<div class="m-portlet__body">
 								<div class="list_item_pemasangan">
 									<div class="m-portlet__head-title row" style="margin-bottom: 20px;">
@@ -375,75 +375,109 @@
 											</h4>	
 										</div>
 										<div align="right" class="col-6">
-											<button style="width: 200px"  data-toggle="modal" data-target="#modal_tambah_item" type="button" class="btn btn-success">Tambah Item</button>	
+											<button style="width: 200px"  data-toggle="modal" data-target="#modal_tambah_item" type="button" class="btn btn-success">+ Tambah Item</button>	
 										</div>
+										<div class=" col-md-6 ">
+												<div class="m-input-icon m-input-icon--left">
+													<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
+													<span class="m-input-icon__icon m-input-icon__icon--left">
+														<span>
+															<i class="la la-search"></i>
+														</span>
+													</span>
+												</div>
+											</div>
 									</div>
+
 								</div>
 								<table class="table" id="tbl_item_ac">
 									<thead>
 										<tr>
 											<th>No</th>
+											<th>ID Unit (auto)</th>
 											<th>Nama Barang</th>
-											<th>ID Unit</th>
+											<th>Type Barang</th>
+											<th>Merek</th>
 											<th>Aksi</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td>1</td>
+											<td>[ID Pelanggan][incremental] </td>
 											<td>AC Split Daikin 1/2 PK</td>
-											<td>01-032819-001</td>
+											<td>Ac Outdoor</td>
+											<td> Daikin </td>
 											<td>
-												<button onclick="window.location.href='print_rincian_pelanggan.html'" class="btn btn-primary">
-													Print
+												<button onclick="window.location.href='print_rincian_pelanggan.html'" class="btn btn-primary "> <i class="fa fa-print"> </i>
+													
 												</button>
-												<button onclick="window.location.href='riwayat_pelanggan.html'" class="btn btn-success">
-													Riwayat
+												
+
+												<button  class="btn btn-info" data-toggle="modal" data-target="#modal_edit_item" >
+													Edit
+												</button>
+												<button  class="btn btn-danger" data-toggle="modal" data-target="#modal_edit_item" > <i class="fa fa-trash"></i>
+													
 												</button>
 											</td>
 										</tr>
 										<tr>
 											<td>2</td>
+											<td>02122019 01</td>
 											<td>AC Split Daikin 1/2 PK</td>
-											<td>02-032819-001</td>
+											<td>Ac Outdoor</td>
+											<td> Daikin </td>
 											<td>
-												<button onclick="window.location.href='print_rincian_pelanggan.html'" class="btn btn-primary">
-													Print
+												
+
+												<button onclick="window.location.href='print_rincian_pelanggan.html'" class="btn btn-primary "> <i class="fa fa-print"> </i>
+													
 												</button>
-												<button onclick="window.location.href='riwayat_pelanggan.html'" class="btn btn-success">
-													Riwayat
+												
+
+												<button  class="btn btn-info" data-toggle="modal" data-target="#modal_edit_item" >
+													Edit
 												</button>
+												<button  class="btn btn-danger" data-toggle="modal" data-target="#modal_edit_item" > <i class="fa fa-trash"></i>
 											</td>
 										</tr>
 										<tr>
 											<td>3</td>
-											<td>AC Split Daikin 1/2 PK</td>
 											<td>03-032819-001</td>
+											<td>AC Split Daikin 1/2 PK</td>
+											<td>AC indoor</td>
+											<td> Daikin </td>
 											<td>
-												<button onclick="window.location.href='print_rincian_pelanggan.html'" class="btn btn-primary">
-													Print
+												<button onclick="window.location.href='print_rincian_pelanggan.html'" class="btn btn-primary "> <i class="fa fa-print"> </i>
+													
 												</button>
-												<button onclick="window.location.href='riwayat_pelanggan.html'" class="btn btn-success">
-													Riwayat
+												
+
+												<button  class="btn btn-info" data-toggle="modal" data-target="#modal_edit_item" >
+													Edit
 												</button>
+												<button  class="btn btn-danger" data-toggle="modal" data-target="#modal_edit_item" > <i class="fa fa-trash"></i>
 											</td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- end:: Body -->
+	<!-- Modal here --> 
 	<div class="modal fade" id="modal_tambah_item"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel">
-						Tambah Item
+						+ Tambah Item
 					</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">
@@ -457,26 +491,46 @@
 							Nama Barang
 						</label>
 						<div class="col-9">
-							<select style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="nama_barang">
-								<option value="1">
-									AC Split 1/2 PK Malaysia
-								</option>
-								<option value="2">
-									AC Daikin 1 PK 
-								</option>
-								<option value="3">
-									AC Split 1 PK Thailand
-								</option>
-							</select>
+							<div class="input-group">
+								<input name="name_item" type="text" class="form-control m-input" value="AC Daikin" >
+								<div class="input-group-append">
+								</div>
+							</div>
 						</div>
 					</div>
+
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-3 col-form-label">
+							Type Barang
+						</label>
+						<div class="col-9">
+							<div class="input-group">
+								<input name="name_item" type="text" class="form-control m-input" value="Ac Indoor" >
+								<div class="input-group-append">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-3 col-form-label">
+							Merek Barang
+						</label>
+						<div class="col-9">
+							<div class="input-group">
+								<input name="name_item" type="text" class="form-control m-input" value="Panasonic" >
+								<div class="input-group-append">
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div class="form-group m-form__group row">
 						<label for="example-text-input" class="col-3 col-form-label">
 							ID Unit
 						</label>
 						<div class="col-9">
 							<div class="input-group">
-								<input name="jumlah_barang" type="text" class="form-control m-input" value="2" aria-describedby="basic-addon2">
+								<input name="jumlah_barang" type="number" class="form-control m-input" value="01" aria-describedby="basic-addon2">
 								<div class="input-group-append">
 								</div>
 							</div>
@@ -494,6 +548,85 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="modal fade" id="modal_edit_item"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						Edit Item
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-3 col-form-label">
+							Nama Barang
+						</label>
+						<div class="col-9">
+							<div class="input-group">
+								<input name="name_item" type="text" class="form-control m-input" value="AC Daikin" >
+								<div class="input-group-append">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-3 col-form-label">
+							Type Barang
+						</label>
+						<div class="col-9">
+							<div class="input-group">
+								<input name="name_item" type="text" class="form-control m-input" value="Ac Indoor" >
+								<div class="input-group-append">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-3 col-form-label">
+							Merek Barang
+						</label>
+						<div class="col-9">
+							<div class="input-group">
+								<input name="name_item" type="text" class="form-control m-input" value="Panasonic" >
+								<div class="input-group-append">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-3 col-form-label">
+							ID Unit
+						</label>
+						<div class="col-9">
+							<div class="input-group">
+								<input name="jumlah_barang" type="number" class="form-control m-input" value="12123122" aria-describedby="basic-addon2">
+								<div class="input-group-append">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						Tutup
+					</button>
+					<button id="btn_tambah_item" data-dismiss="modal" type="button" class="btn btn-primary">
+						Simpan
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal End Here -->
 	<!-- begin::Footer -->
 	<footer class="m-grid__item		m-footer ">
 		<div class="m-container m-container--fluid m-container--full-height m-page__container">
@@ -563,7 +696,7 @@
 				},
 
 				// column sorting
-				sortable: false,
+				sortable: true,
 				search: {
 					input: $('#generalSearch'),
 				},
@@ -585,6 +718,7 @@
 				{
 					field: 'Aksi',
 					textAlign: 'center',
+					width:250
 				}
 
 				],

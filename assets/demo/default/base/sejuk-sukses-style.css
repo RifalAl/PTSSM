@@ -197,3 +197,9 @@ font-weight: 500;
 .m-form.m-form--label-align-right .m-form__group > label {
     text-align: left;
 }
+
+
+.table_riwayat{
+        transform: scaleX(0.8) scaleY(0.8);
+}
+

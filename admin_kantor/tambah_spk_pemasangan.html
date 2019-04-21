@@ -478,9 +478,30 @@
 											<textarea style="resize: none" class="form-control m-input " id="catatan" rows="3">lorem ipsum dolor sit amet</textarea>
 										</div>
 									</div>
-									<div style="margin-top: 20px" align="center">
-										<button data-toggle="modal" data-target="#modal_tambah_pemasangan" type="button" class="btn btn-success btn_pemasangan">Tambah Pemasangan</button>
+
+									<div class="form-group m-form__group row">
+										<label  class="col-2 col-form-label">
+											Status
+										</label>
+										<div class="col-10">
+											<select class="form-control m-input m-input--square" id="tipe_pajak">
+												<option active value="0">
+													Aktif
+												</option>
+												<option value="1">
+													Progress
+												</option>
+												<option value="2">
+													Selesai
+												</option>
+												<option value="2">
+													Batal
+												</option>
+											</select>
+										</div>
 									</div>
+
+									
 								</div>
 							</form>
 							<div class="m-portlet__body">
@@ -488,11 +509,17 @@
 									<h3 align="center" class="m-portlet__head-text">
 										List Item Pemasangan
 									</h3><br>
+
+
+								</div>
+								<div style="margin: 20px" align="right">
+									<button data-toggle="modal" data-target="#modal_tambah_pemasangan" type="button" class="btn btn-success btn_pemasangan"> + Tambah Item Pemasangan</button>
 								</div>
 								<table class="table" id="tbl_item_pemasangan">
 									<thead>
 										<tr>
 											<th>No</th>
+											<th>Kode Barang</th>
 											<th>Nama Barang</th>
 											<th>Jumlah</th>
 											<th>Keterangan</th>
@@ -502,6 +529,7 @@
 									<tbody>
 										<tr>
 											<td>1</td>
+											<td>123232323</td>
 											<td>AC Split 1/2 PK daikin R32 Non Inverter Thailand</td>
 											<td>2</td>
 											<td>-</td>
@@ -511,6 +539,7 @@
 										</tr>
 										<tr>
 											<td>2</td>
+											<td>123232323</td>
 											<td>AC Split 1 PK daikin R32 Non Inverter Thailand</td>
 											<td>1</td>
 											<td>-</td>
@@ -521,7 +550,7 @@
 									</tbody>
 								</table>
 								<div align="center">
-									<button id="btn_terbitkan_spk" type="button" class="btn btn-primary btn_pemasangan">Terbitkan SPK</button>
+									<button id="btn_terbitkan_spk" type="button" class="btn btn-primary btn_pemasangan"> >> Simpan Data/ Terbitkan >></button>
 								</div>
 							</div>
 						</div>
@@ -547,28 +576,28 @@
 				</div>
 				<div class="modal-body">
 					<div class="form-group m-form__group row">
-						<label for="example-text-input" class="col-2 col-form-label">
-							Nama Barang
+						<label for="example-text-input" class="col-3 col-form-label">
+							Nama / Kode Barang
 						</label>
-						<div class="col-10">
-							<select style="width: 100%" class="form-control" name="nama_barang">
+						<div class="col-9">
+							<select style="width: 100%" class="form-control m-select2 dropdown_search" name="nama_barang_modal">
 								<option value="1">
-									AC Split 1/2 PK Malaysia
+									01231239829 || AC Split 1/2 PK Malaysia
 								</option>
 								<option value="2">
-									AC Daikin 1 PK 
+									012312fsg34 || AC Daikin 1 PK 
 								</option>
 								<option value="3">
-									AC Split 1 PK Thailand
+									7o302129829 || AC Split 1 PK Thailand
 								</option>
 							</select>
 						</div>
 					</div>
 					<div class="form-group m-form__group row">
-						<label for="example-text-input" class="col-2 col-form-label">
+						<label for="example-text-input" class="col-3 col-form-label">
 							Jumlah
 						</label>
-						<div class="col-10">
+						<div class="col-9">
 							<div class="input-group">
 								<input name="jumlah_barang" type="text" class="form-control m-input" value="2" aria-describedby="basic-addon2">
 								<div class="input-group-append">
@@ -580,10 +609,10 @@
 						</div>
 					</div>
 					<div class="form-group m-form__group row">
-						<label for="example-text-input" class="col-2 col-form-label">
+						<label for="example-text-input" class="col-3 col-form-label">
 							Keterangan
 						</label>
-						<div class="col-10">
+						<div class="col-9">
 							<textarea class="form-control m-input m-input--solid" name="keterangan" rows="3"></textarea>
 						</div>
 					</div>
@@ -745,6 +774,7 @@
 				Select2.init();
 			});
 		</script>
+
 		<script>
 			//== Class definition
 			var SweetAlert2Demo = function() {

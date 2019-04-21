@@ -13,7 +13,7 @@
 	<html lang="en" >
 	<!-- begin::Head -->
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title>
 			Admin Finance | Tambah Invoice Masuk
 		</title>
@@ -43,11 +43,7 @@
 		<!-- end:: Style tambahan -->
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
-		<style>
-			.m-datatable.m-datatable--default > .m-datatable__pager > .m-datatable__pager-info {
-				display: none !important;
-			}
-		</style>
+		
 	</head>
 	<!-- end::Head -->
 	<!-- end::Body -->
@@ -148,6 +144,7 @@
 									</span>
 								</a>
 							</li>
+							
 							<!--Manajemen Invoice Keluar-->
 							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
 								<a href="#" class="m-menu__link m-menu__toggle">
@@ -354,8 +351,23 @@
 														</select>
 													</div>
 												</div>
+												<div class="form-group m-form__group row">
+													<label  class="col-2 col-form-label">
+														Gudang
+													</label>
+													<div class="col-10">
+														<select style="width: 100%" class="form-control " name="gudang">
+															<option value="1">
+																Kantor  <italic> (Non Pajak) </italic>
+															</option>
+															<option value="2">
+																Toko (pajak)
+															</option>
+														</select>
+													</div>
+												</div>
 												<div style="margin-top: 20px" align="center">
-													<button data-toggle="modal" data-target="#modal_tambah_item" type="button" class="btn btn-success btn_pemasangan">Tambah Item</button>
+													<button data-toggle="modal" data-target="#modal_tambah_item" type="button" class="btn btn-success btn_pemasangan"> + Tambah Item</button>
 												</div>
 											</div>
 										</form>
@@ -365,34 +377,51 @@
 													List Item Barang
 												</h3><br>
 											</div>
-											<table class="table" id="tbl_list_invoice_masuk">
+											<table class="better_table" id="tbl_list_invoice_masuk" >
 												<thead>
 													<tr>
 														<th>No</th>
-														<th>Nama Barang</th>
-														<th>Jumlah Barang</th>
+														<th>Nama </th>
+														<th>Kode </th>
+														<th>Jumlah </th>
 														<th>Harga Jual</th>
 														<th>Potongan Harga</th>
 														<th>Total Harga</th>
+														<th>Aksi</th>
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
 														<td>1</td>
+														<td>AC Daikin Malaysia</td>
 														<td>STV15BXV</td>
 														<td>7</td>
 														<td>3,130,000</td>
 														<td>11.73</td>
 														<td>19,339,957</td>
+														<td>
+															<button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#modal_edit_item" title="Edit Data"> <i class="fa fa-pencil-square"></i> </button>
+
+															<button type="button" class="btn btn-sm btn-danger" data-toggle="modal m-popover" data-target="" title="Hapus"> <i class="fa fa-trash"></i> </button>
+															
+														</td>
 													</tr>
 													<tr>
 														<td>2</td>
+														<td>AC Daikin 1/2 PK </td>
 														<td>STV15BXV</td>
 														<td>10</td>
 														<td>4,250,000</td>
 														<td>11.73</td>
 														<td>37,514,750</td>
+														<td>
+															<button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#modal_edit_item" title="Edit Data"> <i class="fa fa-pencil-square"></i> </button>
+
+															<button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="" title="Hapus"> <i class="fa fa-trash"></i> </button>
+														</td>
 													</tr>
+
+
 												</tbody>
 											</table>
 											<table style="width: 100%" class="tg">
@@ -424,7 +453,7 @@
 											<!--end: Datatable -->
 											<div align="center">
 												<button style="margin-top: 20px;width: 300px" type="button" class="btn btn-success" id="btn_simpan_data">
-													Simpan Data
+													>> Simpan Data >>
 												</button>	
 											</div>
 										</div>
@@ -453,27 +482,27 @@
 						<div class="modal-body">
 							<div class="form-group m-form__group row">
 								<label  class="col-3 col-form-label">
-									Nama Item
+									Nama / Kode Item
 								</label>
 								<div class="col-9">
 									<select style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="nama_item" tabindex="-1" aria-hidden="true">
 										<option value="1" >
-											AC 1
+											AC 1 (SB1124378)
 										</option>
 										<option value="2">
-											AC 2
+											AC 2 (SB1124378)
 										</option>
 										<option value="3">
-											AC 3
+											AC 3 (SB1124378)
 										</option>
 										<option value="4" >
-											Material 1
+											Material 1 (SM1124378)
 										</option>
 										<option value="5">
-											Material 2
+											Material 2 (SM1124378)
 										</option>
 										<option value="6">
-											Material 3
+											Material 3 (SM1124378)
 										</option>
 									</select>
 								</div>
@@ -522,7 +551,7 @@
 							</div>
 							<div class="form-group m-form__group row">
 								<label  class="col-3 col-form-label">
-									Harga
+									Total Harga
 								</label>
 								<div class="col-9">
 									<input class="form-control m-input" type="text" value="Rp4,900,000" id="harga_item">
@@ -540,6 +569,113 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- Modal Edit --> 
+			<div class="modal fade" id="modal_edit_item"   role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">
+								Edit Barang
+							</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">
+									&times;
+								</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Nama / Kode Item
+								</label>
+								<div class="col-9">
+									<select style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="nama_item" tabindex="-1" aria-hidden="true">
+										<option value="1" >
+											AC 1 (SB1124378)
+										</option>
+										<option value="2">
+											AC 2 (SB1124378)
+										</option>
+										<option value="3">
+											AC 3 (SB1124378)
+										</option>
+										<option value="4" >
+											Material 1 (SM1124378)
+										</option>
+										<option value="5">
+											Material 2 (SM1124378)
+										</option>
+										<option value="6">
+											Material 3 (SM1124378)
+										</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Qty
+								</label>
+								<div class="col-9">
+									<input class="form-control m-input" type="number" value="20" id="jumlah_item">
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Satuan
+								</label>
+								<div class="col-9">
+									<select disabled="" style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="satuan" tabindex="-1" aria-hidden="true">
+										<option elected="" value="1" >
+											Unit
+										</option>
+										<option s value="2">
+											Meter
+										</option>
+										<option value="3">
+											Pcs
+										</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Potongan Harga (%)
+								</label>
+								<div class="col-9">
+									<input class="form-control m-input" type="text" value="11.73" id="harga_item">
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Valas
+								</label>
+								<div class="col-9">
+									<input class="form-control m-input" type="text" value="Rp4,900,000" id="harga_item">
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Total Harga
+								</label>
+								<div class="col-9">
+									<input class="form-control m-input" type="text" value="Rp4,900,000" id="harga_item">
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">
+								Tutup
+							</button>
+							<button id="btn_tambah" type="button" class="btn btn-primary" data-dismiss="modal">
+								Update
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal Edit Done -->
 			<!-- begin::Footer -->
 			<footer class="m-grid__item		m-footer ">
 				<div class="m-container m-container--fluid m-container--full-height m-page__container">
@@ -629,8 +765,12 @@
 				SweetAlert2Demo.init();
 			});
 		</script>
+
 		<script type="text/javascript">
 			var tbl_list_invoice_masuk = $('#tbl_list_invoice_masuk').mDatatable({
+
+				responsive: true,
+
 				data: {
 					saveState: {cookie: false},
 					/*type: 'remote',
@@ -660,7 +800,11 @@
 					class: '', // custom wrapper class
 					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
 					// height: 450, // datatable's body's fixed height
-					footer: false // display/hide footer
+					footer: false, // display/hide footer
+					 smoothScroll: {
+					    scrollbarShown: true
+					}
+
 				},
 
 				// column sorting
@@ -673,14 +817,22 @@
 				{
 					field: 'No',
 					textAlign: 'center',
+					width:30
 				},
 				{
-					field: 'Nama Barang',
+					field: 'Nama',
 					textAlign: 'center',
+					width: 180
 				},
 				{
-					field: 'Jumlah Barang',
+					field: 'Kode',
 					textAlign: 'center',
+					width:80
+				},
+				{
+					field: 'Jumlah',
+					textAlign: 'center',
+					width:50
 				},
 				{
 					field: 'Harga Jual',
@@ -693,7 +845,13 @@
 				{
 					field: 'Total Harga',
 					textAlign: 'center',
-				}
+				},
+				{
+
+					field: 'Aksi',
+					textAlign: 'center',
+					width:180
+				},
 
 				],
 			});

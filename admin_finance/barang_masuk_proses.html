@@ -13,9 +13,9 @@
 	<html lang="en" >
 	<!-- begin::Head -->
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title>
-			Admin Finance | Rinican Invoice Barang
+			Admin Finance | Tambah Invoice Masuk
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,11 +43,7 @@
 		<!-- end:: Style tambahan -->
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
-		<style>
-			.m-datatable.m-datatable--default > .m-datatable__pager > .m-datatable__pager-info {
-				display: none !important;
-			}
-		</style>
+		
 	</head>
 	<!-- end::Head -->
 	<!-- end::Body -->
@@ -136,7 +132,7 @@
 						<!-- ASIDE MENU DISINI -->
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 							<!--Invoice Masuk-->
-							<li class="m-menu__item" aria-haspopup="true" >
+							<li class="m-menu__item aria-haspopup="true" >
 								<a  href="index.html" class="m-menu__link ">
 									<i class="m-menu__link-icon fa 	fa-wpforms"></i>
 									<span class="m-menu__link-title">
@@ -148,10 +144,21 @@
 									</span>
 								</a>
 							</li>
-
-							<!-- Manj BArang --> 
+							<!-- Barang Masuk -->
+							<li class="m-menu__item m-menu__item--active"" aria-haspopup="true" >
+								<a  href="barang_masuk.html" class="m-menu__link ">
+									<i class="m-menu__link-icon fa fa-shopping-cart"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Barang Masuk
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
 							<!--Manajemen Invoice Keluar-->
-							<li class="m-menu__item  m-menu__item--submenu m-menu__item--open m-menu__item--expanded" aria-haspopup="true" data-menu-submenu-toggle="hover">
+							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
 								<a href="#" class="m-menu__link m-menu__toggle">
 									<i class="m-menu__link-icon flaticon-folder-2"></i>
 									<span class="m-menu__link-text">
@@ -169,7 +176,7 @@
 												</span>
 											</span>
 										</li>
-										<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">
+										<li class="m-menu__item " aria-haspopup="true">
 											<a href="invoice_barang.html" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
@@ -192,6 +199,7 @@
 									</ul>
 								</div>
 							</li>
+							
 							<!-- Master Stock -->
 							<li class="m-menu__item  " aria-haspopup="true" >
 								<a  href="master_stock.html" class="m-menu__link ">
@@ -205,7 +213,6 @@
 									</span>
 								</a>
 							</li>
-							
 							<!-- Manajemen Harga -->
 							<li class="m-menu__item" aria-haspopup="true" >
 								<a  href="manajemen_harga.html" class="m-menu__link ">
@@ -230,7 +237,7 @@
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
 								<h3 class="m-subheader__title m-subheader__title--separator">
-									Rincian Invoice Barang
+									Invoice Masuk
 								</h3>
 								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
 									<li class="m-nav__item m-nav__item--home">
@@ -242,9 +249,9 @@
 										-
 									</li>
 									<li class="m-nav__item">
-										<a href="invoice_barang.html" class="m-nav__link">
+										<a href="invoice_masuk.html" class="m-nav__link">
 											<span class="m-nav__link-text">
-												Invoice Barang
+												Invoice Masuk
 											</span>
 										</a>
 									</li>
@@ -253,9 +260,9 @@
 										-
 									</li>
 									<li class="m-nav__item">
-										<a href="rincian_invoice_barang.html" class="m-nav__link">
+										<a href="tambah_invoice_masuk.html" class="m-nav__link">
 											<span class="m-nav__link-text">
-												Rincian
+												Tambah
 											</span>
 										</a>
 									</li>
@@ -264,118 +271,102 @@
 						</div>
 					</div>
 					<!-- END: Subheader -->
+					<!-- END: Subheader -->
 					<div class="m-content">
 						<div class="row">
 							<div class="col-xl-12">
-								<div class="m-portlet m-portlet--mobile">
-									<div class="m-portlet__head header">
-										<h2 style="margin-top: 30px" align="left" class="header-pesanan">
-											Invoice Sukses Sejuk Mandiri
-										</h2><br>
-										<button onclick="window.location.href='print_invoice.html'" style="padding: 5px;width: 200px" class="btn btn-primary">
-											Print invoice
-										</button>
-										<h3 name="no_invoice" class="header-pesanan-no"> 
-											<i class="fa fa-check-circle"> </i> 0037/SSM/SPK-PSG/MKS/III/2019
-										</h3><br><br>
-										<div class="info row">
-											<div class="col-sm">
-												<p id="tanggal_surat">
-													<i class="flaticon-calendar-2"> </i>20/11/19
-												</p> 
-												<p id="nama_pelanggan">
-													<i class="flaticon-users"> </i> Ahmad Rifaldi
-												</p>
-												<p id="no_telpon">
-													<i class="fa fa-phone"> </i> 085-145-322-137
-												</p>
+								<div class="m-portlet">
+									<div class="m-portlet__head">
+										<div class="m-portlet__head-caption">
+											<div class="m-portlet__head-title">
+												<h3 class="m-portlet__head-text">
+													List Barang Masuk
+												</h3>
 											</div>
-											<div class="col-sm">
-												<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
-												<p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
-											</div>
-										</div>	
+										</div>
 									</div>
 									<div class="m-portlet__body">
-										<!--end: Search Form -->
-										<!--begin: Datatable -->
-										<!-- <div class="m_datatable" id="local_data"></div> -->
-										<table class="table" id="tbl_rincian_invoice">
-											<thead>
-												<tr>
-													<th>Qty</th>
-													<th>Sat</th>
-													<th>Nama Barang</th>
-													<th>Harga</th>
-													<th>Harga Khusus</th>
-													<th>Jumlah</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>4</td>
-													<td>unit</td>
-													<td>AC Daikin 1/2 PK Thailand</td>
-													<td>31,640,000</td>
-													<td>-</td>
-													<td>126,560,000</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>meter</td>
-													<td>Pipa</td>
-													<td>30,000</td>
-													<td>25,000</td>
-													<td>75,000</td>
-												</tr>
-											</tbody>
-										</table>
-										<table style="width: 100%" class="tg">
-											<tr>
-												<th style="width: 10%" class="tg-s268"></th>
-												<th style="width: 10%" class="tg-s268"></th>
-												<th style="width: 20%" class="tg-s268"></th>
-												<th style="width: 20%" class="tg-s268"></th>
-												<th id="sub_total" align="right" style="width: 25%" class="tg-s268">SUB TOTAL</th>
-												<th style="width: 15%" class="tg-s268">126,635,000</th>
-											</tr>
-											<tr>
-												<th style="width: 10%" class="tg-s268"></th>
-												<th style="width: 10%" class="tg-s268"></th>
-												<th style="width: 20%" class="tg-s268"></th>
-												<th style="width: 20%" class="tg-s268"></th>
-												<th id="ppn" align="right" style="width: 25%" class="tg-s268">PPN 10%</th>
-												<th style="width: 15%" class="tg-s268">12,663,500</th>
-											</tr>
-											<tr>
-												<th style="width: 10%" class="tg-s268"></th>
-												<th style="width: 10%" class="tg-s268"></th>
-												<th style="width: 20%" class="tg-s268"></th>
-												<th style="width: 20%" class="tg-s268"></th>
-												<th id="total" align="right" style="width: 25%" class="tg-s268">TOTAL</th>
-												<th style="width: 15%" class="tg-s268">139,298,500</th>
-											</tr>
-										</table>
-										<p>Pembayaran dapat dikirmkan ke nomer rekening :</p>
-										<p style="font-size: 1.3rem" id="no_rekening_ssm">BNI 12345678</p>
-										<!--end: Datatable -->
-										<div style="margin-top: 20px" class="row">
-											<div align="center" class="col-sm">
-												<p><b>Tanda Terima</b></p>
-												<br>
-												<br>
-												<br>
-												<br>
-												<br>
+										<div style="display: inline;" class="col-md-12">
+											<div class="m-input-icon m-input-icon--left">
+												<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
+												<span class="m-input-icon__icon m-input-icon__icon--left">
+													<span>
+														<i class="la la-search"></i>
+													</span>
+												</span>
 											</div>
-											<div align="center" class="col-sm">
-												<p><b>Hormat Kami</b></p>
-												<br>
-												<br>
-												<br>
-												<br>
-												<br>
-											</div>
+										</div>
+										<div class="tab-content">
+											<table class="table" id="tbl_list_barang_masuk">
+												<thead>
+													<tr>
+														<th>No</th>
+														<th>Tanggal</th>
+														<th>Kode</th>
+														<th>Nama Barang</th>
+														<th>No Invoice</th>
+														<th>Jumlah</th>
+														<th>Aksi</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>20/19/2018</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>12321312</td>
+														<td>20</td>
+														<td>
+															<a href="proses_barang_masuk.html" class="btn btn-sm btn-success btn_material" style="color:white; width:80px;">proses >> </a>
+														</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>20/19/2018</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>12321312</td>
+														<td>20</td>
+														<td>
+															<a href="proses_barang_masuk.html" class="btn btn-sm btn-success btn_material" style="color:white; width:80px;">proses >> </a>
+														</td>
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>20/19/2018</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>12321312</td>
+														<td>20</td>
+														<td>
+															<a href="proses_barang_masuk.html" class="btn btn-sm btn-success btn_material" style="color:white; width:80px;">proses >> </a>
+														</td>
+													</tr>
+													<tr>
+														<td>4</td>
+														<td>20/19/2018</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>12321312</td>
+														<td>20</td>
+														<td>
+															<a href="proses_barang_masuk.html" class="btn btn-sm btn-success btn_material" style="color:white; width:80px;">proses >> </a>
+														</td>
+													</tr>
+													<tr>
+														<td>5</td>
+														<td>20/19/2018</td>
+														<td>1105791</td>
+														<td>Thermistor RKD25GVM</td>
+														<td>12321312</td>
+														<td>20</td>
+														<td>
+															<a href="proses_barang_masuk.html" class="btn btn-sm btn-success btn_material" style="color:white; width:80px;">proses >> </a>
+														</td>
+													</tr>
+												</tbody> 
+											</table>
 										</div>
 									</div>
 								</div>
@@ -386,7 +377,7 @@
 			</div>
 			<!-- end:: Body -->
 			<!-- Modal : TAMBAH ITEM -->
-			<div class="modal fade" id="modal_tambah_barang"   role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal fade" id="modal_tambah_item"   role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -402,18 +393,27 @@
 						<div class="modal-body">
 							<div class="form-group m-form__group row">
 								<label  class="col-3 col-form-label">
-									Nama Barang
+									Nama / Kode Item
 								</label>
 								<div class="col-9">
 									<select style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="nama_item" tabindex="-1" aria-hidden="true">
 										<option value="1" >
-											AC 1
+											AC 1 (SB1124378)
 										</option>
 										<option value="2">
-											AC 2
+											AC 2 (SB1124378)
 										</option>
 										<option value="3">
-											AC 3
+											AC 3 (SB1124378)
+										</option>
+										<option value="4" >
+											Material 1 (SM1124378)
+										</option>
+										<option value="5">
+											Material 2 (SM1124378)
+										</option>
+										<option value="6">
+											Material 3 (SM1124378)
 										</option>
 									</select>
 								</div>
@@ -446,7 +446,15 @@
 							</div>
 							<div class="form-group m-form__group row">
 								<label  class="col-3 col-form-label">
-									Harga
+									Potongan Harga (%)
+								</label>
+								<div class="col-9">
+									<input class="form-control m-input" type="text" value="11.73" id="harga_item">
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Valas
 								</label>
 								<div class="col-9">
 									<input class="form-control m-input" type="text" value="Rp4,900,000" id="harga_item">
@@ -454,10 +462,10 @@
 							</div>
 							<div class="form-group m-form__group row">
 								<label  class="col-3 col-form-label">
-									Harga Khusus
+									Total Harga
 								</label>
 								<div class="col-9">
-									<input class="form-control m-input" type="text" value="Rp3,200,000" id="harga_khusus">
+									<input class="form-control m-input" type="text" value="Rp4,900,000" id="harga_item">
 								</div>
 							</div>
 						</div>
@@ -472,6 +480,113 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- Modal Edit --> 
+			<div class="modal fade" id="modal_edit_item"   role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">
+								Edit Barang
+							</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">
+									&times;
+								</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Nama / Kode Item
+								</label>
+								<div class="col-9">
+									<select style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="nama_item" tabindex="-1" aria-hidden="true">
+										<option value="1" >
+											AC 1 (SB1124378)
+										</option>
+										<option value="2">
+											AC 2 (SB1124378)
+										</option>
+										<option value="3">
+											AC 3 (SB1124378)
+										</option>
+										<option value="4" >
+											Material 1 (SM1124378)
+										</option>
+										<option value="5">
+											Material 2 (SM1124378)
+										</option>
+										<option value="6">
+											Material 3 (SM1124378)
+										</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Qty
+								</label>
+								<div class="col-9">
+									<input class="form-control m-input" type="number" value="20" id="jumlah_item">
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Satuan
+								</label>
+								<div class="col-9">
+									<select disabled="" style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="satuan" tabindex="-1" aria-hidden="true">
+										<option elected="" value="1" >
+											Unit
+										</option>
+										<option s value="2">
+											Meter
+										</option>
+										<option value="3">
+											Pcs
+										</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Potongan Harga (%)
+								</label>
+								<div class="col-9">
+									<input class="form-control m-input" type="text" value="11.73" id="harga_item">
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Valas
+								</label>
+								<div class="col-9">
+									<input class="form-control m-input" type="text" value="Rp4,900,000" id="harga_item">
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label  class="col-3 col-form-label">
+									Total Harga
+								</label>
+								<div class="col-9">
+									<input class="form-control m-input" type="text" value="Rp4,900,000" id="harga_item">
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">
+								Tutup
+							</button>
+							<button id="btn_tambah" type="button" class="btn btn-primary" data-dismiss="modal">
+								Update
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal Edit Done -->
 			<!-- begin::Footer -->
 			<footer class="m-grid__item		m-footer ">
 				<div class="m-container m-container--fluid m-container--full-height m-page__container">
@@ -561,8 +676,12 @@
 				SweetAlert2Demo.init();
 			});
 		</script>
+
 		<script type="text/javascript">
-			var tbl_list_item_masuk = $('#tbl_rincian_invoice').mDatatable({
+			var tbl_list_invoice_masuk = $('#tbl_list_barang_masuk').mDatatable({
+
+				responsive: true,
+
 				data: {
 					saveState: {cookie: false},
 					/*type: 'remote',
@@ -592,7 +711,11 @@
 					class: '', // custom wrapper class
 					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
 					// height: 450, // datatable's body's fixed height
-					footer: false // display/hide footer
+					footer: false, // display/hide footer
+					 smoothScroll: {
+					    scrollbarShown: true
+					}
+
 				},
 
 				// column sorting
@@ -603,32 +726,41 @@
 				columns: [
 
 				{
-					field: 'Qty',
+					field: 'No',
 					textAlign: 'center',
-					width: 50,
+					width:30
 				},
 				{
-					field: 'Sat',
+					field: 'Tanggal',
 					textAlign: 'center',
-					width: 50,
+					width: 60
+				},
+				{
+					field: 'Kode',
+					textAlign: 'center',
+					width:60
 				},
 				{
 					field: 'Nama Barang',
 					textAlign: 'center',
-					width: 250,
+					width:200
+				},
+				
+				{
+					field: 'No Invoice',
+					textAlign: 'center',
 				},
 				{
 					field: 'Jumlah',
 					textAlign: 'center',
+					width:50
 				},
 				{
-					field: 'Harga',
+
+					field: 'Aksi',
 					textAlign: 'center',
+					width:100
 				},
-				{
-					field: 'Harga Khusus',
-					textAlign: 'center',
-				}
 
 				],
 			});

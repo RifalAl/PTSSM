@@ -13,7 +13,7 @@
 	<html lang="en" >
 	<!-- begin::Head -->
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title>
 			Admin Finance | Dashboard
 		</title>
@@ -143,6 +143,8 @@
 									</span>
 								</a>
 							</li>
+
+							<!-- Manj BArang --> 
 							<!--Manajemen Invoice Keluar-->
 							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
 								<a href="#" class="m-menu__link m-menu__toggle">
@@ -251,7 +253,7 @@
 																<h3 class="m-portlet__head-text">
 																	List Invoice Masuk
 																</h3>
-																<button onclick="window.location.href = 'tambah_invoice_masuk.html';" type="button" class="btn btn-success ">tambah Invoice Masuk</button>
+																<button onclick="window.location.href = 'tambah_invoice_masuk.html';" type="button" class="btn btn-success "> + tambah Invoice Masuk</button>
 															</div>
 														</div>
 														<div class="col-md-4 offset-md-4">
@@ -278,9 +280,7 @@
 													<th>Tanggal</th>
 													<th>No Invoice</th>
 													<th>Nama Supplier</th>
-													<th>Alamat</th>
-													<th>NPWP</th>
-													<th>Telpon</th>
+													<th>Status</th>
 													<th>Aksi</th>
 												</tr>
 											</thead>
@@ -290,11 +290,84 @@
 													<td>20/11/19</td>
 													<td>010.00-19.26629390</td>
 													<td>PT. DAIKIN AIRCONDITONING INDONESIA</td>
-													<td>Gedung Wisam KEIA Lantai 18 dan 19, JL. Jendral Sudirman Kav. 3, Karet Tengsin, Tanah Abang</td>
-													<td>31.497.873.026.000</td>
-													<td>(021)5724377</td>
+													<td> Lunas </td>
 													<td>
 														<a href="rincian_invoice_masuk.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+
+														<a href="tambah_invoice_masuk.html" class="btn btn-sm btn-info "  style="color:white;">
+															<i class="fa fa-pencil-square"></i> Edit
+														</a>
+														<button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="" title="Hapus"> <i class="fa fa-trash"></i> </button>
+
+													</td>	
+												</tr>
+
+												<tr>
+													<td>1</td>
+													<td>20/11/19</td>
+													<td>010.00-19.26629390</td>
+													<td>PT. DAIKIN AIRCONDITONING INDONESIA</td>
+													<td> Belum Lunas </td>
+													<td>
+														<a href="rincian_invoice_masuk.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+
+														<a href="tambah_invoice_masuk.html" class="btn btn-sm btn-info "  style="color:white;">
+															<i class="fa fa-pencil-square"></i> Edit
+														</a>
+														<button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="" title="Hapus"> <i class="fa fa-trash"></i> </button>
+
+													</td>	
+												</tr>
+
+												<tr>
+													<td>1</td>
+													<td>20/11/19</td>
+													<td>010.00-19.26629390</td>
+													<td>PT. DAIKIN AIRCONDITONING INDONESIA</td>
+													<td> Lunas </td>
+													<td>
+														<a href="rincian_invoice_masuk.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+
+														<a href="tambah_invoice_masuk.html" class="btn btn-sm btn-info "  style="color:white;">
+															<i class="fa fa-pencil-square"></i> Edit
+														</a>
+														<button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="" title="Hapus"> <i class="fa fa-trash"></i> </button>
+
+													</td>	
+												</tr>
+
+												<tr>
+													<td>1</td>
+													<td>20/11/19</td>
+													<td>010.00-19.26629390</td>
+													<td>PT. DAIKIN AIRCONDITONING INDONESIA</td>
+													<td> Belum Lunas </td>
+													<td>
+														<a href="rincian_invoice_masuk.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+
+														<a href="tambah_invoice_masuk.html" class="btn btn-sm btn-info "  style="color:white;">
+															<i class="fa fa-pencil-square"></i> Edit
+														</a>
+														<button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="" title="Hapus"> <i class="fa fa-trash"></i> </button>
+
+													</td>	
+												</tr>
+
+												<tr>
+													<td>1</td>
+													<td>20/11/19</td>
+													<td>010.00-19.26629390</td>
+													<td>PT. DAIKIN AIRCONDITONING INDONESIA</td>
+													<td> Lunas </td>
+													<td>
+														<a href="rincian_invoice_masuk.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+
+														<a href="tambah_invoice_masuk.html" class="btn btn-sm btn-info "  style="color:white;">
+															<i class="fa fa-pencil-square"></i> Edit
+														</a>
+
+														<button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="" title="Hapus"> <i class="fa fa-trash"></i> </button>
+
 													</td>	
 												</tr>
 											</tbody>
@@ -376,7 +449,8 @@
 					},
 
 					// column sorting
-					sortable: false,
+					sortable: true,
+					filterable:true,
 					search: {
 						input: $('#generalSearch'),
 					},
@@ -385,13 +459,14 @@
 					{
 						field: 'No',
 						textAlign: 'center',
-						width: 50
+						width: 30
 					},
 					{
 						field: 'Tanggal',
 						textAlign: 'center',
 						type:'date',
 						format: 'DD/MM/YYYY',
+						width: 100
 					},
 					{
 						field: 'No Invoice',
@@ -403,21 +478,16 @@
 						width: 200
 					},
 					{
-						field: 'Alamat',
+						field: 'Status',
 						textAlign: 'center',
-						width: 300
+       					filterable: true,
+						width: 80
 					},
-					{
-						field: 'NPWP',
-						textAlign: 'center',
-					},
-					{
-						field: 'Telpon',
-						textAlign: 'center',
-					},
+					
 					{
 						field: 'Aksi',
 						textAlign: 'center',
+						width: 200
 					}
 
 					],

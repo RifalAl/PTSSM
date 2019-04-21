@@ -10193,12 +10193,12 @@ b, strong {
         .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__body .m-datatable__row > .m-datatable__cell,
         .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__foot .m-datatable__row > .m-datatable__cell {
           vertical-align: middle;
-          padding: 11px 10px;
-          font-size: 1rem; }
+          padding: 20px 2px; /*Sidik*/
+          font-size: 12px; }
           .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__head .m-datatable__row > .m-datatable__cell i,
           .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__body .m-datatable__row > .m-datatable__cell i,
           .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__foot .m-datatable__row > .m-datatable__cell i {
-            font-size: 1.3rem; }
+            font-size: 15px; } /*Sidik*/
           .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__head .m-datatable__row > .m-datatable__cell.m-datatable__cell--left,
           .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__body .m-datatable__row > .m-datatable__cell.m-datatable__cell--left,
           .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__foot .m-datatable__row > .m-datatable__cell.m-datatable__cell--left {
@@ -10282,7 +10282,7 @@ b, strong {
       font-weight: 600;
       vertical-align: middle; }
     .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__head .m-datatable__row > .m-datatable__cell {
-      padding: 16px 10px; }
+      padding: 18px 3px; } /*Sidik*/
       .m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__head .m-datatable__row > .m-datatable__cell > span > i {
         display: inline-block;
         position: relative;

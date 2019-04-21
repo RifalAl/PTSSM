@@ -291,19 +291,14 @@
 											<div class="form-group m-form__group row">
 												<div class="col-lg-6">
 													<label>
-														Kode:
+														Kode*:
 													</label>
 													<input type="text" name="input_kode_barang" class="form-control m-input" placeholder="kode barang">
 												</div>
-												<div class="col-lg-6">
-													<label class="">
-														Satuan:
-													</label>
-													<input type="text" name="input_satuan_barang" class="form-control m-input" placeholder="satuan barang">
-												</div>
+												
 												<div class="col-lg-6">
 													<label>
-														Kategori:
+														Kategori*:
 													</label>
 													<select style="width: 100%" class="form-control m-select2 dropdown_search" name="kategori_item">
 														<option value="0">
@@ -325,13 +320,19 @@
 												</div>
 												<div class="col-lg-6">
 													<label class="">
-														Nama:
+														Nama*:
 													</label>
 													<input type="text" name="nama_barang" class="form-control m-input" placeholder="nama barang">
 												</div>
 												<div class="col-lg-6">
 													<label class="">
-														Stock Minimal:
+														Satuan *:
+													</label>
+													<input type="text" name="input_satuan_barang" class="form-control m-input" placeholder="satuan barang">
+												</div>
+												<div class="col-lg-6">
+													<label class="">
+														Stock Minimal*:
 													</label>
 													<input type="number" name="stock_minimal" class="form-control m-input">
 												</div>
@@ -339,33 +340,46 @@
 													<label class="">
 														Tipe:
 													</label>
-													<select style="width: 100%" class="form-control m-select2 dropdown_search" name="tipe_barang">
-														<option value="1">
-															Tipe 1
-														</option>
-														<option value="2">
-															Tipe 2
-														</option>
-														<option value="3">
-															Tipe 3
-														</option>
-													</select>
+													<input type="text" name="Type" class="form-control m-input">
+
+													
 												</div>
 												<div class="col-lg-6">
 													<label class="">
 														Merek:
 													</label>
-													<select style="width: 100%" class="form-control m-select2 dropdown_search" name="merek_barang">
+													<input type="text" name="merek" class="form-control m-input">
+													
+												</div>
+												<div class="col-lg-6">
+													<label class="">
+														Tipe Gudang*:
+													</label>
+													<select style="width: 100%" class="form-control " name="Tipe Pajak">
 														<option value="1">
-															Merek 1
+															Toko (Pajak)
 														</option>
 														<option value="2">
-															Merek 2
+															Kantor (Non Pajak)
 														</option>
-														<option value="3">
-															Merek 3
-														</option>
+														
 													</select>
+												</div>
+
+												<div class="col-lg-6">
+													<label class="">
+														BTU/hr:
+													</label>
+													<input type="text" name="btu" class="form-control m-input">
+													
+												</div>
+
+												<div class="col-lg-6">
+													<label class="">
+														Daya Listrik:
+													</label>
+													<input type="text" name="daya" class="form-control m-input">
+													
 												</div>
 												<div class="col-lg-6">
 													<label class="">
@@ -422,6 +436,7 @@
 														<th>Kategori</th>
 														<th>Kode</th>
 														<th>Nama Item</th>
+														<th>Gudang</th>
 														<th>Tipe</th>
 														<th>Merek</th>
 														<th>Limit</th>
@@ -437,6 +452,7 @@
 														<td>Unit</td>
 														<td>#14253617</td>
 														<td>Thermistor RKD25GVM</td>
+														<td>Kantor</td>
 														<td>Thermistor</td>
 														<td>Daikin</td>
 														<td>20</td>
@@ -455,6 +471,7 @@
 														<td>Material</td>
 														<td>#14253617</td>
 														<td>Thermistor RKD25GVM</td>
+														<td>Kantor</td>
 														<td>Thermistor</td>
 														<td>Daikin</td>
 														<td>20</td>
@@ -474,6 +491,7 @@
 														<td>Jasa</td>
 														<td>#J12</td>
 														<td>Cuci AC Dalam</td>
+														<td>Toko</td>
 														<td> - </td>
 														<td>Daikin</td>
 														<td> - </td>
@@ -492,6 +510,7 @@
 														<td>Sparepart</td>
 														<td>#14253617</td>
 														<td>Thermistor RKD25GVM</td>
+														<td>Kantor</td>
 														<td>Thermistor</td>
 														<td>Daikin</td>
 														<td>20</td>
@@ -510,6 +529,7 @@
 														<td>Sparepart</td>
 														<td>#14253617</td>
 														<td>Thermistor RKD25GVM</td>
+														<td>Kantor</td>
 														<td>Thermistor</td>
 														<td>Daikin</td>
 														<td>20</td>
@@ -599,26 +619,7 @@
 		var tbl_list_master_stock = $('#tbl_list_master_stock').mDatatable({
 			data: {
 				saveState: {cookie: false},
-					/*type: 'remote',
-			        source: {
-			          read: {
-			            // sample GET method
-			            method: 'GET',
-			            url: 'https://keenthemes.com/metronic/preview/inc/api/datatables/demos/default.php',
-			            map: function(raw) {
-			              // sample data mapping
-			              var dataSet = raw;
-			              if (typeof raw.data !== 'undefined') {
-			                dataSet = raw.data;
-			              }
-			              return dataSet;
-			            },
-			          },
-			        },
-			        pageSize: 10,
-			        serverPaging: true,
-			        serverFiltering: true,
-			        serverSorting: true,*/
+					
 			    },
 				// layout definition
 				layout: {
@@ -630,7 +631,7 @@
 				},
 
 				// column sorting
-				sortable: false,
+				sortable: true,
 				search: {
 					input: $('#generalSearch'),
 				},
@@ -639,23 +640,12 @@
 				{
 					field: 'No',
 					textAlign: 'center',
-					width: 50
-				},
-				{
-					field: 'Tanggal',
-					textAlign: 'center',
-					type:'date',
-					format: 'DD/MM/YYYY',
-					width: 50
-				},
-				{
-					field: 'Gambar',
-					textAlign: 'center',
-						
+					width: 40
 				},
 				{
 					field: 'Kategori',
 					textAlign: 'center',
+					width:50
 						
 				},
 				{
@@ -667,6 +657,11 @@
 					field: 'Nama Barang',
 					textAlign: 'center',
 					width: 180
+				},
+				{
+					field: 'Gudang',
+					textAlign: 'center',
+					width: 80
 				},
 				{
 					field: 'Tipe',
@@ -691,6 +686,11 @@
 				{
 					field: 'Keterangan',
 					textAlign: 'center',
+				},
+				{
+					field: 'Gambar',
+					textAlign: 'center',
+						
 				},
 				{
 					field: 'Aksi',

@@ -52,6 +52,8 @@
 				max-width: 600px;
 			}
 		</style>
+
+
 	</head>
 	<!-- end::Head -->
 	<!-- end::Body -->
@@ -397,13 +399,27 @@
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
-												<label  class="col-2 col-form-label">
-													Nama Pelanggan
-												</label>
-												<div class="col-10">
-													<input class="form-control m-input" type="text" value="Ibu Ani" id="nama_pelanggan">
-												</div>
-											</div>
+														<label  class="col-2 col-form-label">
+															No. SPK
+														</label>
+														<div class="col-10">
+															<select style="width: 100%" class="form-control m-select2 dropdown_search" name="nama_pelanggan">
+																
+																<option value="1">
+																	Pak Ayu Raharjo || 1212121
+																</option>
+																<option value="2">
+																	Pak Ayu || 1212121
+																</option>
+																<option value="3">
+																	Sukimin || 1212121
+																</option>
+																<option value="4">
+																	Marvel || 1231231
+																</option>
+															</select>
+														</div>
+													</div>
 											<div class="form-group m-form__group row">
 												<label  class="col-2 col-form-label">
 													Nomer Telpon
@@ -452,14 +468,97 @@
 													<textarea style="resize: none" class="form-control m-input " id="catatan" rows="3">lorem ipsum dolor sit amet</textarea>
 												</div>
 											</div>
+
 											<div style="margin-top: 20px" align="center">
-												<button id="btn_terbitkan_spk" type="button" class="btn btn-primary btn_pemasangan">Terbitkan SPK</button>
+												<button id="" type="button" class="btn btn-primary btn_pemasangan">1. Simpan</button>
 											</div>
+
+
+
+										</div>
+									</form>
+								</div>
+
+								<div class="m-portlet m-portlet--tab">
+									<div class="m-portlet__head">
+										<div class="m-portlet__head-caption">
+											<div class="m-portlet__head-title">
+												<span class="m-portlet__head-icon m--hide">
+													<i class="la la-gear"></i>
+												</span>
+												<h3 class="m-portlet__head-text">
+													Pilih Unit
+												</h3>
+											</div>
+										</div>
+									</div>
+									<!--begin::Form-->
+									<form class="m-form m-form--fit m-form--label-align-right">
+										<div class="m-portlet__body">
+											<table class="table" id="tbl_item_ac">
+												<thead>
+													<tr>
+														<th>No</th>
+														<th>ID Unit (auto)</th>
+														<th>Nama Barang</th>
+														<th>Type Barang</th>
+														<th>Merek</th>
+														<th>Servis</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>[ID Pelanggan][incremental] </td>
+														<td>AC Split Daikin 1/2 PK</td>
+														<td>Ac Outdoor</td>
+														<td> Daikin </td>
+														<td>
+															<input type="checkbox" name="pilihan" value="Pilih">  
+														</td>
+														
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>02122019 01</td>
+														<td>AC Split Daikin 1/2 PK</td>
+														<td>Ac Outdoor</td>
+														<td> Daikin </td>
+														<td>
+															<input type="checkbox" name="pilihan" value="Pilih">  
+														</td>
+														
+														
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>03-032819-001</td>
+														<td>AC Split Daikin 1/2 PK</td>
+														<td>AC indoor</td>
+														<td> Daikin </td>
+														<td>
+															<input type="checkbox" name="pilihan" value="Pilih">  
+														</td>
+														
+														
+													</tr>
+												</tbody>
+											</table>
+											
+
+											<div style="margin-top: 20px" align="center">
+												<button id="btn_terbitkan_spk" type="button" class="btn btn-primary btn_pemasangan">2. Terbitkan SPK</button>
+											</div>
+
+
+
 										</div>
 									</form>
 								</div>
 							</div>
 						</div>
+
+
 					</div>
 				</div>
 			</div>
@@ -561,6 +660,34 @@
 				}
 
 				],
+			});
+		</script>
+		<script>
+			var Select2 = function() {
+				var demos = function(){
+				 // basic
+				 $('.dropdown_search, .dropdown_search_validate').select2({
+				 	placeholder: "Pilih Nama Pelanggan"
+				 });
+				}
+				var modalDemos = function(){
+					$('#m_select2_modal').on('shown.bs.modal', function () {
+				// basic
+				$('.dropdown_search_modal').select2({
+					placeholder: "Pilih Nama Pelanggan"
+				});
+			});
+				}
+				return {
+					init: function() {
+						demos();
+						modalDemos();
+					}
+				};
+			}();
+			//== Initialization
+			jQuery(document).ready(function() {
+				Select2.init();
 			});
 		</script>
 		<script>
