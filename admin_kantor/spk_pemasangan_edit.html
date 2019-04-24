@@ -15,7 +15,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Admin kantor | SPK Pemasangan
+			Admin kantor | Edit SPK Pemasangan
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,6 +43,15 @@
 		<!-- end:: Style tambahan -->
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
+		<style>
+			.m-datatable.m-datatable--default > .m-datatable__pager > .m-datatable__pager-info {
+				display: none !important;
+			}
+
+			.modal-dialog {
+				max-width: 600px;
+			}
+		</style>
 	</head>
 	<!-- end::Head -->
 	<!-- end::Body -->
@@ -319,6 +328,16 @@
 											</span>
 										</a>
 									</li>
+									<li class="m-nav__separator">
+										-
+									</li>
+									<li class="m-nav__item">
+										<a href="tambah_spk_pemasangan.html" class="m-nav__link">
+											<span class="m-nav__link-text">
+												Tambah
+											</span>
+										</a>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -327,165 +346,327 @@
 					<div class="m-content">
 						<div class="row">
 							<div class="col-xl-12">
-								<div class="m-portlet m-portlet--mobile">
-									<div class="m-portlet__body">
-										<!--begin: Search Form -->
-										<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
-											<div class="row align-items-center">
-												<div class="col-md-12">
-													<div class="form-group m-form__group row align-items-center">
-														<div class="col-md-4">
-															<div class="m-portlet__head-title">
-																<h3 class="m-portlet__head-text">
-																	List SPK Pemasangan
-																</h3>
-																<button onclick="window.location.href = 'tambah_spk_pemasangan.html';" type="button" class="btn btn-success btn_tambah_spk"> + Tambah SPK</button>
-															</div>
-														</div>
-														<div class="col-md-4 offset-md-4">
-															<div class="m-input-icon m-input-icon--left">
-																<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
-																<span class="m-input-icon__icon m-input-icon__icon--left">
-																	<span>
-																		<i class="la la-search"></i>
-																	</span>
-																</span>
-															</div>
-														</div>
-													</div>
-												</div>
+								<div class="m-portlet m-portlet--tab">
+									<div class="m-portlet__head">
+										<div class="m-portlet__head-caption">
+											<div class="m-portlet__head-title">
+												<span class="m-portlet__head-icon m--hide">
+													<i class="la la-gear"></i>
+												</span>
+												<h3 class="m-portlet__head-text">
+													Edit SPK Pemasangan
+												</h3>
 											</div>
 										</div>
-										<!--end: Search Form -->
-										<!--begin: Datatable -->
-										<!-- <div class="m_datatable" id="local_data"></div> -->
-										<table class="table" id="tbl_spk_pemasangan">
-											<thead>
-												<tr>
-													<th>No</th>
-													<th>Terbit</th>
-													<th>No SPK</th>
-													<th>Nama Pelanggan</th>
-													<th>No Telpon</th>
-													<th>Status</th>
-													<th>Aksi</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>1</td>
-													<td>20/19/2018</td>
-													<td>1923102301123123</td>
-													<td>Bpk. Hendy</td>
-													<td>085145322137</td>
-													<td>Selesai</td>
-													<td>
-														<a href="spk_pemasangan_edit.html" class="btn btn-sm btn-info" style="color:white; width:70px;">Edit</a>
-														
-														<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:70px;">Rincian</a>
-													</td>
-												</tr>
-												<tr>
-													<td>2</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Bpk. Suminto</td>
-													<td>085145322137</td>
-													<td>Pengerjaan</td>
-													<td>
-														<a href="spk_pemasangan_edit.html" class="btn btn-sm btn-info" style="color:white; width:70px;">Edit</a>
-														
-														<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:70px;">Rincian</a>
-													</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Bpk. Suminto</td>
-													<td>085145322137</td>
-													<td>Pengerjaan</td>
-													<td>
-														<a href="spk_pemasangan_edit.html" class="btn btn-sm btn-info" style="color:white; width:70px;">Edit</a>
-														
-														<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:70px;">Rincian</a>
-													</td>
-												</tr>
-												<tr>
-													<td>4</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Ibu Ida</td>
-													<td>085145322137</td>
-													<td>Selesai</td>
-													<td>
-														<a href="spk_pemasangan_edit.html" class="btn btn-sm btn-info" style="color:white; width:70px;">Edit</a>
-														
-														<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:70px;">Rincian</a>
-													</td>
-												</tr>
-												<tr>
-													<td>5</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Ibu Munna</td>
-													<td>085145322137</td>
-													<td>Selesai</td>
-													<td>
-														<a href="spk_pemasangan_edit.html" class="btn btn-sm btn-info" style="color:white; width:70px;">Edit</a>
-														
-														<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:70px;">Rincian</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-										<!--end: Datatable -->
 									</div>
+									<!--begin::Form-->
+									<form class="m-form m-form--fit m-form--label-align-right">
+										<div class="m-portlet__body">
+											<div class="form-group m-form__group row">
+												<label  class="col-2 col-form-label">
+													Tipe Pajak
+												</label>
+												<div class="col-10">
+													<select class="form-control m-input m-input--square" id="tipe_pajak">
+														<option active value="0">
+															--Pilih Tipe Pajak--
+														</option>
+														<option value="1">
+															Pajak
+														</option>
+														<option value="2">
+															Non-Pajak
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label  class="col-2 col-form-label">
+													No. SPK
+												</label>
+												<div class="col-10">
+													<input class="form-control m-input" type="text" value="0037/SSM/SPK-PSG/MKS/III/2019" id="no_spk">
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label class="col-2 col-form-label">
+													Tanggal
+												</label>
+												<div class="col-10">
+													<input class="form-control m-input" type="date" value="" id="tanggal_pembuatan_spk">
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label  class="col-2 col-form-label">
+													Nama Pelanggan
+												</label>
+												<div class="col-10">
+													<select style="width: 100%" class="form-control m-select2 dropdown_search" name="nama_pelanggan">
+														<option value="1">
+															Ibu Ani
+														</option>
+														<option value="2">
+															Pak Hendy
+														</option>
+														<option value="3">
+															PT. Upana Studio
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label  class="col-2 col-form-label">
+													Nomer Telpon
+												</label>
+												<div class="col-10">
+													<input class="form-control m-input" type="tel" value="085 145 322 137" id="no_telpon">
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label for="example-email-input" class="col-2 col-form-label">
+													Email
+												</label>
+												<div class="col-10">
+													<input class="form-control m-input" type="email" value="nihonggomantappu@example.com" id="email_pelanggan">
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label  class="col-2 col-form-label">
+													Alamat
+												</label>
+												<div class="col-10">
+													<input class="form-control m-input" type="text" value="Jl. Angkasa 5, Panaikang, Makassar" id="alamat_pelanggan">
+												</div>
+											</div>
+									<!-- <div class="form-group m-form__group row">
+										<label  class="col-2 col-form-label">
+											Teknisi
+										</label>
+										<div class="col-10">
+											<select class="form-control m-input" id="nama_teknisi">
+												<option value="agus">
+													Agus
+												</option>
+												<option selected="" value="rahman">
+													Rahman
+												</option>
+												<option value="ridwan">
+													Ridwan
+												</option>
+												<option value="badu">
+													Badu
+												</option>
+												<option value="aldi">
+													Aldi
+												</option>
+											</select>
+										</div>
+									</div> -->
+									<div class="form-group m-form__group row">
+										<label class="col-2 col-form-label">
+											Waktu Pengerjaan
+										</label>
+										<div class="col-10">
+											<input class="form-control m-input" type="datetime-local" value="2019-03-19T10:10:00" id="tgl_mulai">
+										</div>
+									</div>
+									<div  class="form-group m-form__group row">
+										<label  class="col-2 col-form-label">
+											Catatan
+										</label>
+										<div class="col-10">
+											<textarea style="resize: none" class="form-control m-input " id="catatan" rows="3">lorem ipsum dolor sit amet</textarea>
+										</div>
+									</div>
+
+									<div class="form-group m-form__group row">
+										<label  class="col-2 col-form-label">
+											Status
+										</label>
+										<div class="col-10">
+											<select class="form-control m-input m-input--square" id="tipe_pajak">
+												<option active value="0">
+													Aktif
+												</option>
+												<option value="1">
+													Progress
+												</option>
+												<option value="2">
+													Selesai
+												</option>
+												<option value="2">
+													Batal
+												</option>
+											</select>
+										</div>
+									</div>
+
+									
+								</div>
+							</form>
+							<div class="m-portlet__body">
+								<div class="m-portlet__head-title">
+									<h3 align="center" class="m-portlet__head-text">
+										List Item Pemasangan
+									</h3><br>
+
+
+								</div>
+								<div style="margin: 20px" align="right">
+									<button data-toggle="modal" data-target="#modal_tambah_pemasangan" type="button" class="btn btn-success btn_pemasangan"> + Tambah Item Pemasangan</button>
+								</div>
+								<table class="table" id="tbl_item_pemasangan">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Kode Barang</th>
+											<th>Nama Barang</th>
+											<th>Jumlah</th>
+											<th>Keterangan</th>
+											<th>Aksi</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>123232323</td>
+											<td>AC Split 1/2 PK daikin R32 Non Inverter Thailand</td>
+											<td>2</td>
+											<td>-</td>
+											<td>
+												<a class="btn btn-sm btn-danger btn_hapus" style="color:white; width:80px;">Hapus</a>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>123232323</td>
+											<td>AC Split 1 PK daikin R32 Non Inverter Thailand</td>
+											<td>1</td>
+											<td>-</td>
+											<td>
+												<a class="btn btn-sm btn-danger btn_hapus" style="color:white; width:80px;">Hapus</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div align="center">
+									<button id="btn_terbitkan_spk" type="button" class="btn btn-primary btn_pemasangan"> >> Simpan Data/ Terbitkan >></button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end:: Body -->
-			<!-- begin::Footer -->
-			<footer class="m-grid__item		m-footer ">
-				<div class="m-container m-container--fluid m-container--full-height m-page__container">
-					<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
-						<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
-							<span class="m-footer__copyright">
-								Upa'na Studio
-							</span>
+		</div>
+	</div>
+	<!-- end:: Body -->
+	<!--  Begin::Modals -->
+	<div class="modal fade" id="modal_tambah_pemasangan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						Tambah Pemasangan
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-3 col-form-label">
+							Nama / Kode Barang
+						</label>
+						<div class="col-9">
+							<select style="width: 100%" class="form-control m-select2 dropdown_search" name="nama_barang_modal">
+								<option value="1">
+									01231239829 || AC Split 1/2 PK Malaysia
+								</option>
+								<option value="2">
+									012312fsg34 || AC Daikin 1 PK 
+								</option>
+								<option value="3">
+									7o302129829 || AC Split 1 PK Thailand
+								</option>
+							</select>
 						</div>
-
+					</div>
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-3 col-form-label">
+							Jumlah
+						</label>
+						<div class="col-9">
+							<div class="input-group">
+								<input name="jumlah_barang" type="text" class="form-control m-input" value="2" aria-describedby="basic-addon2">
+								<div class="input-group-append">
+									<span class="input-group-text" id="basic-addon2">
+										Unit
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group m-form__group row">
+						<label for="example-text-input" class="col-3 col-form-label">
+							Keterangan
+						</label>
+						<div class="col-9">
+							<textarea class="form-control m-input m-input--solid" name="keterangan" rows="3"></textarea>
+						</div>
 					</div>
 				</div>
-			</footer>
-			<!-- end::Footer -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						Tutup
+					</button>
+					<button id="btn_tambah_pemasangan" data-dismiss="modal" type="button" class="btn btn-primary">
+						Tambahkan
+					</button>
+				</div>
+			</div>
 		</div>
-		<!-- end:: Page -->		    
-		<!-- begin::Scroll Top -->
-		<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500"data-scroll-speed="300">
-			<i class="la la-arrow-up"></i>
+	</div>
+	<!-- End::Modals -->
+	<!-- begin::Footer -->
+	<footer class="m-grid__item		m-footer ">
+		<div class="m-container m-container--fluid m-container--full-height m-page__container">
+			<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+				<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+					<span class="m-footer__copyright">
+						Upa'na Studio
+					</span>
+				</div>
+
+			</div>
 		</div>
-		<!-- end::Scroll Top -->		    
+	</footer>
+	<!-- end::Footer -->
+</div>
+<!-- end:: Page -->		    
+<!-- begin::Scroll Top -->
+<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500"data-scroll-speed="300">
+	<i class="la la-arrow-up"></i>
+</div>
+<!-- end::Scroll Top -->		    
 
-		<!--begin::Base Scripts -->
-		<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-		<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
-		<!--end::Base Scripts -->   
-		<!--begin::Page Vendors -->
-		<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-		<!--end::Page Vendors -->  
-		<!--begin::Page Snippets -->
-		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
+<!--begin::Base Scripts -->
+<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+<!--end::Base Scripts -->   
+<!--begin::Page Vendors -->
+<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+<!--end::Page Vendors -->  
+<!--begin::Page Snippets -->
+<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
 
-		<!--end::Page Snippets -->
-		<script src="http://localhost:35729/livereload.js"></script>
-		<script type="text/javascript">
-			var tbl_spk_pemasangan = $('#tbl_spk_pemasangan').mDatatable({
-				data: {
-					saveState: {cookie: false},
+<!--end::Page Snippets -->
+<script src="http://localhost:35729/livereload.js"></script>
+<script type="text/javascript">
+	var tbl_item_pemasangan = $('#tbl_item_pemasangan').mDatatable({
+		data: {
+			saveState: {cookie: false},
 					/*type: 'remote',
 			        source: {
 			          read: {
@@ -526,38 +707,100 @@
 				{
 					field: 'No',
 					textAlign: 'center',
-					width: 50
 				},
 				{
-					field: 'Terbit',
-					textAlign: 'center',
-					type:'date',
-					format: 'DD/MM/YYYY',
-				},
-				{
-					field: 'No SPK',
-					textAlign: 'center',
-					width:150
-				},
-				{
-					field: 'Nama Pelanggan',
+					field: 'Nama Barang',
 					textAlign: 'center',
 				},
 				{
-					field: 'No Telpon',
+					field: 'Jumlah',
 					textAlign: 'center',
 				},
 				{
-					field: 'Status',
+					field: 'Keterangan',
 					textAlign: 'center',
 				},
 				{
 					field: 'Aksi',
 					textAlign: 'center',
-					width:200
 				}
 
 				],
+			});
+		</script>
+		<script>
+			$('.btn_hapus').click(function(e) {
+				swal({
+					title: 'Apakah anda yakin menghapus item ini?',
+					type: 'warning',
+					showCancelButton: true,
+					confirmButtonText: 'Ya,Hapus!'
+				}).then(function(result) {
+					if (result.value) {
+						swal(
+							'Dihapus!',
+							'item telah dihapus dari item pemasangan',
+							'success'
+							)
+					}
+				});
+			});
+		</script>
+		<script>
+			var Select2 = function() {
+				var demos = function(){
+				 // basic
+				 $('.dropdown_search, .dropdown_search_validate').select2({
+				 	placeholder: "Select a state"
+				 });
+				}
+				var modalDemos = function(){
+					$('#m_select2_modal').on('shown.bs.modal', function () {
+				// basic
+				$('.dropdown_search_modal').select2({
+					placeholder: "Select a state"
+				});
+			});
+				}
+				return {
+					init: function() {
+						demos();
+						modalDemos();
+					}
+				};
+			}();
+			//== Initialization
+			jQuery(document).ready(function() {
+				Select2.init();
+			});
+		</script>
+
+		<script>
+			//== Class definition
+			var SweetAlert2Demo = function() {
+
+			//== Demos
+			var initDemos = function() {
+
+				$('#btn_terbitkan_spk').click(function(e) {
+					swal("SPK Telah Terbit!", "SPK yang anda buat telah terbit","success");
+				});
+				$('#btn_tambah_pemasangan').click(function(e) {
+					swal("Telah ditambahkan!", "data yang anda inputkan telah tersimpan", "success");
+				});
+			};
+
+			return {
+					//== Init
+					init: function() {
+						initDemos();
+					},
+				};
+			}();
+
+			//== Class Initialization
+			jQuery(document).ready(function() {
+				SweetAlert2Demo.init();
 			});
 		</script>
 	</body>

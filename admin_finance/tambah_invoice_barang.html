@@ -293,9 +293,18 @@
 														<input class="form-control m-input" type="text" value="0037/SSM/SPK-PSG/MKS/III/2019" id="no_invoice">
 													</div>
 												</div>
+
+												<div class="form-group m-form__group row">
+													<label  class="col-2 col-form-label">
+														SPK 
+													</label>
+													<div class="col-10">
+														<input disabled="disabled" class="form-control m-input" type="text" value="0037/SSM/SPK-PSG/MKS/III/2019" id="no_spk">
+													</div>
+												</div>
 												<div class="form-group m-form__group row">
 													<label class="col-2 col-form-label">
-														Tanggal Invoice
+														Tanggal Terbit Invoice
 													</label>
 													<div class="col-10">
 														<input class="form-control m-input" type="date" value="" id="tanggal_pembuatan_invoice">
@@ -309,21 +318,7 @@
 														<input class="form-control m-input" type="date" value="" id="tanggal_jatuh__invoice">
 													</div>
 												</div>
-												<div class="form-group m-form__group row">
-													<label  class="col-2 col-form-label">
-														Status
-													</label>
-													<div class="col-10">
-														<select style="width: 100%" class="form-control " name="Status">
-															<option value="1">
-																Lunas
-															</option>
-															<option value="2">
-																Belum Lunas
-															</option>
-														</select>
-													</div>
-												</div>
+											
 												<div class="form-group m-form__group row">
 													<label  class="col-2 col-form-label">
 														Nama Pelanggan
@@ -356,6 +351,48 @@
 														<input class="form-control m-input" type="text" value="Jl. Angkasa 5, Panaikang, Makassar" id="alamat_pelanggan">
 													</div>
 												</div>
+
+												<hr>
+												<h4 style="margin:20px; "> Pembayaran</h4>
+
+
+												<div class="form-group m-form__group row">
+													<label  class="col-2 col-form-label">
+														Status
+													</label>
+													<div class="col-10">
+														<select style="width: 100%" class="form-control " name="Status">
+															<option value="1">
+																Lunas
+															</option>
+															<option value="2">
+																Belum Lunas
+															</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="form-group m-form__group row">
+													<label  class="col-2 col-form-label">
+														Bank Pembayaran
+													</label>
+													<div class="col-10">
+														<select style="width: 100%" class="form-control " name="Status">
+															<option value="1">
+																Bank BRI 12321312312
+															</option>
+															<option value="2">
+																Bank Sulselbar 123123123
+															</option>
+
+															<option value="3">
+																Bank Mandiri 123123123
+															</option>
+														</select>
+													</div>
+												</div>
+
+
 												<div style="margin-top: 20px" align="center">
 													<button data-toggle="modal" data-target="#modal_tambah_barang" type="button" class="btn btn-success btn_pemasangan">Tambah Barang</button>
 												</div>

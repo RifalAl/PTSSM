@@ -248,85 +248,72 @@
 											</div>
 										</div>
 										<!--end: Search Form -->
-										<!--begin: Datatable -->
-										<!-- <div class="m_datatable" id="local_data"></div> -->
-										<table class="table" id="tbl_spk_pemasangan">
-											<thead>
-												<tr>
-													<th>No</th>
-													<th>Tanggal</th>
-													<th>No SPK</th>
-													<th>Nama Pelanggan</th>
-													<th>No Telpon</th>
-													<th>Tipe</th>
-													<th>Status</th>
-													<th>Aksi</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>1</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Bpk. Hendy</td>
-													<td>085145322137</td>
-													<td>Pemasangan</td>
-													<td>Pengerjaan</td>
-													<td>
-														<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
-												</tr>
-												<tr>
-													<td>2</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Bpk. Suminto</td>
-													<td>085145322137</td>
-													<td>Pemasangan</td>
-													<td>Pengerjaan</td>
-													<td>
-														<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Bpk. Suminto</td>
-													<td>085145322137</td>
-													<td>Servis</td>
-													<td>Pengerjaan</td>
-													<td>
-														<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
-												</tr>
-												<tr>
-													<td>4</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Ibu Ida</td>
-													<td>085145322137</td>
-													<td>Survey</td>
-													<td>Selesai</td>
-													<td>
-														<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
-												</tr>
-												<tr>
-													<td>5</td>
-													<td>20/19/2018</td>
-													<td>1923102301</td>
-													<td>Ibu Munna</td>
-													<td>085145322137</td>
-													<td>Pemasangan</td>
-													<td>Selesai</td>
-													<td>
-														<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-										<!--end: Datatable -->
+
+
+										<ul class="nav nav-tabs" role="tablist">
+											<li class="nav-item">
+												<a class="nav-link active" data-toggle="tab" href="#" data-target="#m_tabs_1_1">Antrian</a>
+											</li>
+											
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab" href="#m_tabs_1_2">Terbit </a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link " data-toggle="tab" href="#m_tabs_1_3">Batal</a>
+											</li>
+										</ul>
+
+										<div class="tab-content">
+											<div class="tab-pane active" id="m_tabs_1_1" role="tabpanel">
+												<!--begin: antrian table -->
+									
+												<table class="table" id="tbl_spk_pemasangan">
+													<thead>
+														<tr>
+															<th>No</th>
+															<th>Tanggal</th>
+															<th>No SPK</th>
+															<th>Tipe SPK</th>
+															<th>Pelanggan</th>
+															<th>Teknisi</th>
+															<th>Status</th>
+															<th>Aksi</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>20/19/2018</td>
+															<td>1923102301</td>
+															<td>Pemasangan</td>
+															<td>Bpk. Hendy</td>
+															<td>Pak Tarno</td>
+															<td>Pengerjaan</td>
+															<td>
+																<button  class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#proses_item" type="button"  style="color:white; width:80px;">Proses >>
+																	
+																</button>
+															</td>
+													
+													</tbody>
+												</table>
+												<!--end: Datatable -->
+													
+											</div>
+											
+											<div class="tab-pane" id="m_tabs_1_2" role="tabpanel">
+												<!--begin: terbit table -->
+
+
+
+											</div>
+											<div class="tab-pane" id="m_tabs_1_3" role="tabpanel">
+												
+											</div>
+										</div>
+
+										
+									
 									</div>
 								</div>
 							</div>
@@ -355,7 +342,86 @@
 		<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500"data-scroll-speed="300">
 			<i class="la la-arrow-up"></i>
 		</div>
-		<!-- end::Scroll Top -->		    
+		<!-- end::Scroll Top -->	
+			<!--  Begin::Modals -->
+		<!-- modal tambah item -->
+		<div class="modal fade" id="proses_item"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							Proses Item Penugasan
+						</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">
+								&times;
+							</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group m-form__group row">
+							<label for="example-text-input" class="col-3 col-form-label">
+								Berikan Tugas Kepada
+							</label>
+							<div class="col-9">
+								<div class="m-form__group form-group">
+											<div class="m-checkbox-inline">
+												<label class="m-checkbox">
+													<input type="checkbox"> Option 1
+													<span></span>
+												</label>
+												<label class="m-checkbox">
+													<input type="checkbox"> Option 2
+													<span></span>
+												</label>
+												<label class="m-checkbox">
+													<input type="checkbox"> Option 3
+													<span></span>
+												</label>
+												<label class="m-checkbox">
+													<input type="checkbox"> Option 3
+													<span></span>
+												</label>
+												<label class="m-checkbox">
+													<input type="checkbox"> Option 3
+													<span></span>
+												</label>
+												<label class="m-checkbox">
+													<input type="checkbox"> Option 3
+													<span></span>
+												</label>
+												<label class="m-checkbox">
+													<input type="checkbox"> Option 3
+													<span></span>
+												</label>
+												<label class="m-checkbox">
+													<input type="checkbox"> Option 3
+													<span></span>
+												</label>
+												<label class="m-checkbox">
+													<input type="checkbox"> Option 3
+													<span></span>
+												</label>
+
+											</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">
+							Tutup
+						</button>
+						<button id="btn_tambah_item" data-dismiss="modal" type="button" class="btn btn-primary">
+							Tambahkan
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
 
 		<!--begin::Base Scripts -->
 		<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
@@ -372,26 +438,7 @@
 			var tbl_spk_pemasangan = $('#tbl_spk_pemasangan').mDatatable({
 				data: {
 					saveState: {cookie: false},
-					/*type: 'remote',
-			        source: {
-			          read: {
-			            // sample GET method
-			            method: 'GET',
-			            url: 'https://keenthemes.com/metronic/preview/inc/api/datatables/demos/default.php',
-			            map: function(raw) {
-			              // sample data mapping
-			              var dataSet = raw;
-			              if (typeof raw.data !== 'undefined') {
-			                dataSet = raw.data;
-			              }
-			              return dataSet;
-			            },
-			          },
-			        },
-			        pageSize: 10,
-			        serverPaging: true,
-			        serverFiltering: true,
-			        serverSorting: true,*/
+				
 			    },
 				// layout definition
 				layout: {
@@ -403,7 +450,7 @@
 				},
 
 				// column sorting
-				sortable: false,
+				sortable: true,
 				search: {
 					input: $('#generalSearch'),
 				},

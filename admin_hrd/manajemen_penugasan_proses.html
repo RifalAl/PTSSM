@@ -15,7 +15,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Admin Finance | Manajemen Invoice Keluar - Barang
+			Admin HRD | Dashboard
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,11 +43,6 @@
 		<!-- end:: Style tambahan -->
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
-		<style>
-			.m-datatable.m-datatable--default > .m-datatable__pager > .m-datatable__pager-info {
-				display: none !important;
-			}
-		</style>
 	</head>
 	<!-- end::Head -->
 	<!-- end::Body -->
@@ -95,7 +90,7 @@
 							<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
 								<!-- BEGIN: Horizontal Menu -->
 								<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
-									<img style="display: inline; float: left; height: 60px; width: auto" src="../assets/demo/default/media/img/misc/admin_finance.png">
+									<img style="display: inline; float: left; height: 60px; width: auto" src="../assets/demo/default/media/img/misc/hrd.png">
 								</div>
 								<!-- END: Horizontal Menu -->								
 								<!-- BEGIN: Topbar -->
@@ -135,85 +130,53 @@
 					<div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark" data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500" >
 						<!-- ASIDE MENU DISINI -->
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
-							<!--Invoice Masuk-->
-							<li class="m-menu__item" aria-haspopup="true" >
-								<a  href="index.html" class="m-menu__link ">
-									<i class="m-menu__link-icon fa 	fa-wpforms"></i>
-									<span class="m-menu__link-title">
-										<span class="m-menu__link-wrap">
-											<span class="m-menu__link-text">
-												Invoice Masuk
-											</span>
-										</span>
-									</span>
-								</a>
-							</li>
-
-							<!-- Manj BArang --> 
-							<!--Manajemen Invoice Keluar-->
-							<li class="m-menu__item  m-menu__item--submenu m-menu__item--open m-menu__item--expanded" aria-haspopup="true" data-menu-submenu-toggle="hover">
-								<a href="#" class="m-menu__link m-menu__toggle">
-									<i class="m-menu__link-icon flaticon-folder-2"></i>
-									<span class="m-menu__link-text">
-										Manajemen Invoice Keluar
-									</span>
-									<i style="font-size: 1.5rem" class="m-menu__ver-arrow fa fa-caret-right"></i>
-								</a>
-								<div class="m-menu__submenu " style="">
-									<span class="m-menu__arrow"></span>
-									<ul class="m-menu__subnav">
-										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
-											<span class="m-menu__link">
-												<span class="m-menu__link-text">
-													Manajemen Invoice Keluar
-												</span>
-											</span>
-										</li>
-										<li class="m-menu__item  m-menu__item--active" aria-haspopup="true">
-											<a href="invoice_barang.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Invoice Barang
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true">
-											<a href="invoice_material.html"  class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Invoice Material
-												</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<!-- Master Stock -->
+							<!-- DASHBOARD -->
 							<li class="m-menu__item  " aria-haspopup="true" >
-								<a  href="master_stock.html" class="m-menu__link ">
-									<i class="m-menu__link-icon  flaticon-open-box"></i>
+								<a  href="index.html" class="m-menu__link ">
+									<i class="m-menu__link-icon flaticon-line-graph"></i>
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
-												Master Stock
+												Dashboard
 											</span>
 										</span>
 									</span>
 								</a>
 							</li>
-							
-							<!-- Manajemen Harga -->
-							<li class="m-menu__item" aria-haspopup="true" >
-								<a  href="manajemen_harga.html" class="m-menu__link ">
-									<i class="m-menu__link-icon la la-list"></i>
+							<!-- Manajemen Penugasan -->
+							<li class="m-menu__item m-menu__item--active" aria-haspopup="true" >
+								<a  href="manajemen_penugasan.html" class="m-menu__link ">
+									<i class="m-menu__link-icon fa fa-puzzle-piece"></i>
 									<span class="m-menu__link-title">
 										<span class="m-menu__link-wrap">
 											<span class="m-menu__link-text">
-												Manajemen Harga
+												Manajemen Penugasan
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<!-- Kepuasan Pelanggan -->
+							<li class="m-menu__item" aria-haspopup="true" >
+								<a  href="kepuasan_pelanggan.html" class="m-menu__link ">
+									<i class="m-menu__link-icon fa 	fa-thumbs-up"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Kepuasan Pelanggan
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<!-- Manajemen User -->
+							<li class="m-menu__item  " aria-haspopup="true" >
+								<a  href="manajemen_user.html" class="m-menu__link ">
+									<i class="m-menu__link-icon fa 		fa-user-o"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Manajemen User
 											</span>
 										</span>
 									</span>
@@ -230,12 +193,22 @@
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
 								<h3 class="m-subheader__title m-subheader__title--separator">
-									Manajemen Invoice Keluar | Barang
+									Manajemen Penugasan
 								</h3>
 								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
 									<li class="m-nav__item m-nav__item--home">
 										<a href="index.html" class="m-nav__link m-nav__link--icon">
 											<i class="m-nav__link-icon la la-home"></i>
+										</a>
+									</li>
+									<li class="m-nav__separator">
+										-
+									</li>
+									<li class="m-nav__item">
+										<a href="manajemen_penugasan.html" class="m-nav__link">
+											<span class="m-nav__link-text">
+												Penugasan
+											</span>
 										</a>
 									</li>
 								</ul>
@@ -248,8 +221,6 @@
 							<div class="col-xl-12">
 								<div class="m-portlet m-portlet--mobile">
 									<div class="m-portlet__body">
-
-
 										<!--begin: Search Form -->
 										<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
 											<div class="row align-items-center">
@@ -258,9 +229,8 @@
 														<div class="col-md-4">
 															<div class="m-portlet__head-title">
 																<h3 class="m-portlet__head-text">
-																	List Invoice Barang
+																	List SPK
 																</h3>
-																<button onclick="window.location.href = 'tambah_invoice_barang.html';" type="button" class="btn btn-success ">+ tambah Invoice (tanpa SPK)</button>
 															</div>
 														</div>
 														<div class="col-md-4 offset-md-4">
@@ -279,6 +249,7 @@
 										</div>
 										<!--end: Search Form -->
 
+
 										<ul class="nav nav-tabs" role="tablist">
 											<li class="nav-item">
 												<a class="nav-link active" data-toggle="tab" href="#" data-target="#m_tabs_1_1">Antrian</a>
@@ -296,15 +267,16 @@
 											<div class="tab-pane active" id="m_tabs_1_1" role="tabpanel">
 												<!--begin: antrian table -->
 									
-												<table class="table" id="tbl_list_invoice_barang">
+												<table class="table" id="tbl_spk_pemasangan">
 													<thead>
 														<tr>
 															<th>No</th>
-															<th>Jatuh Tempo</th>
-															<th>No SPK </th>
-															<th>No Surat Jalan</th>
-															<th>Bank Tujuan</th>
+															<th>Tanggal</th>
+															<th>No SPK</th>
+															<th>Tipe SPK</th>
 															<th>Pelanggan</th>
+															<th>Teknisi</th>
+															<th>Status</th>
 															<th>Aksi</th>
 														</tr>
 													</thead>
@@ -312,27 +284,63 @@
 														<tr>
 															<td>1</td>
 															<td>20/19/2018</td>
-															<td>21/SPK-PSG/PT-SSM/I/2019</td>
-															<td>-</td>
-															<td> BRI 123456</td>
+															<td>1923102301</td>
+															<td>Pemasangan</td>
 															<td>Bpk. Hendy</td>
+															<td>Pak Tarno</td>
+															<td>Pengerjaan</td>
 															<td>
-																<a href="proses_invoice_keluar.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Proses >> </a>
+																<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Proses >></a>
 															</td>
 														</tr>
-
 														<tr>
-															<td>1</td>
+															<td>2</td>
 															<td>20/19/2018</td>
-															<td>21/SPK-PSG/PT-SSM/I/2019</td>
-															<td>-</td>
-															<td>-</td>
-															<td>Bpk. Tono</td>
+															<td>1923102301</td>
+															<td>Bpk. Suminto</td>
+															<td>085145322137</td>
+															<td>Pemasangan</td>
+															<td>Pengerjaan</td>
 															<td>
-																<a href="proses_invoice_keluar.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Proses >> </a>
+																<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
 															</td>
 														</tr>
-														
+														<tr>
+															<td>3</td>
+															<td>20/19/2018</td>
+															<td>1923102301</td>
+															<td>Bpk. Suminto</td>
+															<td>085145322137</td>
+															<td>Servis</td>
+															<td>Pengerjaan</td>
+															<td>
+																<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+															</td>
+														</tr>
+														<tr>
+															<td>4</td>
+															<td>20/19/2018</td>
+															<td>1923102301</td>
+															<td>Ibu Ida</td>
+															<td>085145322137</td>
+															<td>Survey</td>
+															<td>Selesai</td>
+															<td>
+																<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+															</td>
+														</tr>
+														<tr>
+															<td>5</td>
+															<td>20/19/2018</td>
+															<td>1923102301</td>
+															<td>Ibu Munna</td>
+															<td>085145322137</td>
+															<td>Pemasangan</td>
+															<td>Selesai</td>
+															<td>
+																<a href="rincian_spk_pemasangan.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+															</td>
+														</tr>
 													</tbody>
 												</table>
 												<!--end: Datatable -->
@@ -342,84 +350,6 @@
 											<div class="tab-pane" id="m_tabs_1_2" role="tabpanel">
 												<!--begin: terbit table -->
 
-												<table class="table" id="tbl_list_invoice_barang">
-													<thead>
-														<tr>
-															<th>No</th>
-															<th>Tanggal</th>
-															<th>Jatuh Tempo</th>
-															<th>No Invoice</th>
-															<th>Nama Pelanggan</th>
-															<th>Tipe</th>
-															<th>Nilai</th>
-															<th>Aksi</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>1</td>
-															<td>20/19/2018</td>
-															<td>25/11/2018</td>
-															<td>1923102301</td>
-															<td>Bpk. Hendy</td>
-															<td>Pajak</td>
-															<td>Lunas</td>
-															<td>
-																<a href="rincian_invoice_barang.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-															</td>
-														</tr>
-														<tr>
-															<td>2</td>
-															<td>20/19/2018</td>
-															<td>25/11/2018</td>
-															<td>1923102301</td>
-															<td>Bpk. Hendy</td>
-															<td>Pajak</td>
-															<td>Lunas</td>
-															<td>
-																<a href="rincian_invoice_barang.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-															</td>
-														</tr>
-														<tr>
-															<td>3</td>
-															<td>20/19/2018</td>
-															<td>25/11/2018</td>
-															<td>1923102301</td>
-															<td>Bpk. Hendy</td>
-															<td>Pajak</td>
-															<td>Lunas</td>
-															<td>
-																<a href="rincian_invoice_barang.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-															</td>
-														</tr>
-														<tr>
-															<td>4</td>
-															<td>20/19/2018</td>
-															<td>25/11/2018</td>
-															<td>1923102301</td>
-															<td>Bpk. Hendy</td>
-															<td>Pajak</td>
-															<td>Lunas</td>
-															<td>
-																<a href="rincian_invoice_barang.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-															</td>
-														</tr>
-														<tr>
-															<td>5</td>
-															<td>20/19/2018</td>
-															<td>25/11/2018</td>
-															<td>1923102301</td>
-															<td>Bpk. Hendy</td>
-															<td>Non-Pajak</td>
-															<td>Lunas</td>
-															<td>
-																<a href="rincian_invoice_barang.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												<!--end: Datatable -->
-												
 
 
 											</div>
@@ -429,6 +359,7 @@
 										</div>
 
 										
+									
 									</div>
 								</div>
 							</div>
@@ -437,93 +368,6 @@
 				</div>
 			</div>
 			<!-- end:: Body -->
-			<!-- Modal : TAMBAH ITEM -->
-			<div class="modal fade" id="modal_tambah_barang"   role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">
-								Tambah Barang
-							</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">
-									&times;
-								</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<div class="form-group m-form__group row">
-								<label  class="col-3 col-form-label">
-									Nama Barang
-								</label>
-								<div class="col-9">
-									<select style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="nama_item" tabindex="-1" aria-hidden="true">
-										<option value="1" >
-											AC 1
-										</option>
-										<option value="2">
-											AC 2
-										</option>
-										<option value="3">
-											AC 3
-										</option>
-									</select>
-								</div>
-							</div>
-							<div class="form-group m-form__group row">
-								<label  class="col-3 col-form-label">
-									Qty
-								</label>
-								<div class="col-9">
-									<input class="form-control m-input" type="number" value="20" id="jumlah_item">
-								</div>
-							</div>
-							<div class="form-group m-form__group row">
-								<label  class="col-3 col-form-label">
-									Satuan
-								</label>
-								<div class="col-9">
-									<select disabled="" style="width: 100%" class="form-control m-select2 dropdown_search select2-hidden-accessible" name="satuan" tabindex="-1" aria-hidden="true">
-										<option elected="" value="1" >
-											Unit
-										</option>
-										<option s value="2">
-											Meter
-										</option>
-										<option value="3">
-											Pcs
-										</option>
-									</select>
-								</div>
-							</div>
-							<div class="form-group m-form__group row">
-								<label  class="col-3 col-form-label">
-									Harga
-								</label>
-								<div class="col-9">
-									<input class="form-control m-input" type="text" value="Rp4,900,000" id="harga_item">
-								</div>
-							</div>
-							<div class="form-group m-form__group row">
-								<label  class="col-3 col-form-label">
-									Harga Khusus
-								</label>
-								<div class="col-9">
-									<input class="form-control m-input" type="text" value="Rp3,200,000" id="harga_khusus">
-								</div>
-							</div>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">
-								Tutup
-							</button>
-							<button id="btn_tambah" type="button" class="btn btn-primary" data-dismiss="modal">
-								Tambah
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
 			<!-- begin::Footer -->
 			<footer class="m-grid__item		m-footer ">
 				<div class="m-container m-container--fluid m-container--full-height m-page__container">
@@ -557,64 +401,8 @@
 		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
-		<script>
-			var Select2 = function() {
-				var demos = function(){
-				 // basic
-				 $('.dropdown_search, .dropdown_search_validate').select2({
-				 	placeholder: "Select a state"
-				 });
-				}
-				var modalDemos = function(){
-					$('#m_select2_modal').on('shown.bs.modal', function () {
-				// basic
-				$('.dropdown_search_modal').select2({
-					placeholder: "Select a state"
-				});
-			});
-				}
-				return {
-					init: function() {
-						demos();
-						modalDemos();
-					}
-				};
-			}();
-			//== Initialization
-			jQuery(document).ready(function() {
-				Select2.init();
-			});
-		</script>
-		<script>
-			//== Class definition
-			var SweetAlert2Demo = function() {
-
-			//== Demos
-			var initDemos = function() {
-
-				$('#btn_simpan_data').click(function(e) {
-					swal("Berhasil!", "Data Invoice Telah Tersimpan","success");
-				});
-				$('#btn_tambah').click(function(e) {
-					swal("Berhasil!", "data yang anda inputkan telah dimasukkan ke list item barang", "success");
-				});
-			};
-
-			return {
-					//== Init
-					init: function() {
-						initDemos();
-					},
-				};
-			}();
-
-			//== Class Initialization
-			jQuery(document).ready(function() {
-				SweetAlert2Demo.init();
-			});
-		</script>
 		<script type="text/javascript">
-			var tbl_list_invoice_barang = $('#tbl_list_invoice_barang').mDatatable({
+			var tbl_spk_pemasangan = $('#tbl_spk_pemasangan').mDatatable({
 				data: {
 					saveState: {cookie: false},
 					/*type: 'remote',
@@ -666,13 +454,7 @@
 					format: 'DD/MM/YYYY',
 				},
 				{
-					field: 'Jatuh Tempo',
-					textAlign: 'center',
-					type:'date',
-					format: 'DD/MM/YYYY',
-				},
-				{
-					field: 'No Invoice',
+					field: 'No SPK',
 					textAlign: 'center',
 				},
 				{
@@ -684,15 +466,11 @@
 					textAlign: 'center',
 				},
 				{
-					field: 'Status',
-					textAlign: 'center',
-				},
-				{
 					field: 'Tipe',
 					textAlign: 'center',
 				},
 				{
-					field: 'Nilai',
+					field: 'Status',
 					textAlign: 'center',
 				},
 				{
