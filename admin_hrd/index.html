@@ -130,21 +130,9 @@
 					<div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark" data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500" >
 						<!-- ASIDE MENU DISINI -->
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
-							<!-- DASHBOARD -->
-							<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
-								<a  href="index.html" class="m-menu__link ">
-									<i class="m-menu__link-icon flaticon-line-graph"></i>
-									<span class="m-menu__link-title">
-										<span class="m-menu__link-wrap">
-											<span class="m-menu__link-text">
-												Dashboard
-											</span>
-										</span>
-									</span>
-								</a>
-							</li>
+							
 							<!-- Manajemen Penugasan -->
-							<li class="m-menu__item" aria-haspopup="true" >
+							<li class="m-menu__item m-menu__item--active" aria-haspopup="true" >
 								<a  href="manajemen_penugasan.html" class="m-menu__link ">
 									<i class="m-menu__link-icon fa fa-puzzle-piece"></i>
 									<span class="m-menu__link-title">
@@ -193,12 +181,22 @@
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
 								<h3 class="m-subheader__title m-subheader__title--separator">
-									Dashboard
+									Manajemen Penugasan
 								</h3>
 								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
 									<li class="m-nav__item m-nav__item--home">
 										<a href="index.html" class="m-nav__link m-nav__link--icon">
 											<i class="m-nav__link-icon la la-home"></i>
+										</a>
+									</li>
+									<li class="m-nav__separator">
+										-
+									</li>
+									<li class="m-nav__item">
+										<a href="manajemen_penugasan.html" class="m-nav__link">
+											<span class="m-nav__link-text">
+												Penugasan
+											</span>
 										</a>
 									</li>
 								</ul>
@@ -207,9 +205,139 @@
 					</div>
 					<!-- END: Subheader -->
 					<div class="m-content">
-						<div class="col-xl-12">
-							<div class="row">
-								
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="m-portlet m-portlet--mobile">
+									<div class="m-portlet__body">
+										<!--begin: Search Form -->
+										<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
+											<div class="row align-items-center">
+												<div class="col-md-12">
+													<div class="form-group m-form__group row align-items-center">
+														<div class="col-md-6">
+															<div class="m-portlet__head-title">
+																<h3 class="m-portlet__head-text">
+																	Daftar SPK untuk ditugaskan
+																</h3>
+															</div>
+														</div>
+														<div class="col-md-4 offset-md-2">
+															<div class="m-input-icon m-input-icon--left">
+																<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
+																<span class="m-input-icon__icon m-input-icon__icon--left">
+																	<span>
+																		<i class="la la-search"></i>
+																	</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!--end: Search Form -->
+
+
+										<ul class="nav nav-tabs" role="tablist">
+											<li class="nav-item">
+												<a class="nav-link active" data-toggle="tab" href="#" data-target="#m_tabs_1_1">Antrian</a>
+											</li>
+											
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab" href="#m_tabs_1_2">Terbit </a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link " data-toggle="tab" href="#m_tabs_1_3">Batal</a>
+											</li>
+										</ul>
+
+										<div class="tab-content">
+											<div class="tab-pane active" id="m_tabs_1_1" role="tabpanel">
+												<!--begin: antrian table -->
+									
+												<table class="table" id="tbl_manajemen_1">
+													<thead>
+														<tr>
+															<th>No</th>
+															<th>Tanggal</th>
+															<th>No SPK</th>
+															<th>Tipe SPK</th>
+															<th>Pelanggan</th>
+															<th>Teknisi</th>
+															<th>Status</th>
+															<th>Aksi</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>20/19/2018</td>
+															<td>1923102301</td>
+															<td>Pemasangan</td>
+															<td>Bpk. Hendy</td>
+															<td> - </td>
+															<td>Aktif</td>
+															<td>
+																<button  class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#proses_item" type="button"  style="color:white; width:80px;">Proses >>
+																	
+																</button>
+															</td>
+													
+													</tbody>
+												</table>
+												<!--end: Datatable -->
+													
+											</div>
+											
+											<div class="tab-pane" id="m_tabs_1_2" role="tabpanel">
+												<!--begin: terbit table -->
+												<table class="table" id="tbl_manajemen_2">
+													<thead>
+														<tr>
+															<th>No</th>
+															<th>Tanggal</th>
+															<th>No SPK</th>
+															<th>Tipe SPK</th>
+															<th>Pelanggan</th>
+															<th>Teknisi</th>
+															<th>Status</th>
+															<th>Aksi</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>20/19/2018</td>
+															<td>1923102301</td>
+															<td>Pemasangan</td>
+															<td>Bpk. Hendy</td>
+															<td>Pak Tarno</td>
+															<td>Pengerjaan</td>
+															<td>
+																<button  class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#edit_item" type="button"  style="color:white; width:80px;"> <i class="fa fa-edit"></i> Edit 																	
+																</button>
+
+																<a href="../admin_kantor/rincian_spk_pemasangan.html" class="btn btn-sm btn-success" role="button"  style="color:white; width:80px;"> <i class="fa fa-eye"></i> Rincian 																	
+																</a>
+															</td>
+													
+													</tbody>
+												</table>
+												<!--end: Datatable -->
+
+
+
+
+											</div>
+											<div class="tab-pane" id="m_tabs_1_3" role="tabpanel">
+												
+											</div>
+										</div>
+
+										
+									
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -236,7 +364,164 @@
 		<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500"data-scroll-speed="300">
 			<i class="la la-arrow-up"></i>
 		</div>
-		<!-- end::Scroll Top -->		    
+		<!-- end::Scroll Top -->	
+			<!--  Begin::Modals -->
+		<!-- modal tambah item -->
+		<div class="modal fade" id="proses_item"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							Proses Item Penugasan
+						</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">
+								&times;
+							</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form class="m-form">
+							<div class="m-form__group form-group">
+
+								<label >Tugas Diberikan Kepada</label>
+
+								<div class="m-checkbox-list">
+									<label class="m-checkbox">
+										<input type="checkbox"> Anto Houd
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Sarah
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Dg Suardi
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Amirul
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Dayat
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Imam
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Taufik
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> rahmad
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Dg. baso
+										<span></span>
+									</label>
+
+									
+								</div>
+							</div>
+							
+						</form>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">
+							Batal
+						</button>
+						<button id="btn_tambah_item" data-dismiss="modal" type="button" class="btn btn-primary">
+							Simpan 
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- modal tambah item -->
+		<div class="modal fade" id="edit_item"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							Edit Proses Item Penugasan
+						</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">
+								&times;
+							</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form class="m-form">
+							<div class="m-form__group form-group">
+
+								<label >Tugas Diberikan Kepada</label>
+
+								<div class="m-checkbox-list">
+									<label class="m-checkbox">
+										<input type="checkbox"> Anto Houd
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Sarah
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Dg Suardi
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Amirul
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Dayat
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Imam
+										<span></span>
+									</label>
+									<label class="em-checkbox">
+										<input type="checkbox"> Taufik
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> rahmad
+										<span></span>
+									</label>
+									<label class="m-checkbox">
+										<input type="checkbox"> Dg. baso
+										<span></span>
+									</label>
+
+									
+								</div>
+							</div>
+							
+						</form>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">
+							Batal
+						</button>
+						<button id="btn_tambah_item" data-dismiss="modal" type="button" class="btn btn-primary">
+							Simpan 
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
 
 		<!--begin::Base Scripts -->
 		<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
@@ -249,6 +534,129 @@
 		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
 		<!--end::Page Snippets -->
 		<script src="http://localhost:35729/livereload.js"></script>
+		<script type="text/javascript">
+			var tbl_spk_pemasangan = $('#tbl_manajemen_1').mDatatable({
+				data: {
+					saveState: {cookie: false},
+				
+			    },
+				// layout definition
+				layout: {
+					theme: 'default', // datatable theme
+					class: '', // custom wrapper class
+					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
+					// height: 450, // datatable's body's fixed height
+					footer: false // display/hide footer
+				},
+
+				// column sorting
+				sortable: true,
+				search: {
+					input: $('#generalSearch'),
+				},
+				columns: [
+
+				{
+					field: 'No',
+					textAlign: 'center',
+					width: 50
+				},
+				{
+					field: 'Tanggal',
+					textAlign: 'center',
+					type:'date',
+					format: 'DD/MM/YYYY',
+				},
+				{
+					field: 'No SPK',
+					textAlign: 'center',
+				},
+				{
+					field: 'Nama Pelanggan',
+					textAlign: 'center',
+				},
+				{
+					field: 'No Telpon',
+					textAlign: 'center',
+				},
+				{
+					field: 'Tipe',
+					textAlign: 'center',
+				},
+				{
+					field: 'Status',
+					textAlign: 'center',
+				},
+				{
+					field: 'Aksi',
+					textAlign: 'center',
+				}
+
+				],
+			});
+
+			var tbl_spk_pemasangan = $('#tbl_manajemen_2').mDatatable({
+				data: {
+					saveState: {cookie: false},
+				
+			    },
+				// layout definition
+				layout: {
+					theme: 'default', // datatable theme
+					class: '', // custom wrapper class
+					scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
+					// height: 450, // datatable's body's fixed height
+					footer: false // display/hide footer
+				},
+
+				// column sorting
+				sortable: true,
+				search: {
+					input: $('#generalSearch'),
+				},
+				columns: [
+
+				{
+					field: 'No',
+					textAlign: 'center',
+					width: 50
+				},
+				{
+					field: 'Tanggal',
+					textAlign: 'center',
+					type:'date',
+					format: 'DD/MM/YYYY',
+				},
+				{
+					field: 'No SPK',
+					textAlign: 'center',
+				},
+				{
+					field: 'Nama Pelanggan',
+					textAlign: 'center',
+				},
+				{
+					field: 'No Telpon',
+					textAlign: 'center',
+				},
+				{
+					field: 'Tipe',
+					textAlign: 'center',
+				},
+				{
+					field: 'Status',
+					textAlign: 'center',
+				},
+				{
+					field: 'Aksi',
+					textAlign: 'center',
+				}
+
+				],
+			});
+		</script>
+
+
 	</body>
 	<!-- end::Body -->
 	</html>

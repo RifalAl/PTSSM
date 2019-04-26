@@ -15,7 +15,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Admin HRD | Dashboard
+			Admin HRD | Manajemen User
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -143,21 +143,9 @@
 									</span>
 								</a>
 							</li>
-							<!-- Manajemen Penugasan -->
-							<li class="m-menu__item m-menu__item--active" aria-haspopup="true" >
-								<a  href="manajemen_penugasan.html" class="m-menu__link ">
-									<i class="m-menu__link-icon fa fa-puzzle-piece"></i>
-									<span class="m-menu__link-title">
-										<span class="m-menu__link-wrap">
-											<span class="m-menu__link-text">
-												Manajemen Penugasan
-											</span>
-										</span>
-									</span>
-								</a>
-							</li>
+							
 							<!-- Kepuasan Pelanggan -->
-							<li class="m-menu__item" aria-haspopup="true" >
+							<li class="m-menu__item " aria-haspopup="true" >
 								<a  href="kepuasan_pelanggan.html" class="m-menu__link ">
 									<i class="m-menu__link-icon fa 	fa-thumbs-up"></i>
 									<span class="m-menu__link-title">
@@ -170,7 +158,7 @@
 								</a>
 							</li>
 							<!-- Manajemen User -->
-							<li class="m-menu__item  " aria-haspopup="true" >
+							<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
 								<a  href="manajemen_user.html" class="m-menu__link ">
 									<i class="m-menu__link-icon fa 		fa-user-o"></i>
 									<span class="m-menu__link-title">
@@ -193,7 +181,7 @@
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
 								<h3 class="m-subheader__title m-subheader__title--separator">
-									Manajemen Penugasan
+									Manajemen User
 								</h3>
 								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
 									<li class="m-nav__item m-nav__item--home">
@@ -201,158 +189,256 @@
 											<i class="m-nav__link-icon la la-home"></i>
 										</a>
 									</li>
-									<li class="m-nav__separator">
-										-
-									</li>
-									<li class="m-nav__item">
-										<a href="manajemen_penugasan.html" class="m-nav__link">
-											<span class="m-nav__link-text">
-												Penugasan
-											</span>
-										</a>
-									</li>
 								</ul>
+
+								
 							</div>
 						</div>
 					</div>
 					<!-- END: Subheader -->
+					<!-- END: Subheader -->
 					<div class="m-content">
 						<div class="row">
 							<div class="col-xl-12">
-								<div class="m-portlet m-portlet--mobile">
-									<div class="m-portlet__body">
-										<!--begin: Search Form -->
-										<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
-											<div class="row align-items-center">
-												<div class="col-md-12">
-													<div class="form-group m-form__group row align-items-center">
-														<div class="col-md-6">
-															<div class="m-portlet__head-title">
-																<h3 class="m-portlet__head-text">
-																	Daftar SPK untuk ditugaskan
-																</h3>
-															</div>
-														</div>
-														<div class="col-md-4 offset-md-2">
-															<div class="m-input-icon m-input-icon--left">
-																<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
-																<span class="m-input-icon__icon m-input-icon__icon--left">
-																	<span>
-																		<i class="la la-search"></i>
-																	</span>
-																</span>
-															</div>
-														</div>
-													</div>
+								<div class="m-portlet m-portlet--tab">
+									<div class="m-portlet__head">
+										<div class="m-portlet__head-caption">
+											<div class="m-portlet__head-title">
+												<span class="m-portlet__head-icon m--hide">
+													<i class="la la-gear"></i>
+												</span>
+												<h3 class="m-portlet__head-text">
+													Edit Pengguna
+												</h3>
+											</div>
+										</div>
+									</div>
+									<!--begin::Form-->
+									<form class="m-form m-form--fit m-form--label-align-right">
+										<div class="m-portlet__body">
+											<div class="form-group m-form__group row">
+												<label  class="col-3 col-form-label">
+													Nama Lengkap Pengguna
+												</label>
+												<div class="col-9">
+													<input class="form-control m-input" type="text" value="Sunaryo Raharjo" id="namaleng">
 												</div>
 											</div>
-										</div>
-										<!--end: Search Form -->
 
-
-										<ul class="nav nav-tabs" role="tablist">
-											<li class="nav-item">
-												<a class="nav-link active" data-toggle="tab" href="#" data-target="#m_tabs_1_1">Antrian</a>
-											</li>
-											
-											<li class="nav-item">
-												<a class="nav-link" data-toggle="tab" href="#m_tabs_1_2">Terbit </a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link " data-toggle="tab" href="#m_tabs_1_3">Batal</a>
-											</li>
-										</ul>
-
-										<div class="tab-content">
-											<div class="tab-pane active" id="m_tabs_1_1" role="tabpanel">
-												<!--begin: antrian table -->
-									
-												<table class="table" id="tbl_spk_pemasangan">
-													<thead>
-														<tr>
-															<th>No</th>
-															<th>Tanggal</th>
-															<th>No SPK</th>
-															<th>Tipe SPK</th>
-															<th>Pelanggan</th>
-															<th>Teknisi</th>
-															<th>Status</th>
-															<th>Aksi</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>1</td>
-															<td>20/19/2018</td>
-															<td>1923102301</td>
-															<td>Pemasangan</td>
-															<td>Bpk. Hendy</td>
-															<td> - </td>
-															<td>Terbit</td>
-															<td>
-																<button  class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#proses_item" type="button"  style="color:white; width:80px;">Proses >>
-																	
-																</button>
-															</td>
-													
-													</tbody>
-												</table>
-												<!--end: Datatable -->
-													
+											<div class="form-group m-form__group row">
+												<label  class="col-3 col-form-label">
+													No. Telp
+												</label>
+												<div class="col-9">
+													<input class="form-control m-input" type="text" value="0812912123" id="no_telpon">
+												</div>
 											</div>
-											
-											<div class="tab-pane" id="m_tabs_1_2" role="tabpanel">
-												<!--begin: terbit table -->
-												<table class="table" id="tbl_spk_pemasangan">
-													<thead>
-														<tr>
-															<th>No</th>
-															<th>Tanggal</th>
-															<th>No SPK</th>
-															<th>Tipe SPK</th>
-															<th>Pelanggan</th>
-															<th>Teknisi</th>
-															<th>Status</th>
-															<th>Aksi</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>1</td>
-															<td>20/19/2018</td>
-															<td>1923102301</td>
-															<td>Pemasangan</td>
-															<td>Bpk. Hendy</td>
-															<td>Pak Tarno</td>
-															<td>Pengerjaan</td>
-															<td>
-																<button  class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#edit_item" type="button"  style="color:white; width:80px;"> <i class="fa fa-edit"></i> Edit 																	
-																</button>
-
-																<a href="../admin_kantor/rincian_spk_pemasangan.html" class="btn btn-sm btn-success" role="button"  style="color:white; width:80px;"> <i class="fa fa-eye"></i> Rincian 																	
-																</a>
-															</td>
-													
-													</tbody>
-												</table>
-												<!--end: Datatable -->
 
 
-
-
+											<div class="form-group m-form__group row">
+												<label  class="col-3 col-form-label">
+													Username (utk login)
+												</label>
+												<div class="col-9">
+													<input class="form-control m-input" type="text" value="sunaryo" id="Username">
+												</div>
 											</div>
-											<div class="tab-pane" id="m_tabs_1_3" role="tabpanel">
+
+											<div class="form-group m-form__group row">
+												<label  class="col-3 col-form-label">
+													Email Aktif
+												</label>
+												<div class="col-9">
+													<input class="form-control m-input" type="email" value="sunaryo@gmail.com" id="Username">
+												</div>
+											</div>
+
+											<hr>
+
+											<div class="form-group m-form__group row">
+												<label  class="col-3 col-form-label">
+													Password
+												</label>
+												<div class="col-9">
+													<input class="form-control m-input" type="Password" value="sunaryomasuk" id="password">
+												</div>
+											</div>
+
+											<div class="form-group m-form__group row">
+												<label  class="col-3 col-form-label">
+													Password (Ulangi)
+												</label>
+												<div class="col-9">
+													<input class="form-control m-input" type="Password" value="sunaryomasuk" id="upassword">
+												</div>
+											</div>
+
+											<hr>
+
+
+											<div class="form-group m-form__group row">
+												<label  class="col-12 col-form-label">
+													Role / Tugas Pengguna 
+												</label>
+
+
+
+												<div class="col-3">
+													<h4>Gudang</h4>
+													<label class="m-checkbox">
+														<input type="checkbox"> Dashboard Inv.
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Barang Masuk
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Surat Jalan
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Pengeluaran Material
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Inventory
+														<span></span>
+													</label>
+													
+													
+												</div>
+												<div class="col-3">
+													<h4>Admin Kantor  </h4>
+													<p>(non PPN)</p>
+													<label class="m-checkbox">
+														<input type="checkbox"> Dashboard Kantor
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Manajemen Pelanggan
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Manajemen Pesanan 
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Manajemen Penawaran
+														<span></span>
+													</label>
+													
+													
+
+													
+													
+												</div>
+												<div class="col-3">
+													<h4>Admin Toko</h4>
+													<p>(PPN)</p>
+													<label class="m-checkbox">
+														<input type="checkbox"> Dashboard Toko (ppn)
+														<span></span>
+													</label>
+													
+													<label class="m-checkbox">
+														<input type="checkbox"> Manajemen Pesanan (ppn)
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Manajemen Penawaran (ppn)
+														<span></span>
+													</label>
+													
+													
+												</div>
+
+												<div class="col-3">
+													<h4>Finance</h4>
+													<label class="m-checkbox">
+														<input type="checkbox"> Manajemen Inv. Masuk
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Manajemen Inv. Keluar
+														<span></span>
+													</label>
+													
+													
+													
+												</div>
+												<div class="col-3">
+													<h4>HR</h4>
+													<label class="m-checkbox">
+														<input type="checkbox"> Manajemen Penugasan
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Kepuasan Pelanggan
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Managemen User
+														<span></span>
+													</label>
+													
+													
+												</div>
+
+												<div class="col-3">
+													<h4>Teknisi</h4>
+													<label class="m-checkbox">
+														<input type="checkbox"> Teknisi
+														<span></span>
+													</label>
+													
+													
+												</div>
+
+												<div class="col-3">
+													<h4>Master</h4>
+													<label class="m-checkbox">
+														<input type="checkbox"> Manajemen Pelanggan 
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Master Stok
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Master Stok (Lihat Saja)
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Manajemen Harga
+														<span></span>
+													</label>
+													<label class="m-checkbox">
+														<input type="checkbox"> Manajemen  (Lihat Saja)
+														<span></span>
+													</label>
+												</div>
+
 												
 											</div>
-										</div>
+											
+											<div style="margin-top: 20px" align="center">
+												<button id="" type="button" class="btn btn-primary btn_pemasangan">Update / Simpan Data Pengguna</button>
+											</div>
 
-										
-									
-									</div>
+
+
+										</div>
+									</form>
 								</div>
+
+								
 							</div>
 						</div>
+
+
 					</div>
+				
 				</div>
 			</div>
 			<!-- end:: Body -->
@@ -376,164 +462,7 @@
 		<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500"data-scroll-speed="300">
 			<i class="la la-arrow-up"></i>
 		</div>
-		<!-- end::Scroll Top -->	
-			<!--  Begin::Modals -->
-		<!-- modal tambah item -->
-		<div class="modal fade" id="proses_item"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">
-							Proses Item Penugasan
-						</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">
-								&times;
-							</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<form class="m-form">
-							<div class="m-form__group form-group">
-
-								<label >Tugas Diberikan Kepada</label>
-
-								<div class="m-checkbox-list">
-									<label class="m-checkbox">
-										<input type="checkbox"> Anto Houd
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Sarah
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Dg Suardi
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Amirul
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Dayat
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Imam
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Taufik
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> rahmad
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Dg. baso
-										<span></span>
-									</label>
-
-									
-								</div>
-							</div>
-							
-						</form>
-						
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">
-							Batal
-						</button>
-						<button id="btn_tambah_item" data-dismiss="modal" type="button" class="btn btn-primary">
-							Simpan 
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- modal tambah item -->
-		<div class="modal fade" id="edit_item"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">
-							Edit Proses Item Penugasan
-						</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">
-								&times;
-							</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<form class="m-form">
-							<div class="m-form__group form-group">
-
-								<label >Tugas Diberikan Kepada</label>
-
-								<div class="m-checkbox-list">
-									<label class="m-checkbox">
-										<input type="checkbox"> Anto Houd
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Sarah
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Dg Suardi
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Amirul
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Dayat
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Imam
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Taufik
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> rahmad
-										<span></span>
-									</label>
-									<label class="m-checkbox">
-										<input type="checkbox"> Dg. baso
-										<span></span>
-									</label>
-
-									
-								</div>
-							</div>
-							
-						</form>
-						
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">
-							Batal
-						</button>
-						<button id="btn_tambah_item" data-dismiss="modal" type="button" class="btn btn-primary">
-							Simpan 
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
+		<!-- end::Scroll Top -->		    
 
 		<!--begin::Base Scripts -->
 		<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
@@ -545,7 +474,6 @@
 		<!--begin::Page Snippets -->
 		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
 		<!--end::Page Snippets -->
-		<script src="http://localhost:35729/livereload.js"></script>
 		<script type="text/javascript">
 			var tbl_spk_pemasangan = $('#tbl_spk_pemasangan').mDatatable({
 				data: {
@@ -578,30 +506,7 @@
 					textAlign: 'center',
 					type:'date',
 					format: 'DD/MM/YYYY',
-				},
-				{
-					field: 'No SPK',
-					textAlign: 'center',
-				},
-				{
-					field: 'Nama Pelanggan',
-					textAlign: 'center',
-				},
-				{
-					field: 'No Telpon',
-					textAlign: 'center',
-				},
-				{
-					field: 'Tipe',
-					textAlign: 'center',
-				},
-				{
-					field: 'Status',
-					textAlign: 'center',
-				},
-				{
-					field: 'Aksi',
-					textAlign: 'center',
+					width:70
 				}
 
 				],
